@@ -13,21 +13,27 @@ function devProjects (id, db = connection) {
   return db('developers')
     .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
     .leftJoin('projects', 'developersProjects.project_id', 'projects.id')
-    .select('profile_picture as profilePic', 'first_name as firstName', 'last_name as lastName', 'pronoun', 'bio', 'projects.image as projectImage', 'name as projectName', 'link', 'email')
+    .select('developers.id as id', 'profile_picture as profilePic', 'first_name as firstName', 'last_name as lastName', 'pronoun', 'bio', 'projects.id as projectId', 'projects.image as projectImage', 'name as projectName', 'link', 'email')
     .where('developers.id', id)
     .then(result => {
+      console.log(result)
       const dev = result[0]
-      console.log('inside db', result)
       return {
+        id: result.id,
         profilePic: dev.profilePic,
         firstName: dev.firstName,
         lastName: dev.lastName,
         pronoun: dev.pronoun,
         bio: dev.bio,
         email: dev.email,
-        projects: [
-          {}
-        ]
+        projects: !result.some(evts => evts.id) ? [] : result.map(project => {
+          return {
+            projectId: project.id,
+            projectImage: project.projectImage,
+            projectName: project.projectName,
+            link: project.link
+          }
+        })
       }
     })
 }
