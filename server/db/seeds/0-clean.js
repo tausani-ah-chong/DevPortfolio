@@ -3,6 +3,7 @@ exports.seed = knex => {
     () => knex(table).del()
 
   return empty('projects')()
+    .then(empty('developersProjects'))
     .then(empty('developers'))
   // .then(empty('table_name'))
 }

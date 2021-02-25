@@ -29,3 +29,16 @@ describe('Getting developers', () => {
       })
   })
 })
+
+describe('Join developers and Projects', () => {
+  it('Will return developer and project data together', () => {
+    const id = 1
+    return dev.getDeveloperById(id, testDb)
+      .then(dev => {
+        expect(dev.projects).toHaveLength(2)
+        expect(dev.firstName).toMatch('multi')
+        expect(dev.projects[1].projectId).toBe(2)
+        return null
+      })
+  })
+})
