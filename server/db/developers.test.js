@@ -35,6 +35,7 @@ describe('Join developers and Projects', () => {
     const id = 1
     return dev.getDeveloperById(id, testDb)
       .then(dev => {
+        console.log(dev)
         expect(dev.projects).toHaveLength(2)
         expect(dev.firstName).toMatch('multi')
         expect(dev.projects[1].projectId).toBe(2)
