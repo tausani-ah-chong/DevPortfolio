@@ -16,7 +16,24 @@ router.get('/', (req, res) => {
       console.log(err.message)
       res.status(500).json({
         error: {
-          title: 'Unable to retrieve event'
+          title: 'Unable to retrieve developers'
+        }
+      })
+    })
+})
+
+router.get('/:id', (req, res) => {
+  const id = Number(req.params.id)
+  dev.getDeveloperById(id)
+    .then(dev => {
+      res.json(dev)
+      return null
+    })
+    .catch((err) => {
+      console.log(err.message)
+      res.status(500).json({
+        error: {
+          title: 'Unable to retrieve developer'
         }
       })
     })
