@@ -14,9 +14,9 @@ beforeEach(() => {
 
 // getDevelopers for use in test environment
 // not wanting to create dependencies on get and delete functions
-// function getDevelopers () {
-//   return testDb('developers').select()
-// }
+function getDevelopers () {
+  return testDb('developers').select()
+}
 
 describe('Getting developers', () => {
   it('getDevelopers returns all developers', () => {
@@ -27,5 +27,12 @@ describe('Getting developers', () => {
         expect(devs[0].first_name).toMatch('multi')
         return null
       })
+  })
+})
+
+describe('Join developers and Projects', () => {
+  it('Will return developer and project data together', () => {
+   return dev.devProjects(1, testDb)
+   .then(result => console.log(result))
   })
 })
