@@ -26,6 +26,11 @@
   "keywords": [
     "fullstack"
   ],
+  "jest": {
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom"
+    ]
+  },
   "babel": {
     "presets": [
       "@babel/preset-env",
