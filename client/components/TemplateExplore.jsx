@@ -1,10 +1,28 @@
 import React from 'react'
+import DevCard from './DevCard'
 
 export default function TemplateExplore () {
   return (
     <>
-      <div className="h-screen w-full bg-blue-400">
-        <h2>templateExplore</h2>
+      <div className=" w-screen grid grid-cols-4 gap-4 bg-blue-400 p-10">
+        <DevCard/>
+        <DevCard/>
+        <DevCard/>
+        <DevCard/>
+        <DevCard/>
+        <DevCard/>
+        <DevCard/>
+        <DevCard/>
+
+        {/* <div className=" w-6 h-64 bg-green-300"></div>
+        <div className=" w-6 h-64 bg-green-300"></div>
+        <div className=" w-6 h-64 bg-green-300"></div>
+        <div className=" w-6 h-64 bg-green-300"></div>
+        <div className=" w-6 h-64 bg-green-300"></div>
+        <div className=" w-6 h-64 bg-green-300"></div>
+        <div className=" w-6 h-64 bg-green-300"></div>
+        <div className=" w-6 h-64 bg-green-300"></div> */}
+
       </div>
 
     </>
