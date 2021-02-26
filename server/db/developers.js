@@ -11,10 +11,10 @@ function getDevelopers (db = connection) {
 
 function getDeveloperById (id, db = connection) {
   return db('developers')
-    .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
-    .leftJoin('projects', 'developersProjects.project_id', 'projects.id')
-    .leftJoin('developersLanguages', 'developersLanguages.developer_id', 'developers.id')
-    .leftJoin('languages', 'developersLanguages.language_id', 'languages.id')
+    .innerJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
+    .innerJoin('projects', 'developersProjects.project_id', 'projects.id')
+    .innerJoin('developersLanguages', 'developersLanguages.developer_id', 'developers.id')
+    .innerJoin('languages', 'developersLanguages.language_id', 'languages.id')
     .select(
       'developers.id as id',
       'profile_picture as profilePic',
@@ -30,8 +30,10 @@ function getDeveloperById (id, db = connection) {
       'languages.name as languageName'
     )
     .where('developers.id', id)
-    .then(result => {
-      const dev = result[0]
+    .then(results => {
+      if (!results.length) return null
+      const dev = results[0]
+      // console.log(results)
       return {
         id: dev.id,
         profilePic: dev.profilePic,
@@ -40,20 +42,19 @@ function getDeveloperById (id, db = connection) {
         pronoun: dev.pronoun,
         bio: dev.bio,
         email: dev.email,
-        projects: !result.some(devs => devs.id) ? [] : result.map(project => {
-          return {
+        projects: results.reduce((acc, project) => {
+          return acc.some(e => e.projectId === project.projectId) ? acc : [...acc, {
             projectId: project.projectId,
             projectImage: project.projectImage,
-            projectName: project.projectName,
-            link: project.link
-          }
-        }),
-        languages: !result.some(devs => devs.id) ? [] : result.map(language => {
-          return {
+            projectName: project.projectName
+          }]
+        }, []),
+        languages: results.reduce((acc, language) => {
+          return acc.some(e => e.languageId === language.languageId) ? acc : [...acc, {
             languageId: language.languageId,
             languageName: language.languageName
-          }
-        })
+          }]
+        }, [])
       }
     })
 }
