@@ -38,6 +38,8 @@ describe('Join developers and Projects', () => {
         expect(dev.projects).toHaveLength(2)
         expect(dev.firstName).toMatch('multi')
         expect(dev.projects[1].projectId).toBe(2)
+        expect(dev.languages).toHaveLength(2)
+        expect(dev.languages[0].languageName).toMatch('JS')
         return null
       })
   })
