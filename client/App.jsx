@@ -4,9 +4,7 @@ import Template from './components/Template'
 const App = () => {
   return (
     <>
-      <body className= "bg-gray-500">
-        <Template/>
-      </body>
+      <Template image="../server/public/pic336.jpg"/>
     </>
   )
 }
