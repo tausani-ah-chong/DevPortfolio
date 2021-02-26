@@ -31176,10 +31176,8 @@ video {
           animation: bounce 1s infinite;
 }
 
-.box{
-  width: 300px;
-  height:200px;
-  background-color:black;
+.testClass{
+  color:green;
 }
 
 @media (min-width: 640px) {
