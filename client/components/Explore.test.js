@@ -1,15 +1,44 @@
-import React from 'react'
-import Explore from './Explore'
-import { render, screen } from '@testing-library/react'
+import { dispatch } from '../store'
+import { setDevs } from '../actions/devs'
+import consume from '../consume'
 
-describe('explore componnt', () => {
-  describe('when the component is loaded, it will display h1 text', () => {
-    it('shows the text "Explore page"', () => {
-      expect.assertions(2)
-      render(<Explore />)
-      const text = screen.getByRole('heading', { level: 1 })
-      expect(text.innerHTML).toBe('Explore Page!')
-      expect(text.innerHTML).toMatch('Page!')
+jest.mock('../store')
+jest.mock('../consume')
+
+afterEach(() => {
+  return jest.resetAllMocks()
+})
+
+describe('setDevs', () => {
+  describe('-> GET /dev api call success', () => {
+    it('dispatches with the correct dev action', () => {
+      consume.mockImplementation(() => {
+        return Promise.resolve(dispatch(setDevs()))
+      })
+      return consume()
+        .then(() => {
+          expect(dispatch).toHaveBeenCalledWith({ type: 'SET_DEVS' })
+          return null
+        })
+    })
+
+    it('show dev name', () => {
+      consume.mockImplementation(() => {
+        return Promise.resolve({
+          body: [{
+            name: 'multi',
+            address: '111 One Lane'
+          }, {
+            name: 'anna',
+            address: '222 Two Lane'
+          }]
+        })
+      })
+      return consume()
+        .then((res) => {
+          expect(res.body[0].name).toBe('multi')
+          return null
+        })
     })
   })
 })
