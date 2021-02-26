@@ -13,16 +13,6 @@ export default function TemplateExplore () {
         <DevCard/>
         <DevCard/>
         <DevCard/>
-
-        {/* <div className=" w-6 h-64 bg-green-300"></div>
-        <div className=" w-6 h-64 bg-green-300"></div>
-        <div className=" w-6 h-64 bg-green-300"></div>
-        <div className=" w-6 h-64 bg-green-300"></div>
-        <div className=" w-6 h-64 bg-green-300"></div>
-        <div className=" w-6 h-64 bg-green-300"></div>
-        <div className=" w-6 h-64 bg-green-300"></div>
-        <div className=" w-6 h-64 bg-green-300"></div> */}
-
       </div>
 
     </>
