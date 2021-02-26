@@ -15,13 +15,13 @@ function Explore ({ dispatch, devs }) {
   return (
     <>
       <h1>Explore Page!</h1>
-      {
+      {/* {
         devs.map(dev => {
           return (
             <p key={dev.id}>{dev.first_name}</p>
           )
         })
-      }
+      } */}
     </>
   )
 }
