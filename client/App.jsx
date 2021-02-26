@@ -1,8 +1,11 @@
 import React from 'react'
+import Template from './components/Template'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <>
+      <Template image="../server/public/pic336.jpg"/>
+    </>
   )
 }
 
