@@ -2,11 +2,12 @@ import React from 'react'
 
 export default function TemplateBanner () {
   return (
-    <div className="w-screen h-80 bg-red-400">
-      <h1 className="testClass">templateNav</h1>
-      <h2>find your next job, find your next dev</h2>
-      <h4> DevPortfolio, connecting those who want with those who need</h4>
-      <button>sign up</button>
+    <div className="w-screen h-80 bg-red-400 flex justify-center" >
+      <div className="align-middle ">
+        <h2 className="text-5xl my-6">find your next job, find your next dev</h2>
+        <h4 className="text-xl my-6"> DevPortfolio, connecting those who want with those who need</h4>
+        <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 ">Sign Up</button>
+      </div>
     </div>
   )
 }
