@@ -4,6 +4,8 @@ exports.seed = knex => {
 
   return empty('projects')()
     .then(empty('developersProjects'))
+    .then(empty('developersLanguages'))
     .then(empty('developers'))
+    .then(empty('languages'))
   // .then(empty('table_name'))
 }
