@@ -22,6 +22,9 @@ function getDevelopers (db = connection) {
       'projects.id as projectId',
       'projects.image as projectImage',
       'projects.name as projectName',
+      'developersProjects.developer_id as projectDevId',
+      'developersLanguages.developer_id as languageDevId',
+      'developersPlatforms.developer_id as platformDevId',
       'link',
       'email',
       'languages.id as languageId',
@@ -39,23 +42,29 @@ function getDevelopers (db = connection) {
           pronoun: dev.pronoun,
           bio: dev.bio,
           projects: results.reduce((projacc, project) => {
-            return projacc.some(e => e.projectId === project.projectId) ? projacc : [...projacc, {
-              projectId: project.projectId,
-              projectImage: project.projectImage,
-              projectName: project.projectName
-            }]
+            return project.projectDevId === dev.id && !projacc.some(e => e.projectId === project.projectId)
+              ? [...projacc, {
+                projectId: project.projectId,
+                projectImage: project.projectImage,
+                projectName: project.projectName
+              }]
+              : projacc
           }, []),
           languages: results.reduce((langacc, language) => {
-            return langacc.some(e => e.languageId === language.languageId) ? langacc : [...langacc, {
-              languageId: language.languageId,
-              languageName: language.languageName
-            }]
+            return language.languageDevId === dev.id && !langacc.some(e => e.languageId === language.languageId)
+              ? [...langacc, {
+                languageId: language.languageId,
+                languageName: language.languageName
+              }]
+              : langacc
           }, []),
           platforms: results.reduce((platacc, platform) => {
-            return platacc.some(e => e.platformId === platform.platformId) ? platacc : [...platacc, {
-              platformId: platform.platformId,
-              platformName: platform.platformName
-            }]
+            return platform.platformDevId === dev.id && !platacc.some(e => e.platformId === platform.platformId)
+              ? [...platacc, {
+                platformId: platform.platformId,
+                platformName: platform.platformName
+              }]
+              : platacc
           }, [])
         }]
       }, [])
