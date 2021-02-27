@@ -4,7 +4,7 @@ module.exports = {
   getDevelopers
 }
 
-function getDevelopers(db = connection) {
+function getDevelopers (db = connection) {
   return db('developers')
     .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
     .leftJoin('projects', 'developersProjects.project_id', 'projects.id')
@@ -22,6 +22,9 @@ function getDevelopers(db = connection) {
       'projects.id as projectId',
       'projects.image as projectImage',
       'projects.name as projectName',
+      'developersProjects.developer_id as projectDevId',
+      'developersLanguages.developer_id as languageDevId',
+      'developersPlatforms.developer_id as platformDevId',
       'link',
       'email',
       'languages.id as languageId',
@@ -31,7 +34,6 @@ function getDevelopers(db = connection) {
     )
     .then(results => {
       const devs = results.reduce((devAcc, dev) => {
-        // if (!dev.length) return null
         return devAcc.some(e => e.id === dev.id) ? devAcc : [...devAcc, {
           id: dev.id,
           profilePic: dev.profilePic,
@@ -40,23 +42,29 @@ function getDevelopers(db = connection) {
           pronoun: dev.pronoun,
           bio: dev.bio,
           projects: results.reduce((projacc, project) => {
-            return projacc.some(e => e.projectId === project.projectId) ? projacc : [...projacc, {
-              projectId: project.projectId,
-              projectImage: project.projectImage,
-              projectName: project.projectName
-            }]
+            return project.projectDevId === dev.id && !projacc.some(e => e.projectId === project.projectId)
+              ? [...projacc, {
+                projectId: project.projectId,
+                projectImage: project.projectImage,
+                projectName: project.projectName
+              }]
+              : projacc
           }, []),
           languages: results.reduce((langacc, language) => {
-            return langacc.some(e => e.languageId === language.languageId) ? langacc : [...langacc, {
-              languageId: language.languageId,
-              languageName: language.languageName
-            }]
+            return language.languageDevId === dev.id && !langacc.some(e => e.languageId === language.languageId)
+              ? [...langacc, {
+                languageId: language.languageId,
+                languageName: language.languageName
+              }]
+              : langacc
           }, []),
           platforms: results.reduce((platacc, platform) => {
-            return platacc.some(e => e.platformId === platform.platformId) ? platacc : [...platacc, {
-              platformId: platform.platformId,
-              platformName: platform.platformName
-            }]
+            return platform.platformDevId === dev.id && !platacc.some(e => e.platformId === platform.platformId)
+              ? [...platacc, {
+                platformId: platform.platformId,
+                platformName: platform.platformName
+              }]
+              : platacc
           }, [])
         }]
       }, [])
