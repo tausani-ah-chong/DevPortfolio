@@ -1,22 +1,10 @@
 const connection = require('./connection')
 
 module.exports = {
-  getDevelopers,
-  getDeveloperById
+  getDevelopers
 }
 
 function getDevelopers (db = connection) {
-  return db('developers').select(
-    'id',
-    'profile_picture as profilePicture',
-    'first_name as firstName',
-    'last_name as lastName',
-    'pronoun',
-    'bio'
-  )
-}
-
-function getDeveloperById (id, db = connection) {
   return db('developers')
     .innerJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
     .innerJoin('projects', 'developersProjects.project_id', 'projects.id')
@@ -29,7 +17,8 @@ function getDeveloperById (id, db = connection) {
       'profile_picture as profilePic',
       'first_name as firstName',
       'last_name as lastName',
-      'pronoun', 'bio',
+      'pronoun',
+      'bio',
       'projects.id as projectId',
       'projects.image as projectImage',
       'projects.name as projectName',
@@ -40,37 +29,37 @@ function getDeveloperById (id, db = connection) {
       'platforms.id as platformId',
       'platforms.name as platformName'
     )
-    .where('developers.id', id)
     .then(results => {
-      if (!results.length) return null
-      const dev = results[0]
-      return {
-        id: dev.id,
-        profilePic: dev.profilePic,
-        firstName: dev.firstName,
-        lastName: dev.lastName,
-        pronoun: dev.pronoun,
-        bio: dev.bio,
-        email: dev.email,
-        projects: results.reduce((acc, project) => {
-          return acc.some(e => e.projectId === project.projectId) ? acc : [...acc, {
-            projectId: project.projectId,
-            projectImage: project.projectImage,
-            projectName: project.projectName
-          }]
-        }, []),
-        languages: results.reduce((acc, language) => {
-          return acc.some(e => e.languageId === language.languageId) ? acc : [...acc, {
-            languageId: language.languageId,
-            languageName: language.languageName
-          }]
-        }, []),
-        platforms: results.reduce((acc, platform) => {
-          return acc.some(e => e.platformId === platform.platformId) ? acc : [...acc, {
-            platformId: platform.platformId,
-            platformName: platform.platformName
-          }]
-        }, [])
-      }
+      const devs = results.reduce((devAcc, dev) => {
+        return devAcc.some(e => e.id === dev.id) ? devAcc : [...devAcc, {
+          id: dev.id,
+          profilePic: dev.profilePic,
+          firstName: dev.firstName,
+          lastName: dev.lastName,
+          pronoun: dev.pronoun,
+          bio: dev.bio,
+          projects: results.reduce((projacc, project) => {
+            return projacc.some(e => e.projectId === project.projectId) ? projacc : [...projacc, {
+              projectId: project.projectId,
+              projectImage: project.projectImage,
+              projectName: project.projectName
+            }]
+          }, []),
+          languages: results.reduce((langacc, language) => {
+            return langacc.some(e => e.languageId === language.languageId) ? langacc : [...langacc, {
+              languageId: language.languageId,
+              languageName: language.languageName
+            }]
+          }, []),
+          platforms: results.reduce((platacc, platform) => {
+            return platacc.some(e => e.platformId === platform.platformId) ? platacc : [...platacc, {
+              platformId: platform.platformId,
+              platformName: platform.platformName
+            }]
+          }, [])
+        }]
+      }, [])
+      console.log(JSON.stringify(devs, null, 2))
+      return devs
     })
 }
