@@ -5,8 +5,8 @@ import Explore from './components/Explore'
 import Nav from './components/Nav'
 import SearchBar from './components/SearchBar'
 import Banner from './components/Banner'
-import Template from './components/Template'
-import TemplateProfilePage from './components/TemplateProfilePage'
+import Template from './components/templates/Template'
+import TemplateProfilePage from './components/templates/TemplateProfilePage'
 
 const App = () => {
   return (
