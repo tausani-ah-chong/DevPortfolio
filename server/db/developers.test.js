@@ -24,7 +24,7 @@ describe('Getting developers', () => {
       .then(devs => {
         expect(devs).toHaveLength(3)
         expect(devs[0].id).toBe(1)
-        expect(devs[0].first_name).toMatch('multi')
+        expect(devs[0].firstName).toMatch('multi')
         return null
       })
   })
@@ -40,6 +40,9 @@ describe('Join developers and Projects', () => {
         expect(dev.projects[1].projectId).toBe(2)
         expect(dev.languages).toHaveLength(2)
         expect(dev.languages[0].languageName).toMatch('JS')
+        expect(dev.languages).toHaveLength(2)
+        expect(dev.platforms[0].platformName).toMatch('Web')
+        expect(dev.platforms).toHaveLength(2)
         return null
       })
   })
