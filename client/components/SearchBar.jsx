@@ -13,7 +13,9 @@ function SearchBar () {
       <Link to='/web'>
         <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 mx-6">Web</button>
       </Link>
-      <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 mx-6">Software</button>
+      <Link to='/software'>
+        <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 mx-6">Software</button>
+      </Link>
     </div>
   )
 }
