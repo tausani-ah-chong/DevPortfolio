@@ -1,4 +1,5 @@
 import React from 'react'
+import TemplateProfileCarousel from './TemplateProfileCarousel'
 
 export default function TemplateProfileBanner () {
   const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus nulla dui, non vestibulum arcu bibendum a. Morbi vestibulum molestie eros ac mattis. Maecenas a justo bibendum, ornare nisl vel, blandit tortor. In euismod purus eu lacinia pulvinar. Morbi vel purus velit. Etiam maximus, nisi et commodo tempor, nisi odio tincidunt massa, vel sagittis lorem nisi non elit. Nam ligula felis, molestie ut nunc eu, sollicitudin maximus sapien.'
@@ -27,8 +28,9 @@ export default function TemplateProfileBanner () {
           </div>
         </div>
         <div className="bg-green-400 w-full order-2 col-span-2 flex items-center">
-          <img src="/images/placeholder-img/pic1.jpg" className="mx-auto my-auto w-auto h-72 "/>
+          <TemplateProfileCarousel/>
         </div>
+
       </div>
     </>
   )
