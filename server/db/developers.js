@@ -4,7 +4,7 @@ module.exports = {
   getDevelopers
 }
 
-function getDevelopers (db = connection) {
+function getDevelopers(db = connection) {
   return db('developers')
     .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
     .leftJoin('projects', 'developersProjects.project_id', 'projects.id')
@@ -31,6 +31,7 @@ function getDevelopers (db = connection) {
     )
     .then(results => {
       const devs = results.reduce((devAcc, dev) => {
+        // if (!dev.length) return null
         return devAcc.some(e => e.id === dev.id) ? devAcc : [...devAcc, {
           id: dev.id,
           profilePic: dev.profilePic,
