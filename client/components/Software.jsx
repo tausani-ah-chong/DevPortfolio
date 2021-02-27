@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import DevCard from './DevCard'
 import { setStore } from './exploreHelper'
 
-function Mobile ({ mobile }) {
+function Software ({ software }) {
   useEffect(() => {
     setStore()
   }, [])
@@ -12,7 +12,7 @@ function Mobile ({ mobile }) {
     <>
       <div className=" w-screen grid grid-cols-4 gap-4 bg-blue-400 rounded-md p-10">
         {
-          mobile.map(dev => {
+          software.map(dev => {
             return (
               <DevCard key={dev.id} dev={dev} />
             )
@@ -25,8 +25,8 @@ function Mobile ({ mobile }) {
 
 function mapStateToProps (state) {
   return {
-    mobile: state.mobile
+    software: state.software
   }
 }
 
-export default connect(mapStateToProps)(Mobile)
+export default connect(mapStateToProps)(Software)

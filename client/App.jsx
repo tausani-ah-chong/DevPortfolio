@@ -6,6 +6,8 @@ import Nav from './components/Nav'
 import Banner from './components/Banner'
 import SearchBar from './components/SearchBar'
 import Mobile from './components/Mobile'
+import Web from './components/Web'
+import Software from './components/Software'
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Route path='/' component={SearchBar} />
       <Route exact path='/' component={Explore} />
       <Route exact path='/mobile' component={Mobile} />
+      <Route exact path='/web' component={Web} />
+      <Route exact path='/software' component={Software} />
     </>
   )
 }
