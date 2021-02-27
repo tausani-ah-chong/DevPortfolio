@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 export default function TemplateProfileCarousel () {
   const [pic, setPic] = useState(1)
 
-  setTimeout(function () { setPic(pic + 1) }, 3000)
+  setTimeout(function () { setPic(pic + 1) }, 4000)
 
   console.log(pic)
 
-  if (pic === 4) {
+  if (pic === 3) {
     setPic(1)
   } else if (pic < 1) {
     setPic(3)
