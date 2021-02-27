@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import SearchBar from './components/SearchBar'
 import Banner from './components/Banner'
 import Template from './components/Template'
+import TemplateProfilePage from './components/TemplateProfilePage'
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       <Route exact path='/' component={Banner} />
       <Route exact path='/' component={SearchBar} />
       <Route exact path='/' component={Explore} />
-      <Route exact path='/css' component={Template} />
+      <Route exact path='/css' component={TemplateProfilePage} />
+
     </>
   )
 }
