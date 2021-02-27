@@ -27,7 +27,6 @@ describe('GET /api/v1/dev', () => {
       .get('/api/v1/dev')
       .expect(200)
       .then((devs) => {
-        console.log(devs)
         expect(devs.body).toHaveLength(3)
         expect(devs.body[0].firstName).toMatch('1')
         return null
