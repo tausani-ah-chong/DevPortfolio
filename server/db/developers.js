@@ -6,12 +6,12 @@ module.exports = {
 
 function getDevelopers (db = connection) {
   return db('developers')
-    .innerJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
-    .innerJoin('projects', 'developersProjects.project_id', 'projects.id')
-    .innerJoin('developersLanguages', 'developersLanguages.developer_id', 'developers.id')
-    .innerJoin('languages', 'developersLanguages.language_id', 'languages.id')
-    .innerJoin('developersPlatforms', 'developersPlatforms.developer_id', 'developers.id')
-    .innerJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
+    .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
+    .leftJoin('projects', 'developersProjects.project_id', 'projects.id')
+    .leftJoin('developersLanguages', 'developersLanguages.developer_id', 'developers.id')
+    .leftJoin('languages', 'developersLanguages.language_id', 'languages.id')
+    .leftJoin('developersPlatforms', 'developersPlatforms.developer_id', 'developers.id')
+    .leftJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
     .select(
       'developers.id as id',
       'profile_picture as profilePic',
@@ -59,7 +59,6 @@ function getDevelopers (db = connection) {
           }, [])
         }]
       }, [])
-      console.log(JSON.stringify(devs, null, 2))
       return devs
     })
 }

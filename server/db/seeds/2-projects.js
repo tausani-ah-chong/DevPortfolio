@@ -18,7 +18,6 @@ exports.seed = function (knex) {
     { id: 16, name: 'rowValue3', image: '/images/project-img/frankie-lopez-Dh7X6RjjNCs-unsplash-min.jpg', link: '' },
     { id: 17, name: 'rowValue3', image: '/images/project-img/frankie-lopez-mRwOOCTL0HQ-unsplash-min.jpg', link: '' },
     { id: 18, name: 'rowValue3', image: '/images/project-img/gabriel-gurrola-u6BPMXgURuI-unsplash-min.jpg', link: '' },
-    { id: 19, name: 'rowValue3', image: '/images/project-img/jan-mayer-sAQ-vjVey20-unsplash-min.jpg', link: '' },
-    { id: 20, name: 'rowValue3', image: '/images/project-img/joey-banks-YApiWyp0lqo-unsplash-min.jpg', link: '' }
+    { id: 19, name: 'rowValue3', image: '/images/project-img/jan-mayer-sAQ-vjVey20-unsplash-min.jpg', link: '' }
   ])
 }
