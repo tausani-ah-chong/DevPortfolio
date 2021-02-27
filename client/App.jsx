@@ -10,11 +10,11 @@ import Mobile from './components/Mobile'
 const App = () => {
   return (
     <>
-      <Route to='/' component={Nav} />
-      <Route to='/' component={Banner} />
-      <Route to='/' component={SearchBar} />
-      <Route to='/' component={Explore} />
-      <Route to='/mobile' component={Mobile} />
+      <Route path='/' component={Nav} />
+      <Route path='/' component={Banner} />
+      <Route path='/' component={SearchBar} />
+      <Route exact path='/' component={Explore} />
+      <Route exact path='/mobile' component={Mobile} />
     </>
   )
 }
