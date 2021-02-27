@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom'
 
 import Explore from './components/Explore'
 import Nav from './components/Nav'
-import SearchBar from './components/SearchBar'
 import Banner from './components/Banner'
 
 const App = () => {
@@ -11,7 +10,6 @@ const App = () => {
     <>
       <Route to='/' component={Nav} />
       <Route to='/' component={Banner} />
-      <Route to='/' component={SearchBar} />
       <Route to='/' component={Explore} />
     </>
   )
