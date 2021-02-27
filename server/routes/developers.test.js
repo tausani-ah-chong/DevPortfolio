@@ -21,30 +21,32 @@ const mockDevelopers = [{
 ]
 
 describe('GET /api/v1/dev', () => {
-  it('responds with list of developers', () => {
+  it('responds with list of developers and data', () => {
     db.getDevelopers.mockImplementation(() => Promise.resolve(mockDevelopers))
     return request(server)
       .get('/api/v1/dev')
       .expect(200)
       .then((devs) => {
+        console.log(devs)
         expect(devs.body).toHaveLength(3)
+        expect(devs.body[0].firstName).toMatch('1')
         return null
       })
   })
 })
 
-describe('GET /api/v1/dev/:id', () => {
-  it('responds with a developer', () => {
-    db.getDeveloperById.mockImplementation((id) => {
-      expect(id).toBe(2)
-      return Promise.resolve(mockDevelopers[1])
-    })
-    return request(server)
-      .get('/api/v1/dev/2')
-      .expect(200)
-      .then((dev) => {
-        expect(dev.body.lastName).toMatch('lastish')
-        return null
-      })
-  })
-})
+// describe('GET /api/v1/dev/:id', () => {
+//   it('responds with a developer', () => {
+//     db.getDeveloperById.mockImplementation((id) => {
+//       expect(id).toBe(2)
+//       return Promise.resolve(mockDevelopers[1])
+//     })
+//     return request(server)
+//       .get('/api/v1/dev/2')
+//       .expect(200)
+//       .then((dev) => {
+//         expect(dev.body.lastName).toMatch('lastish')
+//         return null
+//       })
+//   })
+// })
