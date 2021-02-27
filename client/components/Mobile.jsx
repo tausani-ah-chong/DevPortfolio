@@ -1,18 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import DevCard from './DevCard'
-import { setStore } from './exploreHelper'
 
-function Explore ({ devs }) {
-  useEffect(() => {
-    setStore()
-  }, [])
-
+function Mobile ({ mobile }) {
   return (
     <>
       <div className=" w-screen grid grid-cols-4 gap-4 bg-blue-400 rounded-md p-10">
         {
-          devs.map(dev => {
+          mobile.map(dev => {
             return (
               <DevCard key={dev.id} dev={dev} />
             )
@@ -25,8 +20,8 @@ function Explore ({ devs }) {
 
 function mapStateToProps (state) {
   return {
-    devs: state.devs
+    mobile: state.mobile
   }
 }
 
-export default connect(mapStateToProps)(Explore)
+export default connect(mapStateToProps)(Mobile)
