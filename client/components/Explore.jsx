@@ -4,6 +4,7 @@ import { setDevs } from '../actions/devs'
 import { connect } from 'react-redux'
 import DevCard from './DevCard'
 import { setMobile } from '../actions/mobile'
+import { setWeb } from '../actions/web'
 
 function Explore ({ dispatch, devs, mobile }) {
   useEffect(() => {
@@ -11,6 +12,7 @@ function Explore ({ dispatch, devs, mobile }) {
       .then((res) => {
         dispatch(setDevs(res.body))
         dispatch(setMobile(res.body))
+        dispatch(setWeb(res.body))
         return null
       })
   }, [])
