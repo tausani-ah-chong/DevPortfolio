@@ -7,16 +7,16 @@ jest.mock('../db/developers')
 
 const mockDevelopers = [{
   id: 1,
-  first_name: 'test 1',
-  last_name: 'last name'
+  firstName: 'test 1',
+  lastName: 'last name'
 }, {
   id: 2,
-  first_name: 'test 2',
-  last_name: 'lastish name'
+  firstName: 'test 2',
+  lastName: 'lastish name'
 }, {
   id: 3,
-  first_name: 'test 3',
-  last_name: 'dang last name'
+  firstName: 'test 3',
+  lastName: 'dang last name'
 }
 ]
 
@@ -43,7 +43,7 @@ describe('GET /api/v1/dev/:id', () => {
       .get('/api/v1/dev/2')
       .expect(200)
       .then((dev) => {
-        expect(dev.body.last_name).toMatch('lastish')
+        expect(dev.body.lastName).toMatch('lastish')
         return null
       })
   })

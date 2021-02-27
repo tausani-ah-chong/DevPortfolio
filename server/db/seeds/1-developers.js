@@ -1,9 +1,9 @@
 exports.seed = function (knex) {
   return knex('developers').insert([
-    { id: 1, profile_picture: '', first_name: 'multi', last_name: 'Ah Foon', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 2, profile_picture: '', first_name: 'sani', last_name: 'Ah Chong', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 3, profile_picture: '', first_name: 'anna', last_name: 'Fowler', pronoun: 'her/she', bio: 'lorem ipsum' },
-
+    // TODO: Make seeds more diverse
+    { id: 1, profile_picture: '/images/dev-img/imansyah-muhamad-putera-n4KewLKFOZw-unsplash-min.jpg', first_name: 'Lloyd', last_name: 'Banks', pronoun: 'him/he', bio: 'lorem ipsum' },
+    { id: 2, profile_picture: '/images/dev-img/jurica-koletic-7YVZYZeITc8-unsplash-min.jpg', first_name: 'Kylie', last_name: 'Afoa', pronoun: 'her/she', bio: 'lorem ipsum' },
+    { id: 3, profile_picture: '/images/dev-img/gabriel-silverio-u3WmDyKGsrY-unsplash-min.jpg', first_name: 'Bruce', last_name: 'Loifua', pronoun: 'her/she', bio: 'lorem ipsum' },
     { id: 4, profile_picture: '/images/dev-img/aatik-tasneem-7omHUGhhmZ0-unsplash-min.jpg', first_name: 'Emily', last_name: 'Simpson', pronoun: 'him/he', bio: 'lorem ipsum' },
     { id: 5, profile_picture: '/images/dev-img/aiony-haust-3TLl_97HNJo-unsplash-min.jpg', first_name: 'Diane', last_name: 'Welch', pronoun: 'They/Them', bio: 'lorem ipsum' },
     { id: 6, profile_picture: '/images/dev-img/albert-dera-ILip77SbmOE-unsplash-min.jpg', first_name: 'Dan', last_name: 'Richard', pronoun: 'him/he', bio: 'lorem ipsum' },

@@ -10,8 +10,8 @@ function getDevelopers (db = connection) {
     .innerJoin('projects', 'developersProjects.project_id', 'projects.id')
     .innerJoin('developersLanguages', 'developersLanguages.developer_id', 'developers.id')
     .innerJoin('languages', 'developersLanguages.language_id', 'languages.id')
-    // .innerJoin('developersPlatforms', 'developersPlatforms.developer_id', 'developers.id')
-    // .innerJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
+    .innerJoin('developersPlatforms', 'developersPlatforms.developer_id', 'developers.id')
+    .innerJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
     .select(
       'developers.id as id',
       'profile_picture as profilePic',
@@ -25,7 +25,9 @@ function getDevelopers (db = connection) {
       'link',
       'email',
       'languages.id as languageId',
-      'languages.name as languageName'
+      'languages.name as languageName',
+      'platforms.id as platformId',
+      'platforms.name as platformName'
     )
     .then(results => {
       const devs = results.reduce((devAcc, dev) => {
