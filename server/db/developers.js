@@ -50,13 +50,13 @@ function getDevelopers (db = connection) {
               languageId: language.languageId,
               languageName: language.languageName
             }]
+          }, []),
+          platforms: results.reduce((platacc, platform) => {
+            return platacc.some(e => e.platformId === platform.platformId) ? platacc : [...platacc, {
+              platformId: platform.platformId,
+              platformName: platform.platformName
+            }]
           }, [])
-          // platforms: results.reduce((platacc, platform) => {
-          //   return platacc.some(e => e.platformId === platform.platformId) ? platacc : [...platacc, {
-          //     platformId: platform.platformId,
-          //     platformName: platform.platformName
-          //   }]
-          // }, [])
         }]
       }, [])
       console.log(JSON.stringify(devs, null, 2))
