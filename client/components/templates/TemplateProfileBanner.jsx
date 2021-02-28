@@ -19,7 +19,7 @@ export default function TemplateProfileBanner () {
             </div>
           </div>
           {/* user info */}
-          <div className="w-auto h-full pt-2">
+          <div className="w-auto h-full pt-2 pr-20">
             <ul>
               <li className='text-5xl mb-1 font-semibold' >Multi Ah Foon</li>
               <li className="text-xl italic mb-1">Full Stack Dev,Auckland</li>
@@ -27,8 +27,8 @@ export default function TemplateProfileBanner () {
               <li className="text-xl italic my-2">JS, Css, C#, Python</li>
               <hr/>
             </ul>
-            <div className='h-36 mt-3 w-auto overflow-auto border-2 border-cgrey rounded-md'>
-              <p className="mr-3">Bio: {finalIpsum }</p>
+            <div className='h-40 mt-3 w-auto overflow-auto bg-gray-200 rounded-md'>
+              <p className="mr-3 italic">{finalIpsum }</p>
             </div>
           </div>
         </div>
