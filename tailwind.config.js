@@ -2,7 +2,14 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        Poppins: ['Poppins', 'sans-serif']
+      },
+      colors: {
+        cgrey: '#333333'
+      }
+    }
   },
   variants: {
     extend: {}
