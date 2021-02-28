@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import consume from '../consume'
 
-function PersonalSignup () {
+function PersonalSignup (props) {
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -20,6 +20,12 @@ function PersonalSignup () {
 
   function handleSubmit (e) {
     e.preventDefault()
+    consume('/get-started', 'post', form)
+      .then(id => {
+        props.history.push(`/more/${id}`)
+        return null
+      })
+      .catch(err => console.error(err.message))
   }
 
   return (
@@ -41,29 +47,16 @@ function PersonalSignup () {
               <input className="bg-gray-100 rounded-md" id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
             </div>
 
-            {/* Pronoun might be a checkbox
-                She/Her
-                He/Him
-                They/Them
-            */}
-            <div className="listItem">
-              <label htmlFor='pronoun'>Pronoun</label>
-              <input id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
-            </div>
+            <label htmlFor='pronoun'>Pronoun</label>
+            <input id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
 
-            <div className="listItem">
-              <label htmlFor='profilePicture'>Add a Profile Picture</label>
-              <input id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
-            </div>
+            <label htmlFor='profilePicture'>Add a Profile Picture</label>
+            <input id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
 
-            <div className="listItem">
-              <label htmlFor='bio'>Bio</label>
-              <input id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
-            </div>
+            <label htmlFor='bio'>Bio</label>
+            <input id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
 
-            <Link to='/more'>
-              <button>Next</button>
-            </Link>
+            <button>Next</button>
 
           </form>
 
