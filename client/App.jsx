@@ -9,6 +9,7 @@ import Mobile from './components/Mobile'
 import Web from './components/Web'
 import Software from './components/Software'
 import SearchBar from './components/SearchBar'
+import TemplateVisible from './components/templates/TemplateVisible'
 
 function App () {
   return (
@@ -18,6 +19,7 @@ function App () {
       <Route exact path='/' component={SearchBar} />
       <Route exact path='/' component={Explore} />
       <Route exact path='/css' component={TemplateProfilePage} />
+      <Route exact path='/visible' component={TemplateVisible} />
       <Route exact path='/mobile' component={Mobile} />
       <Route exact path='/web' component={Web} />
       <Route exact path='/software' component={Software} />
