@@ -17,8 +17,8 @@ function App () {
   return (
     <>
       <Route path='/' component={Nav} />
-      <Route path='/' component={Banner} />
-      <Route path='/' component={SearchBar} />
+      <Route exact path='/' component={Banner} />
+      <Route exact path='/' component={SearchBar} />
       <Route exact path='/' component={Explore} />
       <Route exact path='/css' component={TemplateProfilePage} />
       <Route exact path='/visible' component={TemplateVisible} />

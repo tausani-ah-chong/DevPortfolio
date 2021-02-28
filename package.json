@@ -49,6 +49,7 @@
     ]
   },
   "dependencies": {
+    "devicon": "^2.10.1",
     "express": "^4.17.1",
     "firebase": "^8.2.9",
     "knex": "^0.21.18",
