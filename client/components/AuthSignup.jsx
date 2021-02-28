@@ -1,50 +1,48 @@
 import React, { useRef, useState } from 'react'
-
-import { useAuth } from '../contexts/AuthContext'
+// import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
 
 function AuthSignup () {
-  const { signup } = useAuth()
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  const passwordConfirmRef = useRef()
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-  const history = useHistory()
+  // const { signup } = useAuth()
+  // const emailRef = useRef()
+  // const passwordRef = useRef()
+  // const passwordConfirmRef = useRef()
+  // const [error, setError] = useState('')
+  // const [loading, setLoading] = useState(false)
+  // const history = useHistory()
 
-  async function signupHandler (e) {
-    e.preventDefault()
+  // async function signupHandler (e) {
+  //   e.preventDefault()
 
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      setError('Passwords do not match')
-    }
+  //   if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+  //     setError('Passwords do not match')
+  //   }
 
-    try {
-      setError('')
-      setLoading(true)
-      await signup(emailRef.current.value, passwordRef.current.value)
-      history.push('/')
-    } catch {
-      setError('Failed to create an account')
-    }
-    setLoading(false)
-  }
+  //   try {
+  //     setError('')
+  //     setLoading(true)
+  //     await signup(emailRef.current.value, passwordRef.current.value)
+  //     history.push('/')
+  //   } catch {
+  //     setError('Failed to create an account')
+  //   }
+  //   setLoading(false)
+  // }
 
   return (
     <>
       <h1>Sign up!</h1>
-      <form onSubmit={signupHandler}>
-        {error && alert(error)}
+      <form >
         <label htmlFor='email'>Email</label>
-        <input id='email' type='email' ref={emailRef} name='email' required></input>
+        <input id='email' type='email' name='email' required/>
 
         <label htmlFor='password'>Password</label>
-        <input id='password' type='password' ref={passwordRef} name='password' required></input>
+        <input id='password' type='password' name='password' required/>
 
         <label htmlFor='confirmPassword'>Confirm Password</label>
-        <input id='confirmPassword' type='password' ref={passwordConfirmRef} name='confirmPassword' required></input>
+        <input id='confirmPassword' type='password' name='confirmPassword' required/>
 
-        <button disable={loading}>Sign Up</button>
+        <button>Sign Up</button>
 
       </form>
 

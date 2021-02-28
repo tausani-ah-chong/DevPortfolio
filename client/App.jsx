@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-
+// import { AuthProvider } from './contexts/AuthContext'
 import Explore from './components/Explore'
 import Nav from './components/Nav'
 import Banner from './components/Banner'
@@ -17,12 +17,12 @@ function App () {
       <Route path='/' component={Nav} />
       <Route path='/' component={Banner} />
       <Route path='/' component={SearchBar} />
+      <Route path='/signup' component={AuthSignup} />
       <Route exact path='/' component={Explore} />
       <Route exact path='/css' component={TemplateProfilePage} />
       <Route exact path='/mobile' component={Mobile} />
       <Route exact path='/web' component={Web} />
       <Route exact path='/software' component={Software} />
-      <Route path='/signup' component={AuthSignup} />
     </>
   )
 }
