@@ -28,3 +28,7 @@
 .devicon-javascript-plain {
   width: 3rem;
 }
+
+.listItem{
+  @apply my-3
+}
