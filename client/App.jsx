@@ -8,6 +8,7 @@ import SearchBar from './components/SearchBar'
 import Mobile from './components/Mobile'
 import Web from './components/Web'
 import Software from './components/Software'
+import AuthSignup from './components/AuthSignup'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route exact path='/mobile' component={Mobile} />
       <Route exact path='/web' component={Web} />
       <Route exact path='/software' component={Software} />
+      <Route path='/signup' component={AuthSignup} />
     </>
   )
 }
