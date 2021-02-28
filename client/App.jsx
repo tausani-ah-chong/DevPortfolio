@@ -3,19 +3,24 @@ import { Route } from 'react-router-dom'
 
 import Explore from './components/Explore'
 import Nav from './components/Nav'
-import SearchBar from './components/SearchBar'
 import Banner from './components/Banner'
 import TemplateProfilePage from './components/templates/TemplateProfilePage'
+import Mobile from './components/Mobile'
+import Web from './components/Web'
+import Software from './components/Software'
+import SearchBar from './components/SearchBar'
 
-const App = () => {
+function App () {
   return (
     <>
-      <Route exact path='/' component={Nav} />
-      <Route exact path='/' component={Banner} />
-      <Route exact path='/' component={SearchBar} />
+      <Route path='/' component={Nav} />
+      <Route path='/' component={Banner} />
+      <Route path='/' component={SearchBar} />
       <Route exact path='/' component={Explore} />
       <Route exact path='/css' component={TemplateProfilePage} />
-
+      <Route exact path='/mobile' component={Mobile} />
+      <Route exact path='/web' component={Web} />
+      <Route exact path='/software' component={Software} />
     </>
   )
 }
