@@ -20,6 +20,14 @@ const mockDevelopers = [{
 }
 ]
 
+const newDev = {
+  firstName: 'christo',
+  lastName: 'difficult last name',
+  profilePicture: 'beautiful face',
+  pronoun: 'him/he',
+  bio: 'cool bio'
+}
+
 describe('GET /api/v1/dev', () => {
   it('responds with list of developers and data', () => {
     db.getDevelopers.mockImplementation(() => Promise.resolve(mockDevelopers))
@@ -34,18 +42,16 @@ describe('GET /api/v1/dev', () => {
   })
 })
 
-// describe('GET /api/v1/dev/:id', () => {
-//   it('responds with a developer', () => {
-//     db.getDeveloperById.mockImplementation((id) => {
-//       expect(id).toBe(2)
-//       return Promise.resolve(mockDevelopers[1])
-//     })
-//     return request(server)
-//       .get('/api/v1/dev/2')
-//       .expect(200)
-//       .then((dev) => {
-//         expect(dev.body.lastName).toMatch('lastish')
-//         return null
-//       })
-//   })
-// })
+describe('POST / api/v1/dev/get-started', () => {
+  it('responds with new developer id', () => {
+    db.insertNewDeveloper.mockImplementation(() => Promise.resolve(4))
+    return request(server)
+      .post('/api/v1/dev/get-started')
+      .send(newDev)
+      .expect(201)
+      .then(res => {
+        expect(res.body).toBe(4)
+        return null
+      })
+  })
+})
