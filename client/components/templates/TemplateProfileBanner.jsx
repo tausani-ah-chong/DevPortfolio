@@ -9,22 +9,26 @@ export default function TemplateProfileBanner () {
 
   return (
     <>
-      <div className="w-full bg-gray-400 h-96 grid grid-cols-2 p-3">
+      <div className="w-full  h-96 grid grid-cols-2 p-3">
         {/* profilepic and hire button */}
-        <div className="w-full h-full bg-blue-200 flex pr-10 pl-72">
-          <div>
-            <div className="ml-10 rounded-full h-48 w-48 bg-red-400"></div>
-            <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 mx-6">Hire Me</button>
+        <div className="w-full h-full flex pr-10 pl-72">
+          <div className=" pr-6 pt-3 justify-center">
+            <div>
+              <div className="mb-3 mx-auto rounded-full h-48 w-48 bg-red-400"></div>
+              <button type="button" className="flex items-center mx-auto hover:bg-yellow-200 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Hire Me</button>
+            </div>
           </div>
           {/* user info */}
-          <div className="bg-yellow-400 w-1/2 h-full p-3">
+          <div className="w-auto h-full pt-2">
             <ul>
-              <li className='text-5xl font-semibold' >Multi Ah Foon</li>
-              <li className="border-b-2 border-black text-xl italic">Full Stack Dev,Auckland</li>
-              <li className="border-b-2 border-black text-xl italic my-3">JS, Css, C#, Python</li>
+              <li className='text-5xl mb-1 font-semibold' >Multi Ah Foon</li>
+              <li className="text-xl italic mb-1">Full Stack Dev,Auckland</li>
+              <hr/>
+              <li className="text-xl italic my-2">JS, Css, C#, Python</li>
+              <hr/>
             </ul>
-            <div className='h-36 w-auto overflow-auto border-2 border-cgrey rounded-md'>
-              <p className="mx-3">Bio: {finalIpsum }</p>
+            <div className='h-36 mt-3 w-auto overflow-auto border-2 border-cgrey rounded-md'>
+              <p className="mr-3">Bio: {finalIpsum }</p>
             </div>
           </div>
         </div>
