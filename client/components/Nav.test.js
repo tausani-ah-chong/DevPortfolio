@@ -6,8 +6,8 @@ describe('check if nav compentent displays', () => {
   it('shows the text "Nav component"', () => {
     expect.assertions(2)
     render(<Nav />)
-    const element = screen.getByText('Sign In')
+    const element = screen.getByText('Sign Up')
     expect(element).toBeInTheDocument()
-    expect(element).toHaveTextContent('Sign In')
+    expect(element).toHaveTextContent('Sign Up')
   })
 })
