@@ -29,6 +29,7 @@ function App() {
         <Route path='/get-started' component={PersonalSignup} />
         <Route path='/get-started/more' component={MoreInfoSignup} />
       </AuthProvider>
+
     </>
   )
 }

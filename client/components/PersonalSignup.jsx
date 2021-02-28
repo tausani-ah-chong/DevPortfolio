@@ -25,7 +25,7 @@ function PersonalSignup () {
   return (
     <>
       <div>
-        <h1>Welcome! Let`&apos`s create your profile</h1>
+        <h1>Welcome! Let&apos;s create your profile</h1>
       </div>
 
       <div>
@@ -43,6 +43,11 @@ function PersonalSignup () {
             <label htmlFor='lastName'>Last Name</label>
             <input id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
 
+            {/* Pronoun might be a checkbox
+                She/Her
+                He/Him
+                They/Them
+            */}
             <label htmlFor='pronoun'>Pronoun</label>
             <input id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
 
@@ -52,7 +57,7 @@ function PersonalSignup () {
             <label htmlFor='bio'>Bio</label>
             <input id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
 
-            <Link to='/moreinfo'>
+            <Link to='/more'>
               <button>Next</button>
             </Link>
 
