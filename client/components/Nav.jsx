@@ -17,8 +17,9 @@ function Nav () {
         <div className="w-full grid grid-cols-2">
           <h1 className="text-xl font-semibold my-auto ">DevPortfolio</h1>
           <span className= "flex relative order-1">
-            <a href='' className="font-semibold mx-6 inline absolute right-0 hover:text-blue-500">Sign In</a>
-            <a href='' className="font-semibold mx-6 inline absolute right-20 hover:text-blue-500">Sign Up</a>
+            {/* <a href='' className="font-semibold mx-6 inline absolute right-0 hover:text-blue-500">Sign In</a> */}
+            <button type="button" className="flex items-center absolute right-0 mx-6 bg-blue-200 rounded-md h-10 px-3 font-semibold">Sign in</button>
+            <a href='' className="font-semibold mx-6 inline absolute right-32 hover:text-blue-200">Sign Up</a>
           </span>
 
         </div>

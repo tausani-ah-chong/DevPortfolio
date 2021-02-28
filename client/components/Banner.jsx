@@ -2,11 +2,15 @@ import React from 'react'
 
 function Banner () {
   return (
-    <div className="w-screen h-80 bg-red-400 flex justify-center" >
-      <div className="align-middle ">
-        <h2 className=" font-Poppins italic font-bold text-5xl text-cgrey my-6">find your next job, find your next dev</h2>
-        <h4 className="text-xl my-6"> DevPortfolio, connecting those who want with those who need</h4>
-        <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 ">Sign Up</button>
+    <div className="w-screen h-auto grid grid-cols-2 p-10" >
+      <div className="ml-44">
+        <h2 className=" font-Poppins italic font-bold text-6xl text-cgrey my-6">Find your next job, </h2>
+        <h2 className=" font-Poppins italic font-bold text-6xl text-cgrey my-6">Find your next dev</h2>
+        <h4 className="text-2xl font-medium my-6"> DevPortfolio, connecting those who want with those who need</h4>
+        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Sign up</button>
+      </div>
+      <div className="order-2 w-full h-full">
+        <img className="rounded-md h-96 w-auto" src='/images/placeholder-img/pic1.jpg'/>
       </div>
     </div>
   )
