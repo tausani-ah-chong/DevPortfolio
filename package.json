@@ -49,10 +49,12 @@
     ]
   },
   "dependencies": {
+    "devicon": "^2.10.1",
     "express": "^4.17.1",
     "firebase": "^8.2.9",
     "knex": "^0.21.18",
     "postcss": "^8.2.6",
+    "process": "^0.11.10",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",

@@ -20,6 +20,5 @@ exports.seed = function (knex) {
     { id: 17, profile_picture: '/images/dev-img/joseph-gonzalez-iFgRcqHznqg-unsplash-min.jpg', first_name: 'Joan', last_name: 'Kimberly', pronoun: 'him/he', bio: 'lorem ipsum' },
     { id: 18, profile_picture: '/images/dev-img/jurica-koletic-7YVZYZeITc8-unsplash-min.jpg', first_name: 'Martin', last_name: 'Madeleine', pronoun: 'him/he', bio: 'lorem ipsum' },
     { id: 19, profile_picture: '/images/dev-img/kimson-doan-HD8KlyWRYYM-unsplash-min.jpg', first_name: 'Mitchell', last_name: 'Stephanie', pronoun: 'him/he', bio: 'lorem ipsum' }
-
   ])
 }
