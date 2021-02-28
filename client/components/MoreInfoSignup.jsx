@@ -10,24 +10,25 @@ function MoreInfoSignup () {
     <>
       <div className="w-full h-auto bg-yellow-100 flex items-center">
         <div className=" border-black border-2 w-auto mx-auto">
-          <i className="devicon-javascript-plain"></i>
           <form onSubmit={handleSubmit}>
 
             <p className="text-center text-3xl font-semibold ">What programming Languages do you know?</p>
             <span className="flex flex-row">
 
-              <div className="w-52 h-52 hover:bg-blue-200 border-black border-2 rounded-md m-6">
+              <div className="w-52 h-52 bg-blue-200 hover:bg-blue-500 border-black border-2 rounded-md m-6">
+                <i className="devicon-javascript-plain text-9xl text-white"></i>
                 <label htmlFor='JS'>JS</label>
-                <i className="devicon-angularjs-plain"></i>
                 <input id='JS' type="checkbox" value='JS' />
               </div>
 
-              <div className="w-52 h-52 hover:bg-blue-200 border-black border-2 rounded-md m-6">
+              <div className="w-52 h-52 bg-blue-200 hover:bg-blue-500 border-black border-2 rounded-md m-6">
+                <i className="devicon-csharp-plain text-9xl text-white"></i>
                 <label htmlFor='C#'>C#</label>
                 <input id='C#' type="checkbox" value='C#' />
               </div>
 
-              <div className="w-52 h-52 hover:bg-blue-200 border-black border-2 rounded-md m-6">
+              <div className="w-52 h-52 bg-blue-200 hover:bg-blue-500 border-black border-2 rounded-md m-6">
+                <i className="devicon-typescript-plain text-9xl text-white"></i>
                 <label htmlFor='TS'>TS</label>
                 <input id='TS' type="checkbox" value='TS' />
               </div>
@@ -37,17 +38,21 @@ function MoreInfoSignup () {
 
             <span className="flex flex-row">
 
-              <div className="w-52 h-52 border-black border-2 rounded-md m-6">
+              <div className="w-52 h-52 bg-blue-200 hover:bg-blue-500 border-black border-2 rounded-md m-6">
+                <i className="devicon-ie10-original  text-9xl text-white"></i>
                 <label htmlFor='web'>Web</label>
                 <input id='web' type="checkbox" value='web'/>
               </div>
 
-              <div className="w-52 h-52 border-black border-2 rounded-md m-6">
+              <div className="w-52 h-52 bg-blue-200 hover:bg-blue-500 border-black border-2 rounded-md m-6">
+                <i className="devicon-apple-original text-9xl text-white"></i>
                 <label htmlFor='mobile'>Mobile</label>
                 <input id='mobile' type="checkbox" value='mobile'/>
               </div>
 
-              <div className="w-52 h-52 border-black border-2 rounded-md m-6">
+              <div className="w-52 h-52 bg-blue-200 hover:bg-blue-500 border-black border-2 rounded-md m-6">
+                <i className="devicon-windows8-original text-9xl text-white"></i>
+
                 <label htmlFor='software'>Software</label>
                 <input id='software' type="checkbox" value='software'/>
               </div>
