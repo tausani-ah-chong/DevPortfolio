@@ -55,6 +55,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
+.env.local
 .env
 
 # next.js build output
@@ -65,4 +66,3 @@ bundle.*
 
 # Development databases
 dev.sqlite3
-.env.local

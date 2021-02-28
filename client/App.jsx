@@ -13,7 +13,7 @@ import SearchBar from './components/SearchBar'
 import PersonalSignup from './components/PersonalSignup'
 import MoreInfoSignup from './components/MoreInfoSignup'
 
-function App () {
+function App() {
   return (
     <>
       <Route path='/' component={Nav} />
