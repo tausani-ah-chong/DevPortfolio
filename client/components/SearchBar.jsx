@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 
 function SearchBar () {
   return (
-    <div className="h-14 w-full bg-green-600 flex justify-center">
+    <div className="h-14 w-full flex justify-center">
       <Link to='/'>
-        <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 mx-6">All Devs</button>
+        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg">All Devs</button>
       </Link>
       <Link to='/mobile'>
-        <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 mx-6">Mobile</button>
+        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg">Mobile</button>
       </Link>
       <Link to='/web'>
-        <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 mx-6">Web</button>
+        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg">Web</button>
       </Link>
       <Link to='/software'>
-        <button type="button" className="focus:outline-none text-black text-sm py-2.5 px-5 rounded-md border border-white hover:bg-blue-50 mx-6">Software</button>
+        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg">Software</button>
       </Link>
     </div>
   )

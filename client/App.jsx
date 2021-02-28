@@ -11,6 +11,7 @@ import AuthSignup from './components/AuthSignup'
 import SearchBar from './components/SearchBar'
 import PersonalSignup from './components/PersonalSignup'
 import MoreInfoSignup from './components/MoreInfoSignup'
+import TemplateVisible from './components/templates/TemplateVisible'
 
 function App () {
   return (
@@ -20,6 +21,7 @@ function App () {
       <Route path='/' component={SearchBar} />
       <Route exact path='/' component={Explore} />
       <Route exact path='/css' component={TemplateProfilePage} />
+      <Route exact path='/visible' component={TemplateVisible} />
       <Route exact path='/mobile' component={Mobile} />
       <Route exact path='/web' component={Web} />
       <Route exact path='/software' component={Software} />
