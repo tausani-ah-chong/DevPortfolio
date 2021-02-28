@@ -42,11 +42,13 @@ function AuthSignup () {
         <label htmlFor='confirmPassword'>Confirm Password</label>
         <input id='confirmPassword' type='password' name='confirmPassword' required/>
 
-        <button>Sign Up</button>
+        <Link to='/get-started'>
+          <button>Sign Up</button>
+        </Link>
 
       </form>
 
-      <p>Already have an account? <Link to='/login'>Log In</Link></p>
+      <p>Already have an account? <Link to='/login'><button>Log In</button></Link></p>
     </>
   )
 }

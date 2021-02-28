@@ -19,7 +19,6 @@ function App () {
       <Route path='/' component={Nav} />
       <Route path='/' component={Banner} />
       <Route path='/' component={SearchBar} />
-      <Route path='/signup' component={AuthSignup} />
       <Route exact path='/' component={Explore} />
       <Route exact path='/css' component={TemplateProfilePage} />
       <Route exact path='/mobile' component={Mobile} />
@@ -27,7 +26,7 @@ function App () {
       <Route exact path='/software' component={Software} />
       <Route path='/signup' component={AuthSignup} />
       <Route path='/get-started' component={PersonalSignup} />
-      <Route path='/get-started/more' component={MoreInfoSignup} />
+      <Route path='/more' component={MoreInfoSignup} />
     </>
   )
 }

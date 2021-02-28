@@ -52,7 +52,7 @@ function PersonalSignup () {
             <label htmlFor='bio'>Bio</label>
             <input id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
 
-            <Link to='/moreinfo'>
+            <Link to='/more'>
               <button>Next</button>
             </Link>
 

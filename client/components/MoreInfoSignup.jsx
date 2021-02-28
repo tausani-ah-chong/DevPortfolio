@@ -46,7 +46,7 @@ function MoreInfoSignup () {
           </div>
 
           {/* currently this link is a placeholder for the route */}
-          <Link to={`/dev/${'id'}`} >
+          <Link to='/'>
             <button>Complete</button>
           </Link>
 
