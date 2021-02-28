@@ -8,7 +8,6 @@ export default function TemplateProfilePage () {
   return (
     <>
       <div>
-        <TemplateNav/>
         <TemplateProfileBanner/>
         <TemplateProfileExplore/>
       </div>
