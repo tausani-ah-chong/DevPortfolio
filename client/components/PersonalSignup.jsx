@@ -24,28 +24,43 @@ function PersonalSignup () {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <div>
+        <h1>Welcome! Let`&apos`s create your profile</h1>
+      </div>
 
-        <label htmlFor='firstName'>First Name</label>
-        <input id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
+      <div>
 
-        <label htmlFor='lastName'>Last Name</label>
-        <input id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
+        <div>
+          <h2>Add your details:</h2>
+        </div>
 
-        <label htmlFor='pronoun'>Pronoun</label>
-        <input id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
+        <div>
+          <form onSubmit={handleSubmit}>
 
-        <label htmlFor='profilePicture'>Profile Picture</label>
-        <input id='profilePicture' type='media' name='profilePicture' value={form.profilePicture} onChange={onChange} required />
+            <label htmlFor='firstName'>First Name</label>
+            <input id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
 
-        <label htmlFor='bio'>Bio</label>
-        <input id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
+            <label htmlFor='lastName'>Last Name</label>
+            <input id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
 
-        <Link to='/moreinfo'>
-          <button>Next</button>
-        </Link>
+            <label htmlFor='pronoun'>Pronoun</label>
+            <input id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
 
-      </form>
+            <label htmlFor='profilePicture'>Add a Profile Picture</label>
+            <input id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
+
+            <label htmlFor='bio'>Bio</label>
+            <input id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
+
+            <Link to='/moreinfo'>
+              <button>Next</button>
+            </Link>
+
+          </form>
+
+        </div>
+
+      </div>
     </>
   )
 }
