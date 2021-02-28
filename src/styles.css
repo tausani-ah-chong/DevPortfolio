@@ -6,8 +6,17 @@
   body { 
     @apply font-Poppins text-cgrey
   }
+
 }
 
 .testClass{ 
   color:green;
+}
+
+.imgFit{
+  @apply object-cover h-full w-full
+}
+
+.cShadow{
+  
 }
