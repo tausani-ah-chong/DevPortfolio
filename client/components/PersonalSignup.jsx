@@ -43,6 +43,11 @@ function PersonalSignup () {
             <label htmlFor='lastName'>Last Name</label>
             <input id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
 
+            {/* Pronoun might be a checkbox
+                She/Her
+                He/Him
+                They/Them
+            */}
             <label htmlFor='pronoun'>Pronoun</label>
             <input id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
 
