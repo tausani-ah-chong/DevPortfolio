@@ -25,7 +25,7 @@ function PersonalSignup () {
   return (
     <>
       <div>
-        <h1>Welcome! Let`&apos`s create your profile</h1>
+        <h1>Welcome! Let&apos;s create your profile</h1>
       </div>
 
       <div>
