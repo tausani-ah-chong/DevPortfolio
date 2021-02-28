@@ -4,19 +4,21 @@ import { Route } from 'react-router-dom'
 import Explore from './components/Explore'
 import Nav from './components/Nav'
 import Banner from './components/Banner'
-import SearchBar from './components/SearchBar'
+import TemplateProfilePage from './components/templates/TemplateProfilePage'
 import Mobile from './components/Mobile'
 import Web from './components/Web'
 import Software from './components/Software'
 import AuthSignup from './components/AuthSignup'
+import SearchBar from './components/SearchBar'
 
-const App = () => {
+function App () {
   return (
     <>
       <Route path='/' component={Nav} />
       <Route path='/' component={Banner} />
       <Route path='/' component={SearchBar} />
       <Route exact path='/' component={Explore} />
+      <Route exact path='/css' component={TemplateProfilePage} />
       <Route exact path='/mobile' component={Mobile} />
       <Route exact path='/web' component={Web} />
       <Route exact path='/software' component={Software} />
