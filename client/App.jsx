@@ -10,6 +10,8 @@ import Web from './components/Web'
 import Software from './components/Software'
 import AuthSignup from './components/AuthSignup'
 import SearchBar from './components/SearchBar'
+import PersonalSignup from './components/PersonalSignup'
+import MoreInfoSignup from './components/MoreInfoSignup'
 
 function App () {
   return (
@@ -23,6 +25,9 @@ function App () {
       <Route exact path='/mobile' component={Mobile} />
       <Route exact path='/web' component={Web} />
       <Route exact path='/software' component={Software} />
+      <Route path='/signup' component={AuthSignup} />
+      <Route path='/get-started' component={PersonalSignup} />
+      <Route path='/get-started/more' component={MoreInfoSignup} />
     </>
   )
 }

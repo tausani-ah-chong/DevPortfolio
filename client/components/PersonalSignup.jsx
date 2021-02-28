@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function PersonalSignup () {
   const [form, setForm] = useState({
@@ -13,26 +14,53 @@ function PersonalSignup () {
     const { name, value } = e.target
     setForm({
       ...form,
-      [name]: [value]
+      [name]: value
     })
+  }
+
+  function handleSubmit (e) {
+    e.preventDefault()
   }
 
   return (
     <>
-      <label htmlFor='firstName'>First Name</label>
-      <input id='firstName' type='text' name='firstName' value={form.firstName} required></input>
+      <div>
+        <h1>Welcome! Let`&apos`s create your profile</h1>
+      </div>
 
-      <label htmlFor='lastName'>Last Name</label>
-      <input id='lastName' type='text' name='lastName' value={form.lastName} required></input>
+      <div>
 
-      <label htmlFor='pronoun'>Pronoun</label>
-      <input id='pronoun' type='text' name='pronoun' value={form.pronoun} required></input>
+        <div>
+          <h2>Add your details:</h2>
+        </div>
 
-      <label htmlFor='profilePicture'>Profile Picture</label>
-      <input id='profilePicture' type='media' name='profilePicture' value={form.profilePicture} required></input>
+        <div>
+          <form onSubmit={handleSubmit}>
 
-      <label htmlFor='bio'>Bio</label>
-      <input id='bio' type='text' name='bio' value={form.bio} required></input>
+            <label htmlFor='firstName'>First Name</label>
+            <input id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
+
+            <label htmlFor='lastName'>Last Name</label>
+            <input id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
+
+            <label htmlFor='pronoun'>Pronoun</label>
+            <input id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
+
+            <label htmlFor='profilePicture'>Add a Profile Picture</label>
+            <input id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
+
+            <label htmlFor='bio'>Bio</label>
+            <input id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
+
+            <Link to='/moreinfo'>
+              <button>Next</button>
+            </Link>
+
+          </form>
+
+        </div>
+
+      </div>
     </>
   )
 }
