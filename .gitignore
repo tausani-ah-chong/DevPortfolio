@@ -65,6 +65,4 @@ bundle.*
 
 # Development databases
 dev.sqlite3
-
-# Firebase initialization
 .env.local
