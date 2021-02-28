@@ -21,7 +21,7 @@ describe('inserts new developer platform pair into joins table', () => {
   it('takes in a dev id and platform id and returns a new devPlat id', () => {
     return devPlat.insertNewDevPlat(devPlatform, testDb)
       .then(devPlatId => {
-        expect(devPlatId).toBe(5)
+        expect(devPlatId[0]).toBe(5)
         return null
       })
   })

@@ -5,7 +5,7 @@ module.exports = {
   insertNewDeveloper
 }
 
-function getDevelopers(db = connection) {
+function getDevelopers (db = connection) {
   return db('developers')
     .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
     .leftJoin('projects', 'developersProjects.project_id', 'projects.id')

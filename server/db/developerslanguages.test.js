@@ -21,7 +21,7 @@ describe('inserts data of new user with a language', () => {
   it('takes in a user id and language id and returns id', () => {
     return devLang.insertDeveloperLanguage(userLangId, testDb)
       .then(devLangId => {
-        expect(devLangId).toBe(7)
+        expect(devLangId[0]).toBe(7)
         return null
       })
   })

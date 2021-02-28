@@ -10,5 +10,5 @@ function insertNewDevPlat ({ developerId, platformId }, db = connection) {
       developer_id: developerId,
       platform_id: platformId
     })
-    .then(devPlatId => devPlatId[0])
+    .then(devPlatId => devPlatId)
 }
