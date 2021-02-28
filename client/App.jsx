@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import { AuthProvider } from './contexts/AuthContext'
 import Explore from './components/Explore'
 import Nav from './components/Nav'
 import Banner from './components/Banner'
@@ -13,7 +12,7 @@ import SearchBar from './components/SearchBar'
 import PersonalSignup from './components/PersonalSignup'
 import MoreInfoSignup from './components/MoreInfoSignup'
 
-function App() {
+function App () {
   return (
     <>
       <Route path='/' component={Nav} />
@@ -24,12 +23,9 @@ function App() {
       <Route exact path='/mobile' component={Mobile} />
       <Route exact path='/web' component={Web} />
       <Route exact path='/software' component={Software} />
-      <AuthProvider>
-        <Route path='/signup' component={AuthSignup} />
-        <Route path='/get-started' component={PersonalSignup} />
-        <Route path='/get-started/more' component={MoreInfoSignup} />
-      </AuthProvider>
-
+      <Route path='/signup' component={AuthSignup} />
+      <Route path='/get-started' component={PersonalSignup} />
+      <Route path='/more' component={MoreInfoSignup} />
     </>
   )
 }
