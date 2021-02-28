@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: [path.join(__dirname, 'index.js')],
@@ -6,6 +7,13 @@ module.exports = {
     path: path.join(__dirname, '../server/public'),
     filename: 'bundle.js'
   },
+  plugins: [
+    // fix "process is not defined" error:
+    // (do "npm install process" before running the build)
+    new webpack.ProvidePlugin({
+      process: 'process/browser'
+    })
+  ],
   mode: 'development',
   module: {
     rules: [

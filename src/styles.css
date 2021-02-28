@@ -6,8 +6,29 @@
   body { 
     @apply font-Poppins text-cgrey
   }
+
 }
 
 .testClass{ 
   color:green;
+}
+
+.imgFit{
+  @apply object-cover h-full w-full
+}
+
+.cShadow{
+  
+}
+
+.devicon-git-plain path {
+  fill: #FFFFFF;
+}
+
+.devicon-javascript-plain {
+  width: 3rem;
+}
+
+.listItem{
+  @apply my-3
 }

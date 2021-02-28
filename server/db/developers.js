@@ -37,7 +37,7 @@ function getDevelopers (db = connection) {
       const devs = results.reduce((devAcc, dev) => {
         return devAcc.some(e => e.id === dev.id) ? devAcc : [...devAcc, {
           id: dev.id,
-          profilePic: dev.profilePic,
+          profilePicture: dev.profilePic,
           firstName: dev.firstName,
           lastName: dev.lastName,
           pronoun: dev.pronoun,
