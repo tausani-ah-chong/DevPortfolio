@@ -14,7 +14,7 @@ export default function TemplateProfileBanner () {
         <div className="w-full h-full flex pr-10">
           <div className=" pr-6 pt-3 justify-center ml-auto">
             <div>
-              <div className="mb-3 mx-auto rounded-full h-48 w-48 bg-red-400"></div>
+              <div className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48 bg-red-400"></div>
               <button type="button" className="flex items-center mx-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Hire Me</button>
             </div>
           </div>
