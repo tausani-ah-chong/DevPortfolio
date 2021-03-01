@@ -12,16 +12,18 @@ beforeEach(() => {
   return testDb.seed.run()
 })
 
-const userLangId = {
-  developerId: 3,
-  languageId: 1
-}
+const devId = 2
+const languageIds = [
+  { languageId: 2 },
+  { languageId: 3 }
+]
 
 describe('inserts data of new user with a language', () => {
   it('takes in a user id and language id and returns id', () => {
-    return devLang.insertDeveloperLanguage(userLangId, testDb)
+    return devLang.insertDeveloperLanguage(devId, languageIds, testDb)
       .then(devLangId => {
-        expect(devLangId[0]).toBe(7)
+        expect(devLangId).toHaveLength(1)
+        expect(devLangId[0]).toBe(8)
         return null
       })
   })

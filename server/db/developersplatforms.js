@@ -4,11 +4,13 @@ module.exports = {
   insertNewDevPlat
 }
 
-function insertNewDevPlat ({ developerId, platformId }, db = connection) {
-  return db('developersPlatforms')
-    .insert({
+function insertNewDevPlat (developerId, platformIds, db = connection) {
+  const devPlatId = platformIds.map(element => {
+    return {
       developer_id: developerId,
-      platform_id: platformId
-    })
-    .then(devPlatId => devPlatId)
+      platform_id: Number(element.platformId)
+    }
+  })
+  return db('developersPlatforms')
+    .insert(devPlatId)
 }
