@@ -35,7 +35,7 @@ function PersonalSignup (props) {
         <h1 className="text-4xl italic font-semibold my-6">Let&apos;s get started</h1>
         {/* <h2>Add your details:</h2> */}
         <div>
-          <div className="w-auto h-96 bg-gray-200 flex flex-cols p-12 rounded-md">
+          <div className="w-auto h-96 bg-gray-200 flex flex-cols p-6 m-4 rounded-md">
 
             <form onSubmit={handleSubmit}>
               <div className="inputDiv">
