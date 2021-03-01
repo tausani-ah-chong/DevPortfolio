@@ -27,7 +27,7 @@ function App () {
       <Route exact path='/software' component={Software} />
       <Route path='/signup' component={AuthSignup} />
       <Route path='/get-started' component={PersonalSignup} />
-      <Route path='/more' component={MoreInfoSignup} />
+      <Route path='/more/:id' component={MoreInfoSignup} />
     </>
   )
 }
