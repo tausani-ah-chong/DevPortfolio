@@ -31637,6 +31637,14 @@ inputDiv{
   line-height: 1.75rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.defaultButton:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.defaultButton {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
@@ -31659,6 +31667,14 @@ inputDiv{
   height: 2.5rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.buttonNoMargin:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.buttonNoMargin {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
@@ -31683,6 +31699,14 @@ inputDiv{
   line-height: 1.75rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.buttonBlue:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.buttonBlue {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }

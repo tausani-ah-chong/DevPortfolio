@@ -59,20 +59,22 @@ function PersonalSignup (props) {
                 <hr className="border-black mb-4 "></hr>
               </div>
 
+              {/* PROFIL PHOTO */}
+              <div className="mt-4 flex flex-col">
+                <label className="text-xl">Profile Picture:</label>
+                <input className="inputBox h-8" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
+                <hr className="border-black mb-4 "></hr>
+              </div>
+
               {/* BIO  */}
               <div className="inputDiv flex flex-col">
                 <label className="text-xl">Bio:</label>
                 <textarea className="inputBox noResize h-32 text-xl border-cgrey border-2 rounded-md " placeholder="" id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
               </div>
 
-              {/* PROFIL PHOTO */}
-              <div className="mt-4">
-                <label>Profile Picture</label>
-                <input className="inputBox h-8 text-xl " placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
-              </div>
-
+              {/* NEXT BUTTON */}
               <Link to='/more'>
-                <button type="button" className="my-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
+                <button type="button" className=" focus:outline-none mt-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
               </Link>
 
             </form>
