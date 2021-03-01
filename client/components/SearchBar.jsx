@@ -16,6 +16,9 @@ function SearchBar () {
       <Link to='/software'>
         <button type="button" className="defaultButton">Software</button>
       </Link>
+      <Link to='/js'>
+        <button type="button" className="defaultButton">JS</button>
+      </Link>
     </div>
   )
 }

@@ -14,6 +14,7 @@ import PersonalSignup from './components/PersonalSignup'
 import MoreInfoSignup from './components/MoreInfoSignup'
 import TemplateVisible from './components/templates/TemplateVisible'
 import { AuthProvider } from './contexts/AuthContext'
+import JS from './components/queries/JS'
 
 function App () {
   return (
@@ -28,6 +29,7 @@ function App () {
         <Route exact path='/mobile' component={Mobile} />
         <Route exact path='/web' component={Web} />
         <Route exact path='/software' component={Software} />
+        <Route exact path='/js' component={JS} />
         <Route path='/signup' component={AuthSignup} />
         <Route path='/get-started' component={PersonalSignup} />
         <Route path='/more/:id' component={MoreInfoSignup} />
