@@ -3,7 +3,7 @@ import TemplateProfileCarousel from './templates/TemplateProfileCarousel'
 
 function Banner () {
   return (
-    <div className="w-screen h-auto bg-gray-100 grid grid-cols-2 p-10 rounded-md" >
+    <div className="w-full h-auto bg-gray-100 grid grid-cols-2 p-10 rounded-md" >
       <div className="ml-44">
         <h2 className=" font-Poppins italic font-bold xl:text-6xl lg:text-4xl  text-cgrey my-6">Find your next job, </h2>
         <h2 className=" font-Poppins italic font-bold xl:text-6xl lg:text-4xl text-cgrey my-6">Find your next dev</h2>
