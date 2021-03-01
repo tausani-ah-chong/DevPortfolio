@@ -579,9 +579,9 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1285px) {
   .container {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 }
 
@@ -14271,7 +14271,7 @@ body {
 }
 
 .max-w-screen-xl {
-  max-width: 1280px;
+  max-width: 1285px;
 }
 
 .max-w-screen-2xl {
@@ -31649,6 +31649,13 @@ inputDiv{
   padding-right: 0.75rem;
 }
 
+@media (min-width: 1024px) {
+  .defaultButton {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 .buttonNoMargin{
   --tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity))
@@ -31677,6 +31684,13 @@ inputDiv{
 .buttonNoMargin {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .buttonNoMargin {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .buttonBlue{
@@ -31711,8 +31725,101 @@ inputDiv{
   padding-right: 0.75rem;
 }
 
+@media (min-width: 1024px) {
+  .buttonBlue {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 .noResize{
   resize: none;
+}
+
+.languageCard{
+  --tw-bg-opacity: 1;
+  background-color: rgba(191, 219, 254, var(--tw-bg-opacity))
+}
+
+.languageCard:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
+.languageCard {
+  border-radius: 0.375rem;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .languageCard {
+    height: 11rem;
+    width: 11rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .languageCard {
+    height: 13rem;
+    width: 13rem;
+  }
+}
+
+.languageCardText{
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top: 0.25rem;
+  font-style: italic
+}
+
+@media (min-width: 1024px) {
+  .languageCardText {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .languageCardText {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+languageCardIcon{
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+@media (min-width: 1024px) {
+  languageCardIcon {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1285px) {
+  languageCardIcon {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .placeHolderText {
+    height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .placeHolderText {
+    height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -31738,9 +31845,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .sm\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -45430,7 +45537,7 @@ inputDiv{
   }
 
   .sm\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .sm\:max-w-screen-2xl {
@@ -62658,9 +62765,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .md\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -76350,7 +76457,7 @@ inputDiv{
   }
 
   .md\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .md\:max-w-screen-2xl {
@@ -93578,9 +93685,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .lg\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -107270,7 +107377,7 @@ inputDiv{
   }
 
   .lg\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .lg\:max-w-screen-2xl {
@@ -124475,7 +124582,7 @@ inputDiv{
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1285px) {
   .xl\:container {
     width: 100%;
   }
@@ -124498,9 +124605,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .xl\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -138190,7 +138297,7 @@ inputDiv{
   }
 
   .xl\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .xl\:max-w-screen-2xl {
@@ -155418,9 +155525,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .\32xl\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -169110,7 +169217,7 @@ inputDiv{
   }
 
   .\32xl\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .\32xl\:max-w-screen-2xl {

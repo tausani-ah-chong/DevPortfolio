@@ -3,7 +3,7 @@ import React from 'react'
 function DevCard ({ dev }) {
   return (
     <>
-      <div className=" relative w-full h-72">
+      <div className=" relative w-full h-72 lg:h-64">
         {
           dev.projects.length
             ? <img src={dev.projects[0].projectImage} className='imgFit rounded-md'/>
