@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Nav () {
+function Nav() {
   return (
     <>
       {/* <div className="h-auto bg-blue-200 w-full relative grid grid-cols-2 gap-10 items-center p-3">
@@ -19,7 +19,9 @@ function Nav () {
           <h1 className="text-xl font-semibold my-auto ">DevPortfolio</h1>
           <span className="flex relative order-1">
             {/* <a href='' className="font-semibold mx-6 inline absolute right-0 hover:text-blue-500">Sign In</a> */}
-            <button type="button" className="flex items-center absolute right-0 mx-6 bg-blue-200 rounded-md h-10 px-3 font-semibold">Sign in</button>
+            <Link to='/login'>
+              <button type="button" className="flex items-center absolute right-0 mx-6 bg-blue-200 rounded-md h-10 px-3 font-semibold">Sign in</button>
+            </Link>
             <Link to='/signup'>
               <button className="font-semibold mx-6 inline absolute right-32 hover:text-blue-200">Sign Up</button>
             </Link>
