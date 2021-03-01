@@ -40,12 +40,12 @@ function PersonalSignup (props) {
 
             <form onSubmit={handleSubmit}>
               <div className="inputDiv">
-                <input className="inputBox h-8 lg:text-lg xl:text-xl " placeholder="First Name:" id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
+                <input className="inputBox placeHolderText " placeholder="First Name:" id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
               <div className="inputDiv">
-                <input className="inputBox h-8 lg:text-lg xl:text-xl " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
+                <input className="inputBox placeHolderText " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
@@ -55,20 +55,20 @@ function PersonalSignup (props) {
                 They/Them
             */}
               <div className="inputDiv">
-                <input className="inputBox h-8 lg:text-lg xl:text-xl " placeholder="Pronouns:" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
+                <input className="inputBox placeHolderText " placeholder="Pronouns:" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
               {/* PROFIL PHOTO */}
               <div className="mt-4 flex flex-col">
                 <label className="text-xl">Profile Picture:</label>
-                <input className="inputBox h-8" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
+                <input className="inputBox placeHolderText mb-2" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
               {/* BIO  */}
               <div className="inputDiv flex flex-col">
-                <label className="text-xl">Bio:</label>
+                <label className="lg:text-lg xl:text-xl">Bio:</label>
                 <textarea className="inputBox noResize h-32 text-xl border-cgrey border-2 rounded-md " placeholder="" id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
               </div>
 
