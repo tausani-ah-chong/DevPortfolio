@@ -9,8 +9,6 @@ module.exports = router
 router.post('/:id', (req, res) => {
   const devId = Number(req.params.id)
   const langIds = req.body
-  console.log('langids', langIds)
-  console.log(devId)
   return devLang.insertDeveloperLanguage(devId, langIds)
     .then(devLangIds => {
       console.log(devLangIds)
