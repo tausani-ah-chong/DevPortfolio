@@ -7,7 +7,7 @@ function Profile ({ devs }) {
   const { id } = useParams()
   useEffect(() => {
     setStore(Number(id))
-  }, [])
+  }, [id])
 
   // console.log(devs[0].firstName)
   return (
@@ -17,9 +17,8 @@ function Profile ({ devs }) {
         devs.map(dev => {
           return (
             <div key={dev.id}>
-              <p>
-                {dev.firstName}
-              </p>
+              <p>User: {dev.firstName} {dev.lastName}</p>
+              <p>pronoun: {dev.pronoun}</p>
             </div>
           )
         })
