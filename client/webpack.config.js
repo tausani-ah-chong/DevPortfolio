@@ -1,8 +1,9 @@
 const path = require('path')
 const webpack = require('webpack')
+require('babel-polyfill')
 
 module.exports = {
-  entry: [path.join(__dirname, 'index.js')],
+  entry: ['babel-polyfill', path.join(__dirname, 'index.js')],
   output: {
     path: path.join(__dirname, '../server/public'),
     filename: 'bundle.js'

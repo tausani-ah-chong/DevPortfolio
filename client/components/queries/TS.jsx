@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import DevCard from './DevCard'
-import { getDev } from './exploreHelper'
+import DevCard from '../DevCard'
+import { getTS } from './tsHelper'
 
-function Explore ({ devs }) {
+function TS ({ ts }) {
   useEffect(() => {
-    getDev()
+    getTS()
   }, [])
 
   return (
     <>
-      <div className=" w-full grid xl:grid-cols-4 lg:grid-cols-3 gap-4 gap-x-4 rounded-md px-10">
+      <div className="w-screen h- grid grid-cols-4 gap-4 rounded-md p-10">
         {
-          devs.map(dev => {
+          ts.map(dev => {
             return (
               <DevCard key={dev.id} dev={dev} />
             )
@@ -25,8 +25,8 @@ function Explore ({ devs }) {
 
 function mapStateToProps (state) {
   return {
-    devs: state.devs
+    ts: state.ts
   }
 }
 
-export default connect(mapStateToProps)(Explore)
+export default connect(mapStateToProps)(TS)

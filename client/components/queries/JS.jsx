@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import DevCard from './DevCard'
-import { setStore } from './exploreHelper'
+import DevCard from '../DevCard'
+import { getJS } from './jsHelper'
 
-function Software ({ software }) {
+function JS ({ js }) {
   useEffect(() => {
-    setStore()
+    getJS()
   }, [])
 
   return (
     <>
-      <div className=" w-screen grid grid-cols-4 gap-4 bg-blue-400 rounded-md p-10">
+      <div className="w-screen h- grid grid-cols-4 gap-4 rounded-md p-10">
         {
-          software.map(dev => {
+          js.map(dev => {
             return (
               <DevCard key={dev.id} dev={dev} />
             )
@@ -25,8 +25,8 @@ function Software ({ software }) {
 
 function mapStateToProps (state) {
   return {
-    software: state.software
+    js: state.js
   }
 }
 
-export default connect(mapStateToProps)(Software)
+export default connect(mapStateToProps)(JS)

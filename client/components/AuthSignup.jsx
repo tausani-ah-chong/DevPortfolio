@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
 
@@ -57,32 +56,6 @@ function AuthSignup () {
           <p>Already have an account? <Link to='/login'><a className="hover:text-blue-400">Log In</a></Link></p>
         </div>
       </div>
-    </>
-  )
 }
 
 export default AuthSignup
-
-// signup stage 1 (AuthSignup)
-
-// email
-// password
-// confirm password
-
-// sign up stage 2 PersonalSignup.jsx
-
-// first name
-// last name
-// pronoun
-// profile picture
-// bio
-
-// sign up stage 3 MoreInfoSignup
-
-// languages --buttons for selecting lang or highlight all
-// platforms --buttons for selecting platforms or highlight all
-
-// projects --maybe do this on dashboard and not signup
-
-// backend get dev by id
-// where user id is id insert info for plat, lang and proj into join table

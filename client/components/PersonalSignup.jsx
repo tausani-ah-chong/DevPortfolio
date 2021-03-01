@@ -21,9 +21,9 @@ function PersonalSignup (props) {
 
   function handleSubmit (e) {
     e.preventDefault()
-    consume('/get-started', 'post', form)
-      .then(id => {
-        props.history.push(`/more/${id}`)
+    consume('/dev/get-started', 'post', form)
+      .then(res => {
+        props.history.push(`/more/${res.body}`)
         return null
       })
       .catch(err => console.error(err.message))
@@ -49,11 +49,6 @@ function PersonalSignup (props) {
                 <hr className="border-black mb-4 "></hr>
               </div>
 
-              {/* Pronoun might be a checkbox
-                She/Her
-                He/Him
-                They/Them
-            */}
               <div className="inputDiv">
                 <input className="inputBox placeHolderText " placeholder="Pronouns:" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
@@ -66,6 +61,7 @@ function PersonalSignup (props) {
                 <hr className="border-black mb-4 "></hr>
               </div>
 
+
               {/* BIO  */}
               <div className="inputDiv flex flex-col">
                 <label className="lg:text-lg xl:text-xl">Bio:</label>
@@ -76,6 +72,7 @@ function PersonalSignup (props) {
               <Link to='/more'>
                 <button type="button" className=" focus:outline-none mt-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
               </Link>
+
 
             </form>
 
@@ -88,11 +85,3 @@ function PersonalSignup (props) {
 }
 
 export default PersonalSignup
-
-// sign up stage 2 PersonalSignup.jsx
-
-// first name
-// last name
-// pronoun
-// profile picture
-// bio
