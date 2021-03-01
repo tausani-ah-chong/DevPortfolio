@@ -1,6 +1,6 @@
-import { dispatch } from '../store'
-import consume from '../consume'
-import { setMobile } from '../actions/mobile'
+import { dispatch } from '../../store'
+import consume from '../../consume'
+import { setMobile } from '../../actions/mobile'
 
 export function getMobile () {
   return consume('/dev')

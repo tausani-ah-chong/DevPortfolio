@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import DevCard from './DevCard'
-import { getSoftware } from './softwareHelper'
+import DevCard from '../DevCard'
+import { getMobile } from './mobileHelper'
 
-function Software ({ software }) {
+function Mobile ({ mobile }) {
   useEffect(() => {
-    getSoftware()
+    getMobile()
   }, [])
 
   return (
     <>
       <div className=" w-screen grid grid-cols-4 gap-4 bg-blue-400 rounded-md p-10">
         {
-          software.map(dev => {
+          mobile.map(dev => {
             return (
               <DevCard key={dev.id} dev={dev} />
             )
@@ -25,8 +25,8 @@ function Software ({ software }) {
 
 function mapStateToProps (state) {
   return {
-    software: state.software
+    mobile: state.mobile
   }
 }
 
-export default connect(mapStateToProps)(Software)
+export default connect(mapStateToProps)(Mobile)
