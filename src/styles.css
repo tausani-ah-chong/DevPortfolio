@@ -32,3 +32,19 @@
 .listItem{
   @apply my-3
 }
+
+.getStartedLabel{
+  @apply text-lg font-semibold
+}
+
+.inputBox{
+  @apply bg-transparent placeholder-gray-700 w-96 outline-none
+}
+
+inputDiv{
+  @apply my-6
+}
+
+.defaultButton{
+  @apply flex items-center mx-6 hover:bg-blue-400 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg
+}

@@ -49,7 +49,7 @@
     ]
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "devicon": "^2.10.1",
     "express": "^4.17.1",
     "firebase": "^8.2.9",

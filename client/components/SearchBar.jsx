@@ -5,16 +5,16 @@ function SearchBar () {
   return (
     <div className="h-14 w-full flex justify-center">
       <Link to='/'>
-        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg">All Devs</button>
+        <button type="button" className="defaultButton">All Devs</button>
       </Link>
       <Link to='/mobile'>
-        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg">Mobile</button>
+        <button type="button" className="defaultButton">Mobile</button>
       </Link>
       <Link to='/web'>
-        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg">Web</button>
+        <button type="button" className="defaultButton">Web</button>
       </Link>
       <Link to='/software'>
-        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg">Software</button>
+        <button type="button" className="defaultButton">Software</button>
       </Link>
     </div>
   )
