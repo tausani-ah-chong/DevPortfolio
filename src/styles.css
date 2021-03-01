@@ -46,7 +46,7 @@ inputDiv{
 }
 
 .defaultButton{
-  @apply flex items-center mx-6 hover:bg-blue-400 bg-gray-200 rounded-md h-10 px-3 font-semibold text-lg lg:text-base focus:outline-none
+  @apply flex items-center mx-6 hover:bg-blue-400 bg-gray-200 rounded-md lg:h-8 xl:h-10 px-3 lg:font-medium xl:font-semibold xl:text-lg lg:text-base focus:outline-none
 }
 
 .buttonNoMargin{

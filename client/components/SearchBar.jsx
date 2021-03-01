@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function SearchBar () {
   return (
-    <div className="h-14 w-full flex justify-center">
+    <div className="h-14 w-full flex justify-center items-center">
       <Link to='/'>
         <button type="button" className="defaultButton">All Devs</button>
       </Link>
