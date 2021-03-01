@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Nav() {
+function Nav () {
   return (
     <>
       {/* <div className="h-auto bg-blue-200 w-full relative grid grid-cols-2 gap-10 items-center p-3">
@@ -14,16 +14,18 @@ function Nav() {
         </nav>
       </div> */}
 
-      <nav className="w-full h-12 p-3 ">
+      <nav className="w-full h-12 flex items-center">
         <div className="w-full grid grid-cols-2">
-          <h1 className="text-xl font-semibold my-auto ">DevPortfolio</h1>
+          <Link to='/explore'>
+            <h1 className="xl:text-xl lg:text-lg font-semibold my-auto hover:text-blue-400">DevPortfolio</h1>
+          </Link>
           <span className="flex relative order-1">
             {/* <a href='' className="font-semibold mx-6 inline absolute right-0 hover:text-blue-500">Sign In</a> */}
             <Link to='/login'>
-              <button type="button" className="flex items-center absolute right-0 mx-6 bg-blue-200 rounded-md h-10 px-3 font-semibold">Sign in</button>
+              <button type="button" className="buttonBlue absolute right-0 xl:text-lg lg:text-base">Sign in</button>
             </Link>
             <Link to='/signup'>
-              <button className="font-semibold mx-6 inline absolute right-32 hover:text-blue-200">Sign Up</button>
+              <button className="font-semibold mx-6 inline absolute right-32 hover:text-blue-400 xl:text-lg lg:text-base">Sign Up</button>
             </Link>
           </span>
 

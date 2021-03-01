@@ -579,9 +579,9 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1285px) {
   .container {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 }
 
@@ -589,6 +589,194 @@ body {
   .container {
     max-width: 1536px;
   }
+}
+
+.aspect-w-1,
+.aspect-w-2,
+.aspect-w-3,
+.aspect-w-4,
+.aspect-w-5,
+.aspect-w-6,
+.aspect-w-7,
+.aspect-w-8,
+.aspect-w-9,
+.aspect-w-10,
+.aspect-w-11,
+.aspect-w-12,
+.aspect-w-13,
+.aspect-w-14,
+.aspect-w-15,
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+}
+
+.aspect-w-1 > *,
+.aspect-w-2 > *,
+.aspect-w-3 > *,
+.aspect-w-4 > *,
+.aspect-w-5 > *,
+.aspect-w-6 > *,
+.aspect-w-7 > *,
+.aspect-w-8 > *,
+.aspect-w-9 > *,
+.aspect-w-10 > *,
+.aspect-w-11 > *,
+.aspect-w-12 > *,
+.aspect-w-13 > *,
+.aspect-w-14 > *,
+.aspect-w-15 > *,
+.aspect-w-16 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.aspect-none {
+  position: static;
+  padding-bottom: 0;
+}
+
+.aspect-none > * {
+  position: static;
+  height: auto;
+  width: auto;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+
+.aspect-w-1 {
+  --tw-aspect-w: 1;
+}
+
+.aspect-w-2 {
+  --tw-aspect-w: 2;
+}
+
+.aspect-w-3 {
+  --tw-aspect-w: 3;
+}
+
+.aspect-w-4 {
+  --tw-aspect-w: 4;
+}
+
+.aspect-w-5 {
+  --tw-aspect-w: 5;
+}
+
+.aspect-w-6 {
+  --tw-aspect-w: 6;
+}
+
+.aspect-w-7 {
+  --tw-aspect-w: 7;
+}
+
+.aspect-w-8 {
+  --tw-aspect-w: 8;
+}
+
+.aspect-w-9 {
+  --tw-aspect-w: 9;
+}
+
+.aspect-w-10 {
+  --tw-aspect-w: 10;
+}
+
+.aspect-w-11 {
+  --tw-aspect-w: 11;
+}
+
+.aspect-w-12 {
+  --tw-aspect-w: 12;
+}
+
+.aspect-w-13 {
+  --tw-aspect-w: 13;
+}
+
+.aspect-w-14 {
+  --tw-aspect-w: 14;
+}
+
+.aspect-w-15 {
+  --tw-aspect-w: 15;
+}
+
+.aspect-w-16 {
+  --tw-aspect-w: 16;
+}
+
+.aspect-h-1 {
+  --tw-aspect-h: 1;
+}
+
+.aspect-h-2 {
+  --tw-aspect-h: 2;
+}
+
+.aspect-h-3 {
+  --tw-aspect-h: 3;
+}
+
+.aspect-h-4 {
+  --tw-aspect-h: 4;
+}
+
+.aspect-h-5 {
+  --tw-aspect-h: 5;
+}
+
+.aspect-h-6 {
+  --tw-aspect-h: 6;
+}
+
+.aspect-h-7 {
+  --tw-aspect-h: 7;
+}
+
+.aspect-h-8 {
+  --tw-aspect-h: 8;
+}
+
+.aspect-h-9 {
+  --tw-aspect-h: 9;
+}
+
+.aspect-h-10 {
+  --tw-aspect-h: 10;
+}
+
+.aspect-h-11 {
+  --tw-aspect-h: 11;
+}
+
+.aspect-h-12 {
+  --tw-aspect-h: 12;
+}
+
+.aspect-h-13 {
+  --tw-aspect-h: 13;
+}
+
+.aspect-h-14 {
+  --tw-aspect-h: 14;
+}
+
+.aspect-h-15 {
+  --tw-aspect-h: 15;
+}
+
+.aspect-h-16 {
+  --tw-aspect-h: 16;
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -14083,7 +14271,7 @@ body {
 }
 
 .max-w-screen-xl {
-  max-width: 1280px;
+  max-width: 1285px;
 }
 
 .max-w-screen-2xl {
@@ -31449,8 +31637,189 @@ inputDiv{
   line-height: 1.75rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.defaultButton:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.defaultButton {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .defaultButton {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.buttonNoMargin{
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity))
+}
+
+.buttonNoMargin:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+}
+
+.buttonNoMargin {
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  height: 2.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.buttonNoMargin:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.buttonNoMargin {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .buttonNoMargin {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.buttonBlue{
+  --tw-bg-opacity: 1;
+  background-color: rgba(191, 219, 254, var(--tw-bg-opacity))
+}
+
+.buttonBlue:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+}
+
+.buttonBlue {
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  height: 2.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.buttonBlue:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.buttonBlue {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .buttonBlue {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.noResize{
+  resize: none;
+}
+
+.languageCard{
+  --tw-bg-opacity: 1;
+  background-color: rgba(191, 219, 254, var(--tw-bg-opacity))
+}
+
+.languageCard:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
+.languageCard {
+  border-radius: 0.375rem;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .languageCard {
+    height: 11rem;
+    width: 11rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .languageCard {
+    height: 13rem;
+    width: 13rem;
+  }
+}
+
+.languageCardText{
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top: 0.25rem;
+  font-style: italic
+}
+
+@media (min-width: 1024px) {
+  .languageCardText {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .languageCardText {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+languageCardIcon{
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+@media (min-width: 1024px) {
+  languageCardIcon {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1285px) {
+  languageCardIcon {
+    font-size: 8rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .placeHolderText {
+    height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .placeHolderText {
+    height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -31476,9 +31845,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .sm\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -31486,6 +31855,194 @@ inputDiv{
     .sm\:container {
       max-width: 1536px;
     }
+  }
+
+  .sm\:aspect-w-1,
+.sm\:aspect-w-2,
+.sm\:aspect-w-3,
+.sm\:aspect-w-4,
+.sm\:aspect-w-5,
+.sm\:aspect-w-6,
+.sm\:aspect-w-7,
+.sm\:aspect-w-8,
+.sm\:aspect-w-9,
+.sm\:aspect-w-10,
+.sm\:aspect-w-11,
+.sm\:aspect-w-12,
+.sm\:aspect-w-13,
+.sm\:aspect-w-14,
+.sm\:aspect-w-15,
+.sm\:aspect-w-16 {
+    position: relative;
+    padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  }
+
+  .sm\:aspect-w-1 > *,
+.sm\:aspect-w-2 > *,
+.sm\:aspect-w-3 > *,
+.sm\:aspect-w-4 > *,
+.sm\:aspect-w-5 > *,
+.sm\:aspect-w-6 > *,
+.sm\:aspect-w-7 > *,
+.sm\:aspect-w-8 > *,
+.sm\:aspect-w-9 > *,
+.sm\:aspect-w-10 > *,
+.sm\:aspect-w-11 > *,
+.sm\:aspect-w-12 > *,
+.sm\:aspect-w-13 > *,
+.sm\:aspect-w-14 > *,
+.sm\:aspect-w-15 > *,
+.sm\:aspect-w-16 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .sm\:aspect-none {
+    position: static;
+    padding-bottom: 0;
+  }
+
+  .sm\:aspect-none > * {
+    position: static;
+    height: auto;
+    width: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .sm\:aspect-w-1 {
+    --tw-aspect-w: 1;
+  }
+
+  .sm\:aspect-w-2 {
+    --tw-aspect-w: 2;
+  }
+
+  .sm\:aspect-w-3 {
+    --tw-aspect-w: 3;
+  }
+
+  .sm\:aspect-w-4 {
+    --tw-aspect-w: 4;
+  }
+
+  .sm\:aspect-w-5 {
+    --tw-aspect-w: 5;
+  }
+
+  .sm\:aspect-w-6 {
+    --tw-aspect-w: 6;
+  }
+
+  .sm\:aspect-w-7 {
+    --tw-aspect-w: 7;
+  }
+
+  .sm\:aspect-w-8 {
+    --tw-aspect-w: 8;
+  }
+
+  .sm\:aspect-w-9 {
+    --tw-aspect-w: 9;
+  }
+
+  .sm\:aspect-w-10 {
+    --tw-aspect-w: 10;
+  }
+
+  .sm\:aspect-w-11 {
+    --tw-aspect-w: 11;
+  }
+
+  .sm\:aspect-w-12 {
+    --tw-aspect-w: 12;
+  }
+
+  .sm\:aspect-w-13 {
+    --tw-aspect-w: 13;
+  }
+
+  .sm\:aspect-w-14 {
+    --tw-aspect-w: 14;
+  }
+
+  .sm\:aspect-w-15 {
+    --tw-aspect-w: 15;
+  }
+
+  .sm\:aspect-w-16 {
+    --tw-aspect-w: 16;
+  }
+
+  .sm\:aspect-h-1 {
+    --tw-aspect-h: 1;
+  }
+
+  .sm\:aspect-h-2 {
+    --tw-aspect-h: 2;
+  }
+
+  .sm\:aspect-h-3 {
+    --tw-aspect-h: 3;
+  }
+
+  .sm\:aspect-h-4 {
+    --tw-aspect-h: 4;
+  }
+
+  .sm\:aspect-h-5 {
+    --tw-aspect-h: 5;
+  }
+
+  .sm\:aspect-h-6 {
+    --tw-aspect-h: 6;
+  }
+
+  .sm\:aspect-h-7 {
+    --tw-aspect-h: 7;
+  }
+
+  .sm\:aspect-h-8 {
+    --tw-aspect-h: 8;
+  }
+
+  .sm\:aspect-h-9 {
+    --tw-aspect-h: 9;
+  }
+
+  .sm\:aspect-h-10 {
+    --tw-aspect-h: 10;
+  }
+
+  .sm\:aspect-h-11 {
+    --tw-aspect-h: 11;
+  }
+
+  .sm\:aspect-h-12 {
+    --tw-aspect-h: 12;
+  }
+
+  .sm\:aspect-h-13 {
+    --tw-aspect-h: 13;
+  }
+
+  .sm\:aspect-h-14 {
+    --tw-aspect-h: 14;
+  }
+
+  .sm\:aspect-h-15 {
+    --tw-aspect-h: 15;
+  }
+
+  .sm\:aspect-h-16 {
+    --tw-aspect-h: 16;
   }
 
   .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -44980,7 +45537,7 @@ inputDiv{
   }
 
   .sm\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .sm\:max-w-screen-2xl {
@@ -62208,9 +62765,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .md\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -62218,6 +62775,194 @@ inputDiv{
     .md\:container {
       max-width: 1536px;
     }
+  }
+
+  .md\:aspect-w-1,
+.md\:aspect-w-2,
+.md\:aspect-w-3,
+.md\:aspect-w-4,
+.md\:aspect-w-5,
+.md\:aspect-w-6,
+.md\:aspect-w-7,
+.md\:aspect-w-8,
+.md\:aspect-w-9,
+.md\:aspect-w-10,
+.md\:aspect-w-11,
+.md\:aspect-w-12,
+.md\:aspect-w-13,
+.md\:aspect-w-14,
+.md\:aspect-w-15,
+.md\:aspect-w-16 {
+    position: relative;
+    padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  }
+
+  .md\:aspect-w-1 > *,
+.md\:aspect-w-2 > *,
+.md\:aspect-w-3 > *,
+.md\:aspect-w-4 > *,
+.md\:aspect-w-5 > *,
+.md\:aspect-w-6 > *,
+.md\:aspect-w-7 > *,
+.md\:aspect-w-8 > *,
+.md\:aspect-w-9 > *,
+.md\:aspect-w-10 > *,
+.md\:aspect-w-11 > *,
+.md\:aspect-w-12 > *,
+.md\:aspect-w-13 > *,
+.md\:aspect-w-14 > *,
+.md\:aspect-w-15 > *,
+.md\:aspect-w-16 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .md\:aspect-none {
+    position: static;
+    padding-bottom: 0;
+  }
+
+  .md\:aspect-none > * {
+    position: static;
+    height: auto;
+    width: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .md\:aspect-w-1 {
+    --tw-aspect-w: 1;
+  }
+
+  .md\:aspect-w-2 {
+    --tw-aspect-w: 2;
+  }
+
+  .md\:aspect-w-3 {
+    --tw-aspect-w: 3;
+  }
+
+  .md\:aspect-w-4 {
+    --tw-aspect-w: 4;
+  }
+
+  .md\:aspect-w-5 {
+    --tw-aspect-w: 5;
+  }
+
+  .md\:aspect-w-6 {
+    --tw-aspect-w: 6;
+  }
+
+  .md\:aspect-w-7 {
+    --tw-aspect-w: 7;
+  }
+
+  .md\:aspect-w-8 {
+    --tw-aspect-w: 8;
+  }
+
+  .md\:aspect-w-9 {
+    --tw-aspect-w: 9;
+  }
+
+  .md\:aspect-w-10 {
+    --tw-aspect-w: 10;
+  }
+
+  .md\:aspect-w-11 {
+    --tw-aspect-w: 11;
+  }
+
+  .md\:aspect-w-12 {
+    --tw-aspect-w: 12;
+  }
+
+  .md\:aspect-w-13 {
+    --tw-aspect-w: 13;
+  }
+
+  .md\:aspect-w-14 {
+    --tw-aspect-w: 14;
+  }
+
+  .md\:aspect-w-15 {
+    --tw-aspect-w: 15;
+  }
+
+  .md\:aspect-w-16 {
+    --tw-aspect-w: 16;
+  }
+
+  .md\:aspect-h-1 {
+    --tw-aspect-h: 1;
+  }
+
+  .md\:aspect-h-2 {
+    --tw-aspect-h: 2;
+  }
+
+  .md\:aspect-h-3 {
+    --tw-aspect-h: 3;
+  }
+
+  .md\:aspect-h-4 {
+    --tw-aspect-h: 4;
+  }
+
+  .md\:aspect-h-5 {
+    --tw-aspect-h: 5;
+  }
+
+  .md\:aspect-h-6 {
+    --tw-aspect-h: 6;
+  }
+
+  .md\:aspect-h-7 {
+    --tw-aspect-h: 7;
+  }
+
+  .md\:aspect-h-8 {
+    --tw-aspect-h: 8;
+  }
+
+  .md\:aspect-h-9 {
+    --tw-aspect-h: 9;
+  }
+
+  .md\:aspect-h-10 {
+    --tw-aspect-h: 10;
+  }
+
+  .md\:aspect-h-11 {
+    --tw-aspect-h: 11;
+  }
+
+  .md\:aspect-h-12 {
+    --tw-aspect-h: 12;
+  }
+
+  .md\:aspect-h-13 {
+    --tw-aspect-h: 13;
+  }
+
+  .md\:aspect-h-14 {
+    --tw-aspect-h: 14;
+  }
+
+  .md\:aspect-h-15 {
+    --tw-aspect-h: 15;
+  }
+
+  .md\:aspect-h-16 {
+    --tw-aspect-h: 16;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -75712,7 +76457,7 @@ inputDiv{
   }
 
   .md\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .md\:max-w-screen-2xl {
@@ -92940,9 +93685,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .lg\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -92950,6 +93695,194 @@ inputDiv{
     .lg\:container {
       max-width: 1536px;
     }
+  }
+
+  .lg\:aspect-w-1,
+.lg\:aspect-w-2,
+.lg\:aspect-w-3,
+.lg\:aspect-w-4,
+.lg\:aspect-w-5,
+.lg\:aspect-w-6,
+.lg\:aspect-w-7,
+.lg\:aspect-w-8,
+.lg\:aspect-w-9,
+.lg\:aspect-w-10,
+.lg\:aspect-w-11,
+.lg\:aspect-w-12,
+.lg\:aspect-w-13,
+.lg\:aspect-w-14,
+.lg\:aspect-w-15,
+.lg\:aspect-w-16 {
+    position: relative;
+    padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  }
+
+  .lg\:aspect-w-1 > *,
+.lg\:aspect-w-2 > *,
+.lg\:aspect-w-3 > *,
+.lg\:aspect-w-4 > *,
+.lg\:aspect-w-5 > *,
+.lg\:aspect-w-6 > *,
+.lg\:aspect-w-7 > *,
+.lg\:aspect-w-8 > *,
+.lg\:aspect-w-9 > *,
+.lg\:aspect-w-10 > *,
+.lg\:aspect-w-11 > *,
+.lg\:aspect-w-12 > *,
+.lg\:aspect-w-13 > *,
+.lg\:aspect-w-14 > *,
+.lg\:aspect-w-15 > *,
+.lg\:aspect-w-16 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .lg\:aspect-none {
+    position: static;
+    padding-bottom: 0;
+  }
+
+  .lg\:aspect-none > * {
+    position: static;
+    height: auto;
+    width: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .lg\:aspect-w-1 {
+    --tw-aspect-w: 1;
+  }
+
+  .lg\:aspect-w-2 {
+    --tw-aspect-w: 2;
+  }
+
+  .lg\:aspect-w-3 {
+    --tw-aspect-w: 3;
+  }
+
+  .lg\:aspect-w-4 {
+    --tw-aspect-w: 4;
+  }
+
+  .lg\:aspect-w-5 {
+    --tw-aspect-w: 5;
+  }
+
+  .lg\:aspect-w-6 {
+    --tw-aspect-w: 6;
+  }
+
+  .lg\:aspect-w-7 {
+    --tw-aspect-w: 7;
+  }
+
+  .lg\:aspect-w-8 {
+    --tw-aspect-w: 8;
+  }
+
+  .lg\:aspect-w-9 {
+    --tw-aspect-w: 9;
+  }
+
+  .lg\:aspect-w-10 {
+    --tw-aspect-w: 10;
+  }
+
+  .lg\:aspect-w-11 {
+    --tw-aspect-w: 11;
+  }
+
+  .lg\:aspect-w-12 {
+    --tw-aspect-w: 12;
+  }
+
+  .lg\:aspect-w-13 {
+    --tw-aspect-w: 13;
+  }
+
+  .lg\:aspect-w-14 {
+    --tw-aspect-w: 14;
+  }
+
+  .lg\:aspect-w-15 {
+    --tw-aspect-w: 15;
+  }
+
+  .lg\:aspect-w-16 {
+    --tw-aspect-w: 16;
+  }
+
+  .lg\:aspect-h-1 {
+    --tw-aspect-h: 1;
+  }
+
+  .lg\:aspect-h-2 {
+    --tw-aspect-h: 2;
+  }
+
+  .lg\:aspect-h-3 {
+    --tw-aspect-h: 3;
+  }
+
+  .lg\:aspect-h-4 {
+    --tw-aspect-h: 4;
+  }
+
+  .lg\:aspect-h-5 {
+    --tw-aspect-h: 5;
+  }
+
+  .lg\:aspect-h-6 {
+    --tw-aspect-h: 6;
+  }
+
+  .lg\:aspect-h-7 {
+    --tw-aspect-h: 7;
+  }
+
+  .lg\:aspect-h-8 {
+    --tw-aspect-h: 8;
+  }
+
+  .lg\:aspect-h-9 {
+    --tw-aspect-h: 9;
+  }
+
+  .lg\:aspect-h-10 {
+    --tw-aspect-h: 10;
+  }
+
+  .lg\:aspect-h-11 {
+    --tw-aspect-h: 11;
+  }
+
+  .lg\:aspect-h-12 {
+    --tw-aspect-h: 12;
+  }
+
+  .lg\:aspect-h-13 {
+    --tw-aspect-h: 13;
+  }
+
+  .lg\:aspect-h-14 {
+    --tw-aspect-h: 14;
+  }
+
+  .lg\:aspect-h-15 {
+    --tw-aspect-h: 15;
+  }
+
+  .lg\:aspect-h-16 {
+    --tw-aspect-h: 16;
   }
 
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -106444,7 +107377,7 @@ inputDiv{
   }
 
   .lg\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .lg\:max-w-screen-2xl {
@@ -123649,7 +124582,7 @@ inputDiv{
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1285px) {
   .xl\:container {
     width: 100%;
   }
@@ -123672,9 +124605,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .xl\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -123682,6 +124615,194 @@ inputDiv{
     .xl\:container {
       max-width: 1536px;
     }
+  }
+
+  .xl\:aspect-w-1,
+.xl\:aspect-w-2,
+.xl\:aspect-w-3,
+.xl\:aspect-w-4,
+.xl\:aspect-w-5,
+.xl\:aspect-w-6,
+.xl\:aspect-w-7,
+.xl\:aspect-w-8,
+.xl\:aspect-w-9,
+.xl\:aspect-w-10,
+.xl\:aspect-w-11,
+.xl\:aspect-w-12,
+.xl\:aspect-w-13,
+.xl\:aspect-w-14,
+.xl\:aspect-w-15,
+.xl\:aspect-w-16 {
+    position: relative;
+    padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  }
+
+  .xl\:aspect-w-1 > *,
+.xl\:aspect-w-2 > *,
+.xl\:aspect-w-3 > *,
+.xl\:aspect-w-4 > *,
+.xl\:aspect-w-5 > *,
+.xl\:aspect-w-6 > *,
+.xl\:aspect-w-7 > *,
+.xl\:aspect-w-8 > *,
+.xl\:aspect-w-9 > *,
+.xl\:aspect-w-10 > *,
+.xl\:aspect-w-11 > *,
+.xl\:aspect-w-12 > *,
+.xl\:aspect-w-13 > *,
+.xl\:aspect-w-14 > *,
+.xl\:aspect-w-15 > *,
+.xl\:aspect-w-16 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .xl\:aspect-none {
+    position: static;
+    padding-bottom: 0;
+  }
+
+  .xl\:aspect-none > * {
+    position: static;
+    height: auto;
+    width: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .xl\:aspect-w-1 {
+    --tw-aspect-w: 1;
+  }
+
+  .xl\:aspect-w-2 {
+    --tw-aspect-w: 2;
+  }
+
+  .xl\:aspect-w-3 {
+    --tw-aspect-w: 3;
+  }
+
+  .xl\:aspect-w-4 {
+    --tw-aspect-w: 4;
+  }
+
+  .xl\:aspect-w-5 {
+    --tw-aspect-w: 5;
+  }
+
+  .xl\:aspect-w-6 {
+    --tw-aspect-w: 6;
+  }
+
+  .xl\:aspect-w-7 {
+    --tw-aspect-w: 7;
+  }
+
+  .xl\:aspect-w-8 {
+    --tw-aspect-w: 8;
+  }
+
+  .xl\:aspect-w-9 {
+    --tw-aspect-w: 9;
+  }
+
+  .xl\:aspect-w-10 {
+    --tw-aspect-w: 10;
+  }
+
+  .xl\:aspect-w-11 {
+    --tw-aspect-w: 11;
+  }
+
+  .xl\:aspect-w-12 {
+    --tw-aspect-w: 12;
+  }
+
+  .xl\:aspect-w-13 {
+    --tw-aspect-w: 13;
+  }
+
+  .xl\:aspect-w-14 {
+    --tw-aspect-w: 14;
+  }
+
+  .xl\:aspect-w-15 {
+    --tw-aspect-w: 15;
+  }
+
+  .xl\:aspect-w-16 {
+    --tw-aspect-w: 16;
+  }
+
+  .xl\:aspect-h-1 {
+    --tw-aspect-h: 1;
+  }
+
+  .xl\:aspect-h-2 {
+    --tw-aspect-h: 2;
+  }
+
+  .xl\:aspect-h-3 {
+    --tw-aspect-h: 3;
+  }
+
+  .xl\:aspect-h-4 {
+    --tw-aspect-h: 4;
+  }
+
+  .xl\:aspect-h-5 {
+    --tw-aspect-h: 5;
+  }
+
+  .xl\:aspect-h-6 {
+    --tw-aspect-h: 6;
+  }
+
+  .xl\:aspect-h-7 {
+    --tw-aspect-h: 7;
+  }
+
+  .xl\:aspect-h-8 {
+    --tw-aspect-h: 8;
+  }
+
+  .xl\:aspect-h-9 {
+    --tw-aspect-h: 9;
+  }
+
+  .xl\:aspect-h-10 {
+    --tw-aspect-h: 10;
+  }
+
+  .xl\:aspect-h-11 {
+    --tw-aspect-h: 11;
+  }
+
+  .xl\:aspect-h-12 {
+    --tw-aspect-h: 12;
+  }
+
+  .xl\:aspect-h-13 {
+    --tw-aspect-h: 13;
+  }
+
+  .xl\:aspect-h-14 {
+    --tw-aspect-h: 14;
+  }
+
+  .xl\:aspect-h-15 {
+    --tw-aspect-h: 15;
+  }
+
+  .xl\:aspect-h-16 {
+    --tw-aspect-h: 16;
   }
 
   .xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -137176,7 +138297,7 @@ inputDiv{
   }
 
   .xl\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .xl\:max-w-screen-2xl {
@@ -154404,9 +155525,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .\32xl\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -154414,6 +155535,194 @@ inputDiv{
     .\32xl\:container {
       max-width: 1536px;
     }
+  }
+
+  .\32xl\:aspect-w-1,
+.\32xl\:aspect-w-2,
+.\32xl\:aspect-w-3,
+.\32xl\:aspect-w-4,
+.\32xl\:aspect-w-5,
+.\32xl\:aspect-w-6,
+.\32xl\:aspect-w-7,
+.\32xl\:aspect-w-8,
+.\32xl\:aspect-w-9,
+.\32xl\:aspect-w-10,
+.\32xl\:aspect-w-11,
+.\32xl\:aspect-w-12,
+.\32xl\:aspect-w-13,
+.\32xl\:aspect-w-14,
+.\32xl\:aspect-w-15,
+.\32xl\:aspect-w-16 {
+    position: relative;
+    padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  }
+
+  .\32xl\:aspect-w-1 > *,
+.\32xl\:aspect-w-2 > *,
+.\32xl\:aspect-w-3 > *,
+.\32xl\:aspect-w-4 > *,
+.\32xl\:aspect-w-5 > *,
+.\32xl\:aspect-w-6 > *,
+.\32xl\:aspect-w-7 > *,
+.\32xl\:aspect-w-8 > *,
+.\32xl\:aspect-w-9 > *,
+.\32xl\:aspect-w-10 > *,
+.\32xl\:aspect-w-11 > *,
+.\32xl\:aspect-w-12 > *,
+.\32xl\:aspect-w-13 > *,
+.\32xl\:aspect-w-14 > *,
+.\32xl\:aspect-w-15 > *,
+.\32xl\:aspect-w-16 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .\32xl\:aspect-none {
+    position: static;
+    padding-bottom: 0;
+  }
+
+  .\32xl\:aspect-none > * {
+    position: static;
+    height: auto;
+    width: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .\32xl\:aspect-w-1 {
+    --tw-aspect-w: 1;
+  }
+
+  .\32xl\:aspect-w-2 {
+    --tw-aspect-w: 2;
+  }
+
+  .\32xl\:aspect-w-3 {
+    --tw-aspect-w: 3;
+  }
+
+  .\32xl\:aspect-w-4 {
+    --tw-aspect-w: 4;
+  }
+
+  .\32xl\:aspect-w-5 {
+    --tw-aspect-w: 5;
+  }
+
+  .\32xl\:aspect-w-6 {
+    --tw-aspect-w: 6;
+  }
+
+  .\32xl\:aspect-w-7 {
+    --tw-aspect-w: 7;
+  }
+
+  .\32xl\:aspect-w-8 {
+    --tw-aspect-w: 8;
+  }
+
+  .\32xl\:aspect-w-9 {
+    --tw-aspect-w: 9;
+  }
+
+  .\32xl\:aspect-w-10 {
+    --tw-aspect-w: 10;
+  }
+
+  .\32xl\:aspect-w-11 {
+    --tw-aspect-w: 11;
+  }
+
+  .\32xl\:aspect-w-12 {
+    --tw-aspect-w: 12;
+  }
+
+  .\32xl\:aspect-w-13 {
+    --tw-aspect-w: 13;
+  }
+
+  .\32xl\:aspect-w-14 {
+    --tw-aspect-w: 14;
+  }
+
+  .\32xl\:aspect-w-15 {
+    --tw-aspect-w: 15;
+  }
+
+  .\32xl\:aspect-w-16 {
+    --tw-aspect-w: 16;
+  }
+
+  .\32xl\:aspect-h-1 {
+    --tw-aspect-h: 1;
+  }
+
+  .\32xl\:aspect-h-2 {
+    --tw-aspect-h: 2;
+  }
+
+  .\32xl\:aspect-h-3 {
+    --tw-aspect-h: 3;
+  }
+
+  .\32xl\:aspect-h-4 {
+    --tw-aspect-h: 4;
+  }
+
+  .\32xl\:aspect-h-5 {
+    --tw-aspect-h: 5;
+  }
+
+  .\32xl\:aspect-h-6 {
+    --tw-aspect-h: 6;
+  }
+
+  .\32xl\:aspect-h-7 {
+    --tw-aspect-h: 7;
+  }
+
+  .\32xl\:aspect-h-8 {
+    --tw-aspect-h: 8;
+  }
+
+  .\32xl\:aspect-h-9 {
+    --tw-aspect-h: 9;
+  }
+
+  .\32xl\:aspect-h-10 {
+    --tw-aspect-h: 10;
+  }
+
+  .\32xl\:aspect-h-11 {
+    --tw-aspect-h: 11;
+  }
+
+  .\32xl\:aspect-h-12 {
+    --tw-aspect-h: 12;
+  }
+
+  .\32xl\:aspect-h-13 {
+    --tw-aspect-h: 13;
+  }
+
+  .\32xl\:aspect-h-14 {
+    --tw-aspect-h: 14;
+  }
+
+  .\32xl\:aspect-h-15 {
+    --tw-aspect-h: 15;
+  }
+
+  .\32xl\:aspect-h-16 {
+    --tw-aspect-h: 16;
   }
 
   .\32xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -167908,7 +169217,7 @@ inputDiv{
   }
 
   .\32xl\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .\32xl\:max-w-screen-2xl {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import consume from '../consume'
+import { Link } from 'react-router-dom'
 
 function PersonalSignup (props) {
   const [form, setForm] = useState({
@@ -31,39 +32,47 @@ function PersonalSignup (props) {
   return (
     <>
 
-      <div className="w-full px-auto flex items-center flex-col pt-6">
-        <h1 className="text-4xl italic font-semibold my-6">Let&apos;s get started</h1>
+      <div className="w-full px-auto flex items-center flex-col lg:p-0 xl:pt-10">
+        <h1 className="text-2xl xl:text-4xl italic font-semibold mb-3">Let&apos;s get started</h1>
         {/* <h2>Add your details:</h2> */}
         <div>
-          <div className="w-auto h-96 bg-gray-200 flex flex-cols p-12 rounded-md">
+          <div className="w-auto h-auto bg-gray-200 flex flex-cols lg:p-4 xl:p-6 m-4 rounded-md">
 
             <form onSubmit={handleSubmit}>
               <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="First Name:" id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
+                <input className="inputBox placeHolderText " placeholder="First Name:" id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
               <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
+                <input className="inputBox placeHolderText " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
               <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="Pronouns" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
+                <input className="inputBox placeHolderText " placeholder="Pronouns:" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
-              <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="Bio" id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
+              {/* PROFIL PHOTO */}
+              <div className="mt-4 flex flex-col">
+                <label className="text-xl">Profile Picture:</label>
+                <input className="inputBox placeHolderText mb-2" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
-              <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" />
+
+              {/* BIO  */}
+              <div className="inputDiv flex flex-col">
+                <label className="lg:text-lg xl:text-xl">Bio:</label>
+                <textarea className="inputBox noResize h-32 text-xl border-cgrey border-2 rounded-md " placeholder="" id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
               </div>
 
-              <p>Profile Picture</p>
-              <button className="my-6 flex items-center mr-auto hover:bg-yellow-200 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
+              {/* NEXT BUTTON */}
+              <Link to='/more'>
+                <button type="button" className=" focus:outline-none mt-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
+              </Link>
+
 
             </form>
 

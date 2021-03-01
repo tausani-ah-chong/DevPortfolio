@@ -11,6 +11,9 @@ module.exports = {
       },
       width: {
         c: '630px'
+      },
+      screens: {
+        xl: '1285px'
       }
     }
   },
