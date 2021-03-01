@@ -32,3 +32,15 @@
 .listItem{
   @apply my-3
 }
+
+.getStartedLabel{
+  @apply text-lg font-semibold
+}
+
+.inputBox{
+  @apply bg-transparent placeholder-gray-700 w-96 outline-none
+}
+
+inputDiv{
+  @apply my-6
+}
