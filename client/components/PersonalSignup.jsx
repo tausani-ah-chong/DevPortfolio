@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import consume from '../consume'
 
-function PersonalSignup () {
+function PersonalSignup (props) {
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -20,6 +20,12 @@ function PersonalSignup () {
 
   function handleSubmit (e) {
     e.preventDefault()
+    consume('/get-started', 'post', form)
+      .then(id => {
+        props.history.push(`/more/${id}`)
+        return null
+      })
+      .catch(err => console.error(err.message))
   }
 
   return (
