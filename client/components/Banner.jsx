@@ -1,4 +1,5 @@
 import React from 'react'
+import TemplateProfileCarousel from './templates/TemplateProfileCarousel'
 
 function Banner () {
   return (
@@ -7,10 +8,11 @@ function Banner () {
         <h2 className=" font-Poppins italic font-bold text-6xl text-cgrey my-6">Find your next job, </h2>
         <h2 className=" font-Poppins italic font-bold text-6xl text-cgrey my-6">Find your next dev</h2>
         <h4 className="text-2xl font-medium my-6"> DevPortfolio, connecting those who want with those who need</h4>
-        <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Sign up</button>
+        <button type="button" className="defaultButton">Sign up</button>
       </div>
       <div className="order-2 w-full h-full">
-        <img className="rounded-md h-96 w-auto" src='/images/placeholder-img/pic1.jpg'/>
+        {/* <img className="rounded-md h-96 w-auto" src='/images/placeholder-img/pic1.jpg'/> */}
+        <TemplateProfileCarousel/>
       </div>
     </div>
   )
