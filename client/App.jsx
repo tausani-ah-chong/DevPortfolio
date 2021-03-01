@@ -28,7 +28,7 @@ function App () {
         <Route path='/explore' component={Banner} />
         <Route path='/explore' component={SearchBar} />
         <Route exact path='/explore/alldevs' component={Explore} />
-        <Route exact path='/explore/css' component={TemplateProfilePage} />
+        <Route exact path='/profile' component={TemplateProfilePage} />
         <Route exact path='/explore/visible' component={TemplateVisible} />
         <Route exact path='/explore/mobile' component={Mobile} />
         <Route exact path='/explore/web' component={Web} />

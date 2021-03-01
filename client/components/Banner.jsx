@@ -18,8 +18,6 @@ function Banner () {
         {/* <TemplateProfileCarousel/> */}
         <div className="h-0 pt-p">
           <img className="h-5/6 w-5/6 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-5 object-cover rounded-md" src='/images/placeholder-img/pic1.jpg'/>
-           
-          {/* <div className="bg-green-400  h-5/6 w-5/6 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-5 rounded-md"></div> */}
         </div>
 
       </div>

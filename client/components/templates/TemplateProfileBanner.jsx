@@ -9,7 +9,7 @@ export default function TemplateProfileBanner () {
 
   return (
     <>
-      <div className="w-full  h-96 grid grid-cols-2 p-3">
+      <div className="w-full  h-96 grid grid-cols-2 p-10 bg-gray-100">
         {/* profilepic and hire button */}
         <div className="w-full h-full flex pr-10">
           <div className=" pr-6 pt-3 justify-center ml-auto">
@@ -33,8 +33,12 @@ export default function TemplateProfileBanner () {
           </div>
         </div>
         {/* showcase reel carousel */}
-        <div className="w-full order-2 flex items-center">
-          <TemplateProfileCarousel/>
+        <div className="w-full order-2 aspect-w-16 aspect-h-9">
+          {/* <TemplateProfileCarousel/> */}
+          <div className="h-0 pt-p">
+            <img className="h-4/6 w-4/6 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-5 xl:mt-0 object-cover rounded-md" src='/images/placeholder-img/pic1.jpg'/>
+          </div>
+
         </div>
 
       </div>
