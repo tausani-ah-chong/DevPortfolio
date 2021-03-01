@@ -12,22 +12,25 @@ import SearchBar from './components/SearchBar'
 import PersonalSignup from './components/PersonalSignup'
 import MoreInfoSignup from './components/MoreInfoSignup'
 import TemplateVisible from './components/templates/TemplateVisible'
+import { AuthProvider } from './contexts/AuthContext'
 
 function App () {
   return (
     <>
-      <Route path='/' component={Nav} />
-      <Route path='/' component={Banner} />
-      <Route path='/' component={SearchBar} />
-      <Route exact path='/' component={Explore} />
-      <Route exact path='/css' component={TemplateProfilePage} />
-      <Route exact path='/visible' component={TemplateVisible} />
-      <Route exact path='/mobile' component={Mobile} />
-      <Route exact path='/web' component={Web} />
-      <Route exact path='/software' component={Software} />
-      <Route path='/signup' component={AuthSignup} />
-      <Route path='/get-started' component={PersonalSignup} />
-      <Route path='/more' component={MoreInfoSignup} />
+      <AuthProvider>
+        <Route path='/' component={Nav} />
+        <Route path='/' component={Banner} />
+        <Route path='/' component={SearchBar} />
+        <Route exact path='/' component={Explore} />
+        <Route exact path='/css' component={TemplateProfilePage} />
+        <Route exact path='/visible' component={TemplateVisible} />
+        <Route exact path='/mobile' component={Mobile} />
+        <Route exact path='/web' component={Web} />
+        <Route exact path='/software' component={Software} />
+        <Route path='/signup' component={AuthSignup} />
+        <Route path='/get-started' component={PersonalSignup} />
+        <Route path='/more' component={MoreInfoSignup} />
+      </AuthProvider>
     </>
   )
 }
