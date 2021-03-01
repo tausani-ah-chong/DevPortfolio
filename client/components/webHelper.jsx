@@ -1,11 +1,11 @@
 import { dispatch } from '../store'
 import consume from '../consume'
-import { setDevs } from '../actions/devs'
+import { setWeb } from '../actions/web'
 
-export function getDev () {
+export function getWeb () {
   return consume('/dev')
     .then((res) => {
-      dispatch(setDevs(res.body))
+      dispatch(setWeb(res.body))
       return null
     })
 }

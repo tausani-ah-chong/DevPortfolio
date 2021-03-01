@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import DevCard from './DevCard'
-import { setStore } from './exploreHelper'
+import { getDev } from './exploreHelper'
 
 function Explore ({ devs }) {
   useEffect(() => {
-    setStore()
+    getDev()
   }, [])
 
   return (

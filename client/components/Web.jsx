@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { setStore } from '../components/exploreHelper'
 import DevCard from './DevCard'
+import { getWeb } from './webHelper'
 
 function Web ({ web }) {
   useEffect(() => {
-    setStore()
+    getWeb()
   }, [])
 
   return (
