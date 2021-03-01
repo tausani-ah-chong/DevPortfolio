@@ -73,3 +73,7 @@ inputDiv{
 languageCardIcon{
   @apply lg:text-8xl xl:text-9xl text-white
 }
+
+.placeHolderText{
+  @apply lg:h-6 xl:h-8 lg:text-lg xl:text-xl
+}

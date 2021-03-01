@@ -36,17 +36,17 @@ function AuthSignup () {
         <div className=" flex-col mx-auto bg-gray-200 rounded-md p-6 m-4">
           <form>
             <div className="mb-3">
-              <input className="inputBox h-8 text-xl " placeholder="Email" id='email' type='email' name='email' required></input>
+              <input className="inputBox placeHolderText" placeholder="Email" id='email' type='email' name='email' required></input>
               <hr className="border-black mb-4 "></hr>
             </div>
 
             <div className="mb-3">
-              <input className="inputBox h-8 text-xl" placeholder="Password" id='password' type='password' name='password' required></input>
+              <input className="inputBox placeHolderText" placeholder="Password" id='password' type='password' name='password' required></input>
               <hr className="border-black mb-4 "></hr>
             </div>
 
             <div className="mb-3">
-              <input className="inputBox h-8 text-xl" placeholder="Confirm Password" id='confirmPassword' type='password' name='confirmPassword' required></input>
+              <input className="inputBox placeHolderText" placeholder="Confirm Password" id='confirmPassword' type='password' name='confirmPassword' required></input>
               <hr className="border-black mb-4 "></hr>
             </div>
 

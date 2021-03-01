@@ -31806,6 +31806,22 @@ languageCardIcon{
   }
 }
 
+@media (min-width: 1024px) {
+  .placeHolderText {
+    height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .placeHolderText {
+    height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

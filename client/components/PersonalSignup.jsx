@@ -32,20 +32,20 @@ function PersonalSignup (props) {
   return (
     <>
 
-      <div className="w-full px-auto flex items-center flex-col pt-6">
-        <h1 className="text-4xl italic font-semibold my-6">Let&apos;s get started</h1>
+      <div className="w-full px-auto flex items-center flex-col lg:p-0 xl:pt-10">
+        <h1 className="text-2xl xl:text-4xl italic font-semibold mb-3">Let&apos;s get started</h1>
         {/* <h2>Add your details:</h2> */}
         <div>
-          <div className="w-auto h-auto bg-gray-200 flex flex-cols p-6 m-4 rounded-md">
+          <div className="w-auto h-auto bg-gray-200 flex flex-cols lg:p-4 xl:p-6 m-4 rounded-md">
 
             <form onSubmit={handleSubmit}>
               <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="First Name:" id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
+                <input className="inputBox h-8 lg:text-lg xl:text-xl " placeholder="First Name:" id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
               <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
+                <input className="inputBox h-8 lg:text-lg xl:text-xl " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
@@ -55,7 +55,7 @@ function PersonalSignup (props) {
                 They/Them
             */}
               <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="Pronouns:" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
+                <input className="inputBox h-8 lg:text-lg xl:text-xl " placeholder="Pronouns:" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
