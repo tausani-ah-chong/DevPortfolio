@@ -43,6 +43,7 @@ function AuthSignup (props) {
         <input id='confirmPassword' type='password' ref={passwordConfirmRef} name='confirmPassword' required/>
         <button disabled={loading}>Sign Up</button>
       </form>
+
       <p>Already have an account? <Link to='/login'><button>Log In</button></Link></p>
     </>
   )
