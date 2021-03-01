@@ -20,9 +20,9 @@ function PersonalSignup (props) {
 
   function handleSubmit (e) {
     e.preventDefault()
-    consume('/get-started', 'post', form)
-      .then(id => {
-        props.history.push(`/more/${id}`)
+    consume('/dev/get-started', 'post', form)
+      .then(res => {
+        props.history.push(`/more/${res.body}`)
         return null
       })
       .catch(err => console.error(err.message))

@@ -5,8 +5,6 @@ export default function TemplateProfileCarousel () {
 
   setTimeout(function () { setPic(pic + 1) }, 4000)
 
-  console.log(pic)
-
   if (pic === 3) {
     setPic(1)
   } else if (pic < 1) {

@@ -4,10 +4,13 @@ module.exports = {
   insertDeveloperLanguage
 }
 
-function insertDeveloperLanguage ({ developerId, languageId }, db = connection) {
-  return db('developersLanguages')
-    .insert({
+function insertDeveloperLanguage (developerId, languageIds, db = connection) {
+  const devLangId = languageIds.map(element => {
+    return {
       developer_id: developerId,
-      language_id: languageId
-    })
+      language_id: Number(element.languageId)
+    }
+  })
+  return db('developersLanguages')
+    .insert(devLangId)
 }

@@ -8,10 +8,13 @@ module.exports = router
 
 router.post('/:id', (req, res) => {
   const devId = Number(req.params.id)
-  const langId = Number(req.body.languageId)
-  return devLang.insertDeveloperLanguage({ developerId: devId, languageId: langId })
-    .then(devLangId => {
-      res.status(201).json(devLangId)
+  const langIds = req.body
+  console.log('langids', langIds)
+  console.log(devId)
+  return devLang.insertDeveloperLanguage(devId, langIds)
+    .then(devLangIds => {
+      console.log(devLangIds)
+      res.status(201).json(devLangIds)
       return null
     })
     .catch((err) => {
