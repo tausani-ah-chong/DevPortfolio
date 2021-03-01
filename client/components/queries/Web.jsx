@@ -10,7 +10,7 @@ function Web ({ web }) {
 
   return (
     <>
-      <div className=" w-screen grid grid-cols-4 gap-4 bg-blue-400 rounded-md p-10">
+      <div className="w-screen h- grid grid-cols-4 gap-4 rounded-md p-10">
         {
           web.map(dev => {
             return (
