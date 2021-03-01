@@ -6,6 +6,7 @@ import web from './web'
 import software from './software'
 import js from './js'
 import ts from './ts'
+import c from './c'
 
 export default combineReducers({
   devs,
@@ -13,5 +14,6 @@ export default combineReducers({
   web,
   software,
   js,
-  ts
+  ts,
+  c
 })

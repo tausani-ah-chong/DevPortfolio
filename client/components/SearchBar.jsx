@@ -22,6 +22,9 @@ function SearchBar () {
       <Link to='/ts'>
         <button type="button" className="defaultButton">TS</button>
       </Link>
+      <Link to='/c'>
+        <button type="button" className="defaultButton">C#</button>
+      </Link>
     </div>
   )
 }

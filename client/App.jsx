@@ -16,6 +16,7 @@ import TemplateVisible from './components/templates/TemplateVisible'
 import { AuthProvider } from './contexts/AuthContext'
 import JS from './components/queries/JS'
 import TS from './components/queries/TS'
+import C from './components/queries/C'
 
 function App () {
   return (
@@ -32,6 +33,7 @@ function App () {
         <Route exact path='/software' component={Software} />
         <Route exact path='/js' component={JS} />
         <Route exact path='/ts' component={TS} />
+        <Route exact path='/c' component={C} />
         <Route path='/signup' component={AuthSignup} />
         <Route path='/get-started' component={PersonalSignup} />
         <Route path='/more/:id' component={MoreInfoSignup} />
