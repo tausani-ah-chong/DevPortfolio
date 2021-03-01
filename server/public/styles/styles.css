@@ -579,9 +579,9 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1285px) {
   .container {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 }
 
@@ -14271,7 +14271,7 @@ body {
 }
 
 .max-w-screen-xl {
-  max-width: 1280px;
+  max-width: 1285px;
 }
 
 .max-w-screen-2xl {
@@ -31649,6 +31649,13 @@ inputDiv{
   padding-right: 0.75rem;
 }
 
+@media (min-width: 1024px) {
+  .defaultButton {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 .buttonNoMargin{
   --tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity))
@@ -31677,6 +31684,13 @@ inputDiv{
 .buttonNoMargin {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .buttonNoMargin {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .buttonBlue{
@@ -31711,6 +31725,13 @@ inputDiv{
   padding-right: 0.75rem;
 }
 
+@media (min-width: 1024px) {
+  .buttonBlue {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 .noResize{
   resize: none;
 }
@@ -31738,9 +31759,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .sm\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -45430,7 +45451,7 @@ inputDiv{
   }
 
   .sm\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .sm\:max-w-screen-2xl {
@@ -62658,9 +62679,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .md\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -76350,7 +76371,7 @@ inputDiv{
   }
 
   .md\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .md\:max-w-screen-2xl {
@@ -93578,9 +93599,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .lg\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -107270,7 +107291,7 @@ inputDiv{
   }
 
   .lg\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .lg\:max-w-screen-2xl {
@@ -124475,7 +124496,7 @@ inputDiv{
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1285px) {
   .xl\:container {
     width: 100%;
   }
@@ -124498,9 +124519,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .xl\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -138190,7 +138211,7 @@ inputDiv{
   }
 
   .xl\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .xl\:max-w-screen-2xl {
@@ -155418,9 +155439,9 @@ inputDiv{
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1285px) {
     .\32xl\:container {
-      max-width: 1280px;
+      max-width: 1285px;
     }
   }
 
@@ -169110,7 +169131,7 @@ inputDiv{
   }
 
   .\32xl\:max-w-screen-xl {
-    max-width: 1280px;
+    max-width: 1285px;
   }
 
   .\32xl\:max-w-screen-2xl {

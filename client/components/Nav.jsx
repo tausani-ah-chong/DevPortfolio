@@ -17,11 +17,11 @@ function Nav () {
       <nav className="w-full h-12 flex items-center">
         <div className="w-full grid grid-cols-2">
           <Link to="/">
-            <h1 className="text-xl font-semibold my-auto hover:text-blue-400">DevPortfolio</h1>
+            <h1 className="xl:text-xl lg:text-lg font-semibold my-auto hover:text-blue-400">DevPortfolio</h1>
           </Link>
           <span className= "flex relative order-1">
-            <button type="button" className="buttonBlue absolute right-0 text-lg">Sign in</button>
-            <a href='' className="font-semibold mx-6 inline absolute right-32 hover:text-blue-400 text-lg">Sign Up</a>
+            <button type="button" className="buttonBlue absolute right-0 xl:text-lg lg:text-base">Sign in</button>
+            <a href='' className="font-semibold mx-6 inline absolute right-32 hover:text-blue-400 xl:text-lg lg:text-base">Sign Up</a>
           </span>
 
         </div>

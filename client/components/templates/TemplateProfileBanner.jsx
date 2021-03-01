@@ -11,20 +11,20 @@ export default function TemplateProfileBanner () {
     <>
       <div className="w-full  h-96 grid grid-cols-2 p-3">
         {/* profilepic and hire button */}
-        <div className="w-full h-full flex pr-10 pl-72">
-          <div className=" pr-6 pt-3 justify-center">
+        <div className="w-full h-full flex pr-10">
+          <div className=" pr-6 pt-3 justify-center ml-auto">
             <div>
               <div className="mb-3 mx-auto rounded-full h-48 w-48 bg-red-400"></div>
               <button type="button" className="flex items-center mx-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Hire Me</button>
             </div>
           </div>
           {/* user info */}
-          <div className="w-auto h-full pt-2 pr-20">
+          <div className="w-auto max-w-md h-full pt-2">
             <ul>
-              <li className='text-5xl mb-1 font-semibold' >Multi Ah Foon</li>
-              <li className="text-xl italic mb-1">Full Stack Dev,Auckland</li>
+              <li className='lg:text-3xl xl:text-5xl mb-1 font-semibold' >Multi Ah Foon</li>
+              <li className="lg:text-lg xl:text-xl italic mb-1">Full Stack Dev,Auckland</li>
               <hr/>
-              <li className="text-xl italic my-2">JS, Css, C#, Python</li>
+              <li className="lg:text-lg xl:text-xl italic my-2">JS, Css, C#, Python</li>
               <hr/>
             </ul>
             <div className='h-40 mt-3 w-auto overflow-auto bg-gray-200 rounded-md'>
