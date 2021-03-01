@@ -8,8 +8,8 @@ module.exports = router
 
 router.post('/:id', (req, res) => {
   const devId = Number(req.params.id)
-  const platId = Number(req.body.platformId)
-  return devPlat.insertNewDevPlat({ developerId: devId, platformId: platId })
+  const platIds = req.body
+  return devPlat.insertNewDevPlat(devId, platIds)
     .then(devPlatId => {
       res.status(201).json(devPlatId)
       return null

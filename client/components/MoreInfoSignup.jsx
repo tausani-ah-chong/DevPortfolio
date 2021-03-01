@@ -1,27 +1,27 @@
 import React, { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import consume from '../consume'
 import { connect } from 'react-redux'
 
-function MoreInfoSignup(props) {
+function MoreInfoSignup (props) {
   const [languages, setLanguages] = useState([])
   const [platforms, setPlatforms] = useState([])
-  const [button, setButton] = useState(false)
+  // const [button, setButton] = useState(false)
   const id = Number(useParams().id)
-  // const devPlatRoute = `/devPlat/${id}`
-  function changeLang(e) {
+
+  function changeLang (e) {
     return !languages.some(element => element.languageId === e.target.value)
       ? setLanguages([...languages, { languageId: e.target.value }])
       : setLanguages(languages.filter(language => language.languageId !== e.target.value))
   }
 
-  function changePlat(e) {
+  function changePlat (e) {
     return !platforms.some(element => element.platformId === e.target.value)
       ? setPlatforms([...platforms, { platformId: e.target.value }])
       : setPlatforms(platforms.filter(platform => platform.platformId !== e.target.value))
   }
 
-  function handleSubmit(e) {
+  function handleSubmit (e) {
     e.preventDefault()
     if (languages.length && platforms.length) {
       consume(`/devLang/${id}`, 'post', languages)
