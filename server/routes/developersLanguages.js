@@ -11,7 +11,6 @@ router.post('/:id', (req, res) => {
   const langIds = req.body
   return devLang.insertDeveloperLanguage(devId, langIds)
     .then(devLangIds => {
-      console.log(devLangIds)
       res.status(201).json(devLangIds)
       return null
     })
