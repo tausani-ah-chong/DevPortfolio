@@ -21,7 +21,7 @@ function Nav () {
           </Link>
           <span className= "flex relative order-1">
             <button type="button" className="buttonBlue absolute right-0 text-lg">Sign in</button>
-            <a href='' className="font-semibold mx-6 inline absolute right-32 hover:text-blue-400">Sign Up</a>
+            <a href='' className="font-semibold mx-6 inline absolute right-32 hover:text-blue-400 text-lg">Sign Up</a>
           </span>
 
         </div>
