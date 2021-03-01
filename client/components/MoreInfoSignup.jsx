@@ -71,7 +71,7 @@ function MoreInfoSignup () {
               {/* currently this link is a placeholder for the route */}
             </span>
             <Link to='/'>
-              <button type="button" className="flex items-center mx-6 hover:bg-yellow-200 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Complete</button>
+              <button type="button" className="flex items-center mx-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Complete</button>
             </Link>
 
           </form>

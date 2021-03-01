@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Nav () {
   return (
@@ -13,13 +14,14 @@ function Nav () {
         </nav>
       </div> */}
 
-      <nav className="w-full h-12 p-3 ">
+      <nav className="w-full h-12 flex items-center">
         <div className="w-full grid grid-cols-2">
-          <h1 className="text-xl font-semibold my-auto ">DevPortfolio</h1>
+          <Link to="/">
+            <h1 className="text-xl font-semibold my-auto hover:text-blue-400">DevPortfolio</h1>
+          </Link>
           <span className= "flex relative order-1">
-            {/* <a href='' className="font-semibold mx-6 inline absolute right-0 hover:text-blue-500">Sign In</a> */}
-            <button type="button" className="flex items-center absolute right-0 mx-6 bg-blue-200 rounded-md h-10 px-3 font-semibold">Sign in</button>
-            <a href='' className="font-semibold mx-6 inline absolute right-32 hover:text-blue-200">Sign Up</a>
+            <button type="button" className="buttonBlue absolute right-0 text-lg">Sign in</button>
+            <a href='' className="font-semibold mx-6 inline absolute right-32 hover:text-blue-400">Sign Up</a>
           </span>
 
         </div>

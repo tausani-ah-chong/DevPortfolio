@@ -63,7 +63,7 @@ function PersonalSignup () {
 
               <Link to='/more'>
                 <p>Profile Picture</p>
-                <button type="button" className="my-6 flex items-center mr-auto hover:bg-yellow-200 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
+                <button type="button" className="my-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
               </Link>
 
             </form>
