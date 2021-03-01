@@ -19,19 +19,18 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
-  console.log('dev requested')
-  const id = Number(req.params.id)
-  dev.getDeveloperById(id)
-    .then(dev => {
-      res.json(dev)
+router.post('/get-started', (req, res) => {
+  const newUser = req.body
+  dev.insertNewDeveloper(newUser)
+    .then(devId => {
+      res.status(201).json(devId)
       return null
     })
     .catch((err) => {
       console.log(err.message)
       res.status(500).json({
         error: {
-          title: 'Unable to retrieve developer'
+          title: 'create new developer'
         }
       })
     })

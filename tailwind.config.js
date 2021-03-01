@@ -8,6 +8,9 @@ module.exports = {
       },
       colors: {
         cgrey: '#333333'
+      },
+      width: {
+        c: '630px'
       }
     }
   },
@@ -15,6 +18,7 @@ module.exports = {
     extend: {}
   },
   plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/aspect-ratio')
+    // require('@tailwindcss/forms')
   ]
 }
