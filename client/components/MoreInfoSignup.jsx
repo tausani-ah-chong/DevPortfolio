@@ -26,7 +26,7 @@ function MoreInfoSignup (props) {
     if (languages.length && platforms.length) {
       consume(`/devLang/${id}`, 'post', languages)
         .then(() => consume(`/devPlat/${id}`, 'post', platforms))
-        .then(() => props.history.push('/'))
+        .then(() => props.history.push('/dashboard'))
         .catch(err => console.error(err.message))
     } else {
       alert('Must Choose at least one language and platform')
