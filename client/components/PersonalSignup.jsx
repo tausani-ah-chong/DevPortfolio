@@ -47,6 +47,7 @@ function PersonalSignup (props) {
                 <input className="inputBox h-8 text-xl " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
+              
               <div className="inputDiv">
                 <input className="inputBox h-8 text-xl " placeholder="Pronouns" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
@@ -75,11 +76,3 @@ function PersonalSignup (props) {
 }
 
 export default PersonalSignup
-
-// sign up stage 2 PersonalSignup.jsx
-
-// first name
-// last name
-// pronoun
-// profile picture
-// bio
