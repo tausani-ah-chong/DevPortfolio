@@ -14952,6 +14952,10 @@ body {
   padding: 0.875rem;
 }
 
+.p-p {
+  padding: 56.25%;
+}
+
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -15300,6 +15304,16 @@ body {
 .px-3\.5 {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
+}
+
+.py-p {
+  padding-top: 56.25%;
+  padding-bottom: 56.25%;
+}
+
+.px-p {
+  padding-left: 56.25%;
+  padding-right: 56.25%;
 }
 
 .pt-0 {
@@ -15860,6 +15874,22 @@ body {
 
 .pl-3\.5 {
   padding-left: 0.875rem;
+}
+
+.pt-p {
+  padding-top: 56.25%;
+}
+
+.pr-p {
+  padding-right: 56.25%;
+}
+
+.pb-p {
+  padding-bottom: 56.25%;
+}
+
+.pl-p {
+  padding-left: 56.25%;
 }
 
 .placeholder-transparent::-moz-placeholder {
@@ -31631,10 +31661,6 @@ inputDiv{
   border-radius: 0.375rem;
   display: flex;
   align-items: center;
-  font-weight: 600;
-  height: 2.5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -31651,8 +31677,19 @@ inputDiv{
 
 @media (min-width: 1024px) {
   .defaultButton {
+    font-weight: 500;
+    height: 2rem;
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .defaultButton {
+    font-weight: 600;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -31670,10 +31707,6 @@ inputDiv{
   border-radius: 0.375rem;
   display: flex;
   align-items: center;
-  font-weight: 600;
-  height: 2.5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .buttonNoMargin:focus {
@@ -31688,8 +31721,19 @@ inputDiv{
 
 @media (min-width: 1024px) {
   .buttonNoMargin {
+    font-weight: 500;
+    height: 2rem;
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .buttonNoMargin {
+    font-weight: 600;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -46218,6 +46262,10 @@ languageCardIcon{
     padding: 0.875rem;
   }
 
+  .sm\:p-p {
+    padding: 56.25%;
+  }
+
   .sm\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -46566,6 +46614,16 @@ languageCardIcon{
   .sm\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .sm\:py-p {
+    padding-top: 56.25%;
+    padding-bottom: 56.25%;
+  }
+
+  .sm\:px-p {
+    padding-left: 56.25%;
+    padding-right: 56.25%;
   }
 
   .sm\:pt-0 {
@@ -47126,6 +47184,22 @@ languageCardIcon{
 
   .sm\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .sm\:pt-p {
+    padding-top: 56.25%;
+  }
+
+  .sm\:pr-p {
+    padding-right: 56.25%;
+  }
+
+  .sm\:pb-p {
+    padding-bottom: 56.25%;
+  }
+
+  .sm\:pl-p {
+    padding-left: 56.25%;
   }
 
   .sm\:placeholder-transparent::-moz-placeholder {
@@ -77138,6 +77212,10 @@ languageCardIcon{
     padding: 0.875rem;
   }
 
+  .md\:p-p {
+    padding: 56.25%;
+  }
+
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -77486,6 +77564,16 @@ languageCardIcon{
   .md\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .md\:py-p {
+    padding-top: 56.25%;
+    padding-bottom: 56.25%;
+  }
+
+  .md\:px-p {
+    padding-left: 56.25%;
+    padding-right: 56.25%;
   }
 
   .md\:pt-0 {
@@ -78046,6 +78134,22 @@ languageCardIcon{
 
   .md\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .md\:pt-p {
+    padding-top: 56.25%;
+  }
+
+  .md\:pr-p {
+    padding-right: 56.25%;
+  }
+
+  .md\:pb-p {
+    padding-bottom: 56.25%;
+  }
+
+  .md\:pl-p {
+    padding-left: 56.25%;
   }
 
   .md\:placeholder-transparent::-moz-placeholder {
@@ -108058,6 +108162,10 @@ languageCardIcon{
     padding: 0.875rem;
   }
 
+  .lg\:p-p {
+    padding: 56.25%;
+  }
+
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -108406,6 +108514,16 @@ languageCardIcon{
   .lg\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .lg\:py-p {
+    padding-top: 56.25%;
+    padding-bottom: 56.25%;
+  }
+
+  .lg\:px-p {
+    padding-left: 56.25%;
+    padding-right: 56.25%;
   }
 
   .lg\:pt-0 {
@@ -108966,6 +109084,22 @@ languageCardIcon{
 
   .lg\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .lg\:pt-p {
+    padding-top: 56.25%;
+  }
+
+  .lg\:pr-p {
+    padding-right: 56.25%;
+  }
+
+  .lg\:pb-p {
+    padding-bottom: 56.25%;
+  }
+
+  .lg\:pl-p {
+    padding-left: 56.25%;
   }
 
   .lg\:placeholder-transparent::-moz-placeholder {
@@ -138978,6 +139112,10 @@ languageCardIcon{
     padding: 0.875rem;
   }
 
+  .xl\:p-p {
+    padding: 56.25%;
+  }
+
   .xl\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -139326,6 +139464,16 @@ languageCardIcon{
   .xl\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .xl\:py-p {
+    padding-top: 56.25%;
+    padding-bottom: 56.25%;
+  }
+
+  .xl\:px-p {
+    padding-left: 56.25%;
+    padding-right: 56.25%;
   }
 
   .xl\:pt-0 {
@@ -139886,6 +140034,22 @@ languageCardIcon{
 
   .xl\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .xl\:pt-p {
+    padding-top: 56.25%;
+  }
+
+  .xl\:pr-p {
+    padding-right: 56.25%;
+  }
+
+  .xl\:pb-p {
+    padding-bottom: 56.25%;
+  }
+
+  .xl\:pl-p {
+    padding-left: 56.25%;
   }
 
   .xl\:placeholder-transparent::-moz-placeholder {
@@ -169898,6 +170062,10 @@ languageCardIcon{
     padding: 0.875rem;
   }
 
+  .\32xl\:p-p {
+    padding: 56.25%;
+  }
+
   .\32xl\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -170246,6 +170414,16 @@ languageCardIcon{
   .\32xl\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .\32xl\:py-p {
+    padding-top: 56.25%;
+    padding-bottom: 56.25%;
+  }
+
+  .\32xl\:px-p {
+    padding-left: 56.25%;
+    padding-right: 56.25%;
   }
 
   .\32xl\:pt-0 {
@@ -170806,6 +170984,22 @@ languageCardIcon{
 
   .\32xl\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .\32xl\:pt-p {
+    padding-top: 56.25%;
+  }
+
+  .\32xl\:pr-p {
+    padding-right: 56.25%;
+  }
+
+  .\32xl\:pb-p {
+    padding-bottom: 56.25%;
+  }
+
+  .\32xl\:pl-p {
+    padding-left: 56.25%;
   }
 
   .\32xl\:placeholder-transparent::-moz-placeholder {
