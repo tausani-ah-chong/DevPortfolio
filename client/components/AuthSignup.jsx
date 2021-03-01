@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
 
-function AuthSignup () {
+function AuthSignup (props) {
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
@@ -11,7 +11,7 @@ function AuthSignup () {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
 
-  async function signupHandler(e) {
+  async function signupHandler (e) {
     e.preventDefault()
 
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -22,7 +22,7 @@ function AuthSignup () {
       setError('')
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
-      history.push('/dev')
+      history.push('/get-started')
     } catch {
       setError('Failed to create an account')
     }
