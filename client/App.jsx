@@ -25,17 +25,17 @@ function App () {
     <>
       <AuthProvider>
         <Route path='/' component={Nav} />
-        <Route exact path='/' component={Banner} />
-        <Route exact path='/' component={SearchBar} />
-        <Route exact path='/' component={Explore} />
-        <Route exact path='/css' component={TemplateProfilePage} />
-        <Route exact path='/visible' component={TemplateVisible} />
-        <Route exact path='/mobile' component={Mobile} />
-        <Route exact path='/web' component={Web} />
-        <Route exact path='/software' component={Software} />
-        <Route exact path='/js' component={JS} />
-        <Route exact path='/ts' component={TS} />
-        <Route exact path='/c' component={C} />
+        <Route path='/explore' component={Banner} />
+        <Route path='/explore' component={SearchBar} />
+        <Route exact path='/explore/alldevs' component={Explore} />
+        <Route exact path='/explore/css' component={TemplateProfilePage} />
+        <Route exact path='/explore/visible' component={TemplateVisible} />
+        <Route exact path='/explore/mobile' component={Mobile} />
+        <Route exact path='/explore/web' component={Web} />
+        <Route exact path='/explore/software' component={Software} />
+        <Route exact path='/explore/js' component={JS} />
+        <Route exact path='/explore/ts' component={TS} />
+        <Route exact path='/explore/c' component={C} />
         <Route path='/signup' component={AuthSignup} />
         <Route path='/get-started' component={PersonalSignup} />
         <Route path='/more/:id' component={MoreInfoSignup} />
