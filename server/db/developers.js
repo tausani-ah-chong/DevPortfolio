@@ -1,7 +1,8 @@
 const connection = require('./connection')
 
 module.exports = {
-  getDevelopers
+  getDevelopers,
+  insertNewDeveloper
 }
 
 function getDevelopers (db = connection) {
@@ -70,4 +71,16 @@ function getDevelopers (db = connection) {
       }, [])
       return devs
     })
+}
+
+function insertNewDeveloper ({ firstName, lastName, profilePicture, pronoun, bio }, db = connection) {
+  return db('developers')
+    .insert({
+      first_name: firstName,
+      last_name: lastName,
+      profile_picture: profilePicture,
+      pronoun,
+      bio
+    })
+    .then(result => result[0])
 }

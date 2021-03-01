@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import consume from '../consume'
 
-function PersonalSignup () {
+function PersonalSignup (props) {
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -20,34 +20,33 @@ function PersonalSignup () {
 
   function handleSubmit (e) {
     e.preventDefault()
+    consume('/get-started', 'post', form)
+      .then(id => {
+        props.history.push(`/more/${id}`)
+        return null
+      })
+      .catch(err => console.error(err.message))
   }
 
   return (
     <>
-      <div>
+
+      <div className="w-full bg-blue-100 px-auto">
         <h1>Welcome! Let&apos;s create your profile</h1>
-      </div>
+        <h2>Add your details:</h2>
 
-      <div>
-
-        <div>
-          <h2>Add your details:</h2>
-        </div>
-
-        <div>
+        <div className="w-auto bg-blue-400 flex flex-col">
           <form onSubmit={handleSubmit}>
 
-            <label htmlFor='firstName'>First Name</label>
-            <input id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
+            <div className="listItem" >
+              <label htmlFor='firstName'>First Name</label>
+              <input id='firstName' type='text' name='firstName' value={form.firstName} onChange={onChange} required />
+            </div>
+            <div className="listItem">
+              <label htmlFor='lastName'>Last Name</label>
+              <input className="bg-gray-100 rounded-md" id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
+            </div>
 
-            <label htmlFor='lastName'>Last Name</label>
-            <input id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
-
-            {/* Pronoun might be a checkbox
-                She/Her
-                He/Him
-                They/Them
-            */}
             <label htmlFor='pronoun'>Pronoun</label>
             <input id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
 
@@ -57,9 +56,7 @@ function PersonalSignup () {
             <label htmlFor='bio'>Bio</label>
             <input id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
 
-            <Link to='/more'>
-              <button>Next</button>
-            </Link>
+            <button>Next</button>
 
           </form>
 

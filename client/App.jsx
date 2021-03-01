@@ -14,13 +14,13 @@ import MoreInfoSignup from './components/MoreInfoSignup'
 import TemplateVisible from './components/templates/TemplateVisible'
 import { AuthProvider } from './contexts/AuthContext'
 
-function App () {
+function App() {
   return (
     <>
       <AuthProvider>
         <Route path='/' component={Nav} />
-        <Route path='/' component={Banner} />
-        <Route path='/' component={SearchBar} />
+        <Route exact path='/' component={Banner} />
+        <Route exact path='/' component={SearchBar} />
         <Route exact path='/' component={Explore} />
         <Route exact path='/css' component={TemplateProfilePage} />
         <Route exact path='/visible' component={TemplateVisible} />
@@ -29,7 +29,7 @@ function App () {
         <Route exact path='/software' component={Software} />
         <Route path='/signup' component={AuthSignup} />
         <Route path='/get-started' component={PersonalSignup} />
-        <Route path='/more' component={MoreInfoSignup} />
+        <Route path='/more/:id' component={MoreInfoSignup} />
       </AuthProvider>
     </>
   )
