@@ -39,7 +39,7 @@ function App () {
         <Route path='/signup' component={AuthSignup} />
         <Route path='/get-started' component={PersonalSignup} />
         <Route path='/more/:id' component={MoreInfoSignup} />
-        <PrivateRoute exact path='/dashboard' component={Profile}/>
+        <PrivateRoute exact path='/dashboard/:id' component={Profile}/>
         <Route path='/login' component={Login} />
       </AuthProvider>
     </>
