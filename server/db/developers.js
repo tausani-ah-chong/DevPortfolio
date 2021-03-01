@@ -139,7 +139,6 @@ function getDeveloperById (id, db = connection) {
           }, [])
         }]
       }, [])
-      console.log(devs)
       return devs
     })
 }
