@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import Explore from './components/Explore'
+import Profile from './components/Profile'
 import Nav from './components/Nav'
 import Banner from './components/Banner'
 import TemplateProfilePage from './components/templates/TemplateProfilePage'
@@ -20,6 +21,7 @@ function App () {
       <Route exact path='/' component={Banner} />
       <Route exact path='/' component={SearchBar} />
       <Route exact path='/' component={Explore} />
+      <Route exact path='/profile/:id' component={Profile} />
       <Route exact path='/css' component={TemplateProfilePage} />
       <Route exact path='/visible' component={TemplateVisible} />
       <Route exact path='/mobile' component={Mobile} />
