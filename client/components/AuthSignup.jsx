@@ -56,6 +56,8 @@ function AuthSignup () {
           <p>Already have an account? <Link to='/login'><a className="hover:text-blue-400">Log In</a></Link></p>
         </div>
       </div>
+    </>
+  )
 }
 
 export default AuthSignup
