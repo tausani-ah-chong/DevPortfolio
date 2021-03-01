@@ -8,6 +8,9 @@ module.exports = {
       },
       colors: {
         cgrey: '#333333'
+      },
+      width: {
+        c: '630px'
       }
     }
   },
