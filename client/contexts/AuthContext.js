@@ -10,6 +10,7 @@ export function useAuth () {
 export function AuthProvider ({ children }) {
   const [currentUser, setCurrentUser] = useState()
   const [loading, setLoading] = useState(true)
+  // const user = auth.getInstance().getCurrentUser()
 
   function signup (email, password) {
     return auth.createUserWithEmailAndPassword(email, password)
@@ -17,7 +18,7 @@ export function AuthProvider ({ children }) {
 
   function login (email, password) {
     return auth.signInWithEmailAndPassword(email, password)
-      .then(response => console.log(response.user.X.X))
+      .then(() => console.log(auth.currentUser))
   }
 
   function logout () {

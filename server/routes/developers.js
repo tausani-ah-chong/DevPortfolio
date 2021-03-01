@@ -20,8 +20,8 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  const id = Number(req.params.id)
-  dev.getDeveloperById(id)
+  const uuid = Number(req.params.uuid)
+  dev.getDeveloperById(uuid)
     .then(devs => res.json(devs))
     .catch((err) => {
       console.log(err.message)

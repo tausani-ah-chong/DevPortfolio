@@ -22,6 +22,7 @@ const mockDevelopers = [{
 
 const newDev = {
   firstName: 'christo',
+  uuid: 'adfdsfd1234',
   lastName: 'difficult last name',
   profilePicture: 'beautiful face',
   pronoun: 'him/he',
@@ -51,6 +52,19 @@ describe('POST / api/v1/dev/get-started', () => {
       .expect(201)
       .then(res => {
         expect(res.body).toBe(4)
+        return null
+      })
+  })
+})
+
+describe('GET /api/v1/dev/:id', () => {
+  it('responds with a developer by uuid', () => {
+    db.getDeveloperById.mockImplementation(() => Promise.resolve(newDev))
+    return request(server)
+      .get('/api/v1/dev/adfdsfd1234')
+      .expect(200)
+      .then((dev) => {
+        expect(dev.body.uuid).toMatch('ad')
         return null
       })
   })
