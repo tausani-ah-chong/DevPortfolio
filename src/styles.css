@@ -57,3 +57,7 @@ inputDiv{
   @apply flex items-center mx-6 hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg
 
 }
+
+.noResize{
+  resize: none;
+}

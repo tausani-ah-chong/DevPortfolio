@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import consume from '../consume'
+import { Link } from 'react-router-dom'
 
 function PersonalSignup (props) {
   const [form, setForm] = useState({
@@ -35,7 +36,7 @@ function PersonalSignup (props) {
         <h1 className="text-4xl italic font-semibold my-6">Let&apos;s get started</h1>
         {/* <h2>Add your details:</h2> */}
         <div>
-          <div className="w-auto h-96 bg-gray-200 flex flex-cols p-6 m-4 rounded-md">
+          <div className="w-auto h-auto bg-gray-200 flex flex-cols p-6 m-4 rounded-md">
 
             <form onSubmit={handleSubmit}>
               <div className="inputDiv">
@@ -54,21 +55,23 @@ function PersonalSignup (props) {
                 They/Them
             */}
               <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="Pronouns" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
+                <input className="inputBox h-8 text-xl " placeholder="Pronouns:" id='pronoun' type='text' name='pronoun' value={form.pronoun} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
-              <div className="inputDiv">
-                <input className="inputBox h-8 text-xl " placeholder="Bio" id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
-                <hr className="border-black mb-4 "></hr>
+              {/* BIO  */}
+              <div className="inputDiv flex flex-col">
+                <label className="text-xl">Bio:</label>
+                <textarea className="inputBox noResize h-32 text-xl border-cgrey border-2 rounded-md " placeholder="" id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
               </div>
 
-              <div className="inputDiv">
+              {/* PROFIL PHOTO */}
+              <div className="mt-4">
+                <label>Profile Picture</label>
                 <input className="inputBox h-8 text-xl " placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
               </div>
 
               <Link to='/more'>
-                <p>Profile Picture</p>
                 <button type="button" className="my-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
               </Link>
 
