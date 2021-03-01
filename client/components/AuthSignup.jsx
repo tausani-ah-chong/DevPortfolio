@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
 
-function AuthSignup (props) {
+function AuthSignup () {
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()

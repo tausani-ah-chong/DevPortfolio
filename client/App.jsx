@@ -14,7 +14,7 @@ import MoreInfoSignup from './components/MoreInfoSignup'
 import TemplateVisible from './components/templates/TemplateVisible'
 import { AuthProvider } from './contexts/AuthContext'
 
-function App() {
+function App () {
   return (
     <>
       <AuthProvider>
