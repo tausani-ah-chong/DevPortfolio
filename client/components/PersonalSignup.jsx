@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import consume from '../consume'
+import { useParams } from 'react-router-dom'
 
 function PersonalSignup (props) {
+  const { uid } = useParams()
+
   const [form, setForm] = useState({
+    uuid: '',
     firstName: '',
     lastName: '',
     pronoun: '',
@@ -14,15 +18,16 @@ function PersonalSignup (props) {
     const { name, value } = e.target
     setForm({
       ...form,
-      [name]: value
+      [name]: value,
+      uuid: uid
     })
   }
 
   function handleSubmit (e) {
     e.preventDefault()
-    consume('/dev/get-started', 'post', form)
-      .then(res => {
-        props.history.push(`/more/${res.body}`)
+    consume(`/dev/get-started/${uid}`, 'post', form)
+      .then(() => {
+        props.history.push(`/more/${uid}`)
         return null
       })
       .catch(err => console.error(err.message))
@@ -67,6 +72,7 @@ function PersonalSignup (props) {
               </div>
 
               {/* NEXT BUTTON */}
+
               <button className=" focus:outline-none mt-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
 
             </form>

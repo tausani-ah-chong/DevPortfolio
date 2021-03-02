@@ -18,7 +18,6 @@ import JS from './components/queries/JS'
 import TS from './components/queries/TS'
 import C from './components/queries/C'
 import Login from './components/Login'
-import PrivateRoute from './components/PrivateRoute'
 import ProfileExplore from './components/ProfileExplore'
 
 function App () {
@@ -38,9 +37,9 @@ function App () {
         <Route exact path='/explore/ts' component={TS} />
         <Route exact path='/explore/c' component={C} />
         <Route path='/signup' component={AuthSignup} />
-        <Route path='/get-started' component={PersonalSignup} />
-        <Route path='/more/:id' component={MoreInfoSignup} />
-        <Route exact path='/dashboard/:id' component={Profile}/>
+        <Route path='/get-started/:uid' component={PersonalSignup} />
+        <Route path='/more/:uid' component={MoreInfoSignup} />
+        <Route exact path='/dashboard/:uid' component={Profile} />
         <Route exact path='/dashboard/:id' component={ProfileExplore}/>
         <Route path='/login' component={Login} />
       </AuthProvider>
@@ -49,3 +48,6 @@ function App () {
 }
 
 export default App
+
+// TODO:
+// Change component path of user login Dashboard

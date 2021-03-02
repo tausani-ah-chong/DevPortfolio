@@ -4,7 +4,6 @@ exports.up = function (knex) {
     table.dropColumn('platforms')
     table.dropColumn('locations')
     table.dropColumn('projects_id')
-    table.dropColumn('uuid')
     table.string('email')
     table.unique('email')
   })

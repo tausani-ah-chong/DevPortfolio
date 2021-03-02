@@ -22,6 +22,7 @@ const mockDevelopers = [{
 
 const newDev = {
   firstName: 'christo',
+  uuid: 'adfdsfd1234',
   lastName: 'difficult last name',
   profilePicture: 'beautiful face',
   pronoun: 'him/he',
@@ -42,15 +43,28 @@ describe('GET /api/v1/dev', () => {
   })
 })
 
-describe('POST / api/v1/dev/get-started', () => {
+describe('POST / api/v1/dev/get-started/:uid', () => {
   it('responds with new developer id', () => {
     db.insertNewDeveloper.mockImplementation(() => Promise.resolve(4))
     return request(server)
-      .post('/api/v1/dev/get-started')
+      .post('/api/v1/dev/get-started/adfdsfd1234')
       .send(newDev)
       .expect(201)
       .then(res => {
         expect(res.body).toBe(4)
+        return null
+      })
+  })
+})
+
+describe('GET /api/v1/dev/:id', () => {
+  it('responds with a developer by uuid', () => {
+    db.getDeveloperById.mockImplementation(() => Promise.resolve(newDev))
+    return request(server)
+      .get('/api/v1/dev/adfdsfd1234')
+      .expect(200)
+      .then((dev) => {
+        expect(dev.body.uuid).toMatch('ad')
         return null
       })
   })

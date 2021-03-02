@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
-export default function Login() {
+export default function Login () {
   const emailRef = useRef()
   const passwordRef = useRef()
   const { login } = useAuth()
@@ -17,7 +17,7 @@ export default function Login() {
       setError('')
       setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value)
-      history.push('/dashboard')
+        .then(result => history.push(`/dashboard/${result}`))
     } catch {
       setError('Failed to log in')
     }
@@ -27,7 +27,7 @@ export default function Login() {
 
   return (
     <>
-      <h1>Sign up!</h1>
+      <h1><strong>Sign In</strong></h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor='email'>Email</label>
         <input id='email' type='email' ref={emailRef} name='email' required />
