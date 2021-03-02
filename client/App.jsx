@@ -20,6 +20,7 @@ import C from './components/queries/C'
 import Login from './components/Login'
 import PrivateRoute from './components/PrivateRoute'
 import NewBanner from './components/templates/NewBanner'
+import NewProfile from './components/templates/NewProfile'
 
 function App () {
   return (
@@ -31,6 +32,7 @@ function App () {
         <Route path='/explore' component={SearchBar} />
         <Route exact path='/explore/alldevs' component={Explore} />
         <Route exact path='/profile' component={TemplateProfilePage} />
+        <Route exact path='/newprofile' component={NewProfile} />
         <Route exact path='/explore/visible' component={TemplateVisible} />
         <Route exact path='/explore/mobile' component={Mobile} />
         <Route exact path='/explore/web' component={Web} />
