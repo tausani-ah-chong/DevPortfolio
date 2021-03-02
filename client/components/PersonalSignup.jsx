@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import consume from '../consume'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 function PersonalSignup (props) {
   const [form, setForm] = useState({
@@ -10,6 +10,7 @@ function PersonalSignup (props) {
     profilePicture: '',
     bio: ''
   })
+  const uid = useParams()
 
   function onChange (e) {
     const { name, value } = e.target
@@ -21,8 +22,9 @@ function PersonalSignup (props) {
 
   function handleSubmit (e) {
     e.preventDefault()
-    consume('/dev/get-started', 'post', form)
+    consume(`/dev/get-started/${uid}`, 'post', form)
       .then(res => {
+        console.log('inside personal signup', res.body)
         props.history.push(`/more/${res.body}`)
         return null
       })
@@ -61,7 +63,6 @@ function PersonalSignup (props) {
                 <hr className="border-black mb-4 "></hr>
               </div>
 
-
               {/* BIO  */}
               <div className="inputDiv flex flex-col">
                 <label className="lg:text-lg xl:text-xl">Bio:</label>
@@ -69,10 +70,8 @@ function PersonalSignup (props) {
               </div>
 
               {/* NEXT BUTTON */}
-              <Link to='/more'>
-                <button type="button" className=" focus:outline-none mt-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
-              </Link>
 
+              <button className=" focus:outline-none mt-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
 
             </form>
 
