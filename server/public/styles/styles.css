@@ -31693,6 +31693,53 @@ inputDiv{
   }
 }
 
+.buttonSearchBar{
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity))
+}
+
+.buttonSearchBar:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
+}
+
+.buttonSearchBar {
+  --tw-bg-opacity: 0.8;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.buttonSearchBar:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.buttonSearchBar {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .buttonSearchBar {
+    font-weight: 400;
+    height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1285px) {
+  .buttonSearchBar {
+    font-weight: 400;
+    height: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 .buttonNoMargin{
   --tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity))

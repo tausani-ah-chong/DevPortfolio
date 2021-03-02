@@ -49,6 +49,11 @@ inputDiv{
   @apply flex items-center mx-6 hover:bg-blue-400 bg-gray-200 rounded-md lg:h-8 xl:h-10 px-3 lg:font-medium xl:font-semibold xl:text-lg lg:text-base focus:outline-none
 }
 
+.buttonSearchBar{
+  @apply flex items-center mx-3 hover:bg-blue-100 bg-gray-100 bg-opacity-80 rounded-md lg:h-8 xl:h-8 px-3 lg:font-normal xl:font-normal xl:text-lg lg:text-base focus:outline-none
+
+}
+
 .buttonNoMargin{
   @apply flex items-center hover:bg-blue-400 bg-gray-200 rounded-md lg:h-8 xl:h-10 px-3 lg:font-medium xl:font-semibold xl:text-lg lg:text-base focus:outline-none
 }
