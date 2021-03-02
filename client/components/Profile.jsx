@@ -68,7 +68,7 @@ function Profile ({ devs }) {
         <div className="w-full order-2 flex items-center">
           <div className="mr-96 xl:h-96 w-auto flex items-center">
             {
-              devs.length && (<img src={devs[0].projects[0].projectImage} alt=""/>)
+              devs[0].projects.length ? (<img src={devs[0].projects[0].projectImage} alt=""/>) : null
             }
           </div>
           {/* <ProfileCarousel /> */}
