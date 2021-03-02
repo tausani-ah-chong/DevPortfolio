@@ -19,6 +19,7 @@ import TS from './components/queries/TS'
 import C from './components/queries/C'
 import Login from './components/Login'
 import PrivateRoute from './components/PrivateRoute'
+import ProfileExplore from './components/ProfileExplore'
 
 function App () {
   return (
@@ -40,6 +41,7 @@ function App () {
         <Route path='/get-started' component={PersonalSignup} />
         <Route path='/more/:id' component={MoreInfoSignup} />
         <Route exact path='/dashboard/:id' component={Profile}/>
+        <Route exact path='/dashboard/:id' component={ProfileExplore}/>
         <Route path='/login' component={Login} />
       </AuthProvider>
     </>
