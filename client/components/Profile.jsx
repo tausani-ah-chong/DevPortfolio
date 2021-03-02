@@ -20,8 +20,10 @@ function Profile ({ devs }) {
               {
                 devs.map(e => {
                   return (
-                    // use conditional to show either stock or real image
-                    <img key={e.id} src={e.profilePicture} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" alt=""/>
+                    e.profilePicture
+                      ? <img key={e.id} src={e.profilePicture} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" alt="" />
+                      : <img className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" src='https://www.appliedlogistics.co.nz/wp-content/uploads/2018/01/person-placeholder-300x300.jpg' />
+
                   )
                 })
               }
@@ -33,7 +35,7 @@ function Profile ({ devs }) {
             <ul>
               {devs.map(e => (<li key={e.id} className='lg:text-3xl xl:text-5xl mb-1 font-semibold' >{e.firstName} {e.lastName}</li>))}
               {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}</li>))}
-              <hr/>
+              <hr />
               {
                 devs.map(e => {
                   return (
@@ -49,7 +51,7 @@ function Profile ({ devs }) {
                   )
                 })
               }
-              <hr/>
+              <hr />
             </ul>
             <div className='h-40 mt-3 w-auto overflow-auto bg-gray-200 rounded-md'>
               {
@@ -66,7 +68,7 @@ function Profile ({ devs }) {
         <div className="w-full order-2 flex items-center">
           <div className="mr-96 xl:h-96 w-auto flex items-center">
             {
-              devs[0].projects.length ? (<img src={devs[0].projects[0].projectImage} alt=""/>) : null
+              devs[0].projects.length ? (<img src={devs[0].projects[0].projectImage} alt="" />) : <h2><strong>No Projects to show</strong></h2>
             }
           </div>
           {/* <ProfileCarousel /> */}

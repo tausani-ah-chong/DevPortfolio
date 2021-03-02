@@ -53,6 +53,3 @@ function App () {
 }
 
 export default App
-
-// TODO:
-// Change component path of user login Dashboard
