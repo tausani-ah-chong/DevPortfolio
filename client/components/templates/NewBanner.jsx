@@ -15,7 +15,7 @@ export default function NewBanner () {
         <div className="lg:h-72 xl:h-96 w-full ">
           <div className="order-2 aspect-w-16 aspect-h-9 rounded-md">
             <div className="h-0 pt-p">
-              <img className="h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-5 object-cover rounded-md" src='/images/placeholder-img/pic1.jpg'/>
+              <img className="h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-8 xl:mt-5 object-cover rounded-md" src='/images/placeholder-img/pic1.jpg'/>
             </div>
           </div>
         </div>
