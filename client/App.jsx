@@ -19,13 +19,15 @@ import TS from './components/queries/TS'
 import C from './components/queries/C'
 import Login from './components/Login'
 import PrivateRoute from './components/PrivateRoute'
+import NewBanner from './components/templates/NewBanner'
 
 function App () {
   return (
     <>
       <AuthProvider>
         <Route path='/' component={Nav} />
-        <Route path='/explore' component={Banner} />
+        <Route exact path ='/grid' component={NewBanner}/>
+        <Route path='/explore' component={NewBanner} />
         <Route path='/explore' component={SearchBar} />
         <Route exact path='/explore/alldevs' component={Explore} />
         <Route exact path='/profile' component={TemplateProfilePage} />
