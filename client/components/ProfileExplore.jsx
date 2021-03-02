@@ -12,10 +12,8 @@ function ProfileExplore ({ devs }) {
 
   return (
     <>
-      <div className='w-screen h- grid lg:grid-cols-3 xl:grid-cols-4 gap-4 rounded-md lg:py-1 xl:p-10'>
-        {
-          devs.length && <WorkCard devs={devs}/>
-        }
+      <div className='w-full grid lg:grid-cols-3 xl:grid-cols-4 gap-4 rounded-md lg:py-10 lg:px-6 xl:px-10'>
+        {devs.length && <WorkCard devs={devs}/>}
       </div>
     </>
   )
