@@ -30,10 +30,12 @@ function App () {
         <Route exact path ='/grid' component={NewBanner}/>
         <Route path='/explore' component={NewBanner} />
         <Route path='/explore' component={SearchBar} />
+
         <Route exact path='/explore/alldevs' component={Explore} />
         <Route exact path='/profile' component={TemplateProfilePage} />
         <Route exact path='/newprofile' component={NewProfile} />
         <Route exact path='/explore/visible' component={TemplateVisible} />
+
         <Route exact path='/explore/mobile' component={Mobile} />
         <Route exact path='/explore/web' component={Web} />
         <Route exact path='/explore/software' component={Software} />

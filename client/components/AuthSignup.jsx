@@ -53,7 +53,7 @@ function AuthSignup () {
               <button className="flex items-center hover:bg-blue-400 bg-blue-200 rounded-md h-10 mb-3 px-3 font-semibold tracking-wide">Sign Up</button>
             </Link>
           </form>
-          <p>Already have an account? <Link to='/login'><a className="hover:text-blue-400">Log In</a></Link></p>
+          <p>Already have an account? <Link to='/login'><span className="hover:text-blue-400">Log In</span></Link></p>
         </div>
       </div>
     </>

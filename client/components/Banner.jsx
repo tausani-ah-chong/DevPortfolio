@@ -10,7 +10,9 @@ function Banner () {
         <h2 className=" font-Poppins italic font-bold xl:text-6xl lg:text-4xl  text-cgrey my-6">Find your next job, </h2>
         <h2 className=" font-Poppins italic font-bold xl:text-6xl lg:text-4xl text-cgrey my-6">Find your next dev</h2>
         <h4 className="xl:text-2xl lg:text-xl font-medium my-6"> DevPortfolio, connecting those who want with those who need</h4>
-        <button type="button" className="buttonNoMargin">Sign up</button>
+        <Link to='/signup'>
+          <button type="button" className="buttonNoMargin">Sign up</button>
+        </Link>
 
       </div>
 
