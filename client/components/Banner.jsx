@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Banner () {
   return (
-    <div className="w-full h-auto bg-gray-100 grid grid-cols-2 p-10 rounded-md" >
+    <div className="w-full h-96 bg-gray-100 grid grid-cols-2 rounded-md" >
       <div className="ml-44">
 
         <h2 className=" font-Poppins italic font-bold xl:text-6xl lg:text-4xl  text-cgrey my-6">Find your next job, </h2>
@@ -19,8 +19,8 @@ function Banner () {
         <div className="h-0 pt-p">
           <img className="h-5/6 w-5/6 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-5 object-cover rounded-md" src='/images/placeholder-img/pic1.jpg'/>
         </div>
-
       </div>
+      
     </div>
   )
 }
