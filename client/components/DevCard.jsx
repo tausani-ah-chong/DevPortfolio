@@ -11,8 +11,8 @@ function DevCard ({ dev }) {
             : <img src='/images/project-img/gabriel-gurrola-u6BPMXgURuI-unsplash-min.jpg' className="imgFit rounded-md"/>
         }
         <div className=" absolute bottom-0 h-20 w-full flex flex-row items-center pt-7">
-          <img className= "rounded-full w-10 h-10 mx-3 mb-1 opacity-50 group-hover:opacity-100" src={dev.profilePicture}/>
-          <h4 className="self-center text-gray-300 group-hover:text-white text-lg">{`${dev.firstName} ${dev.lastName}`}</h4>
+          <img className= "rounded-full group-hover:w-20 lg:w-8 mx-3 mb-1 opacity-50 group-hover:opacity-100" src={dev.profilePicture}/>
+          <h4 className="self-center text-gray-300 group-hover:text-white text-normal">{`${dev.firstName} ${dev.lastName}`}</h4>
         </div>
 
       </div>
