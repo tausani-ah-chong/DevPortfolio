@@ -19,6 +19,7 @@ router.get('/', (req, res) => {
     })
 })
 
+// Might take ID
 router.get('/:id', (req, res) => {
   const id = Number(req.params.id)
   dev.getDeveloperById(id)
@@ -33,7 +34,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.post('/get-started', (req, res) => {
+router.post('/get-started/:uid', (req, res) => {
   const newUser = req.body
   dev.insertNewDeveloper(newUser)
     .then(devId => {

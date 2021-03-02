@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 
 export default function NewBanner () {
+  const { currentUser } = useAuth()
   return (
     <>
       <div className="w-full lg:h-72 xl:h-96  grid grid-cols-2 gap-4 bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-md">
@@ -9,7 +12,11 @@ export default function NewBanner () {
             <h2 className=" font-Poppins font-extrabold xl:text-5xl lg:text-4xl text-cgrey ">Find your next job, </h2>
             <h2 className=" font-Poppins my-3 font-extrabold xl:text-5xl lg:text-4xl text-cgrey ">Find your next dev</h2>
             <h4 className="xl:text-xl lg:text-xl italic font-normal mb-3">Your dream Developer is just a click away</h4>
-            <button type="button" className="buttonNoMargin">Sign up</button>
+            {currentUser ? null
+              : <Link to='/signup'>
+                <button type="button" className="buttonNoMargin">Sign up</button>
+              </Link>
+            }
           </div>
         </div>
         <div className="lg:h-72 xl:h-96 w-full ">

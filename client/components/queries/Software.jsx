@@ -10,7 +10,7 @@ function Software ({ software }) {
 
   return (
     <>
-      <div className="w-screen h- grid grid-cols-4 gap-4 rounded-md p-10">
+      <div className=" w-full grid xl:grid-cols-4 lg:grid-cols-3 gap-4 gap-x-4 rounded-md lg:px-6 xl:px-10">
         {
           software.map(dev => {
             return (

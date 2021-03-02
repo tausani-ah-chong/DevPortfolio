@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import consume from '../consume'
+import { useParams } from 'react-router-dom'
 
 function PersonalSignup (props) {
+  const { uid } = useParams()
+
   const [form, setForm] = useState({
+    uuid: '',
     firstName: '',
     lastName: '',
     pronoun: '',
@@ -14,14 +18,15 @@ function PersonalSignup (props) {
     const { name, value } = e.target
     setForm({
       ...form,
-      [name]: value
+      [name]: value,
+      uuid: uid
     })
   }
 
   function handleSubmit (e) {
     e.preventDefault()
-    consume('/dev/get-started', 'post', form)
-      .then(res => {
+    consume(`/dev/get-started/${uid}`, 'post', form)
+      .then((res) => {
         props.history.push(`/more/${res.body}`)
         return null
       })
@@ -44,7 +49,7 @@ function PersonalSignup (props) {
               </div>
 
               <div className="inputDiv">
-                <input className="inputBox placeHolderText " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
+                <input className="inputBox placeHolderText " placeholder="Last Name:" id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
@@ -54,11 +59,11 @@ function PersonalSignup (props) {
               </div>
 
               {/* PROFIL PHOTO */}
-              <div className="mt-4 flex flex-col">
-                <label className="lg:text-lg xl:text-xl">Profile Picture:</label>
-                <input className="inputBox placeHolderText mb-2" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
-                <hr className="border-black mb-4 "></hr>
-              </div>
+
+              {/* <div className="mt-4 flex flex-col"> */}
+              {/* <input hidden='true' value='' className="inputBox placeHolderText mb-2" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" /> */}
+              {/* <hr className="border-black mb-4 "></hr> */}
+              {/* </div> */}
 
               {/* BIO  */}
               <div className="inputDiv flex flex-col">
@@ -67,6 +72,7 @@ function PersonalSignup (props) {
               </div>
 
               {/* NEXT BUTTON */}
+
               <button className=" focus:outline-none mt-6 flex items-center mr-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Next</button>
 
             </form>

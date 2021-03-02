@@ -18,10 +18,9 @@ import JS from './components/queries/JS'
 import TS from './components/queries/TS'
 import C from './components/queries/C'
 import Login from './components/Login'
-import PrivateRoute from './components/PrivateRoute'
-import NewBanner from './components/templates/NewBanner'
+import ProfileExplore from './components/ProfileExplore'
+import NewBanner from './components/NewBanner'
 import NewProfile from './components/templates/NewProfile'
-
 import LandingPage from './components/LandingPage'
 
 function App () {
@@ -29,15 +28,13 @@ function App () {
     <>
       <AuthProvider>
         <Route path='/' component={Nav} />
-        <Route exact path ='/landingpage' component={LandingPage}/>
+        <Route exact path ='/' component={LandingPage}/>
         <Route path='/explore' component={NewBanner} />
         <Route path='/explore' component={SearchBar} />
-
-        <Route exact path='/explore/alldevs' component={Explore} />
+        <Route exact path='/explore' component={Explore} />
         <Route exact path='/profile' component={TemplateProfilePage} />
         <Route exact path='/newprofile' component={NewProfile} />
         <Route exact path='/explore/visible' component={TemplateVisible} />
-
         <Route exact path='/explore/mobile' component={Mobile} />
         <Route exact path='/explore/web' component={Web} />
         <Route exact path='/explore/software' component={Software} />
@@ -45,9 +42,10 @@ function App () {
         <Route exact path='/explore/ts' component={TS} />
         <Route exact path='/explore/c' component={C} />
         <Route path='/signup' component={AuthSignup} />
-        <Route path='/get-started' component={PersonalSignup} />
-        <Route path='/more/:id' component={MoreInfoSignup} />
-        <PrivateRoute exact path='/dashboard/:id' component={Profile}/>
+        <Route path='/get-started/:uid' component={PersonalSignup} />
+        <Route path='/more/:uid' component={MoreInfoSignup} />
+        <Route exact path='/dashboard/:id' component={Profile} />
+        <Route exact path='/dashboard/:id' component={ProfileExplore}/>
         <Route path='/login' component={Login} />
       </AuthProvider>
     </>
@@ -55,3 +53,6 @@ function App () {
 }
 
 export default App
+
+// TODO:
+// Change component path of user login Dashboard

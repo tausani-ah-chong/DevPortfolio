@@ -13,10 +13,12 @@ export function AuthProvider ({ children }) {
 
   function signup (email, password) {
     return auth.createUserWithEmailAndPassword(email, password)
+      .then(() => auth.currentUser.uid)
   }
 
   function login (email, password) {
     return auth.signInWithEmailAndPassword(email, password)
+      .then(() => auth.currentUser.uid)
   }
 
   function logout () {
