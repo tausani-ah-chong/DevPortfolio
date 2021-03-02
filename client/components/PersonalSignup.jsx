@@ -1,31 +1,33 @@
 import React, { useState } from 'react'
 import consume from '../consume'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 function PersonalSignup (props) {
+  const { uid } = useParams()
+
   const [form, setForm] = useState({
+    uuid: '',
     firstName: '',
     lastName: '',
     pronoun: '',
     profilePicture: '',
     bio: ''
   })
-  const uid = useParams()
 
   function onChange (e) {
     const { name, value } = e.target
     setForm({
       ...form,
-      [name]: value
+      [name]: value,
+      uuid: uid
     })
   }
 
   function handleSubmit (e) {
     e.preventDefault()
     consume(`/dev/get-started/${uid}`, 'post', form)
-      .then(res => {
-        console.log('inside personal signup', res.body)
-        props.history.push(`/more/${res.body}`)
+      .then(() => {
+        props.history.push(`/more/${uid}`)
         return null
       })
       .catch(err => console.error(err.message))

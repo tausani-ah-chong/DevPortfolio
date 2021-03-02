@@ -7,8 +7,7 @@ function MoreInfoSignup (props) {
   const [languages, setLanguages] = useState([])
   const [platforms, setPlatforms] = useState([])
   // const [button, setButton] = useState(false)
-  const id = Number(useParams().id)
-
+  const { uid } = useParams()
   function changeLang (e) {
     return !languages.some(element => element.languageId === e.target.value)
       ? setLanguages([...languages, { languageId: e.target.value }])
@@ -24,9 +23,9 @@ function MoreInfoSignup (props) {
   function handleSubmit (e) {
     e.preventDefault()
     if (languages.length && platforms.length) {
-      consume(`/devLang/${id}`, 'post', languages)
-        .then(() => consume(`/devPlat/${id}`, 'post', platforms))
-        .then(() => props.history.push('/dashboard'))
+      consume(`/devLang/${uid}`, 'post', languages)
+        .then(() => consume(`/devPlat/${uid}`, 'post', platforms))
+        .then(() => props.history.push(`/dashboard/${uid}`))
         .catch(err => console.error(err.message))
     } else {
       alert('Must Choose at least one language and platform')
@@ -109,7 +108,7 @@ function MoreInfoSignup (props) {
               </div>
 
             </span>
-            <button type="button" className="flex items-center mx-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Complete</button>
+            <button className="flex items-center mx-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Complete</button>
 
           </form>
         </div>

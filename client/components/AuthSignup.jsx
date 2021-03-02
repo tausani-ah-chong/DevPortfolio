@@ -21,11 +21,9 @@ function AuthSignup() {
     try {
       setError('')
       setLoading(true)
-      console.log('inside sign up')
       await signup(emailRef.current.value, passwordRef.current.value)
         .then(result => history.push(`/get-started/${result}`))
     } catch {
-      console.log('inside error')
       setError('Failed to sign up')
     }
 

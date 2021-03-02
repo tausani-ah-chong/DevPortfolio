@@ -24,7 +24,7 @@ function App () {
   return (
     <>
       <AuthProvider>
-        <Route path='/' component={Nav} />
+        <PrivateRoute path='/' component={Nav} />
         <Route path='/explore' component={Banner} />
         <Route path='/explore' component={SearchBar} />
         <Route exact path='/explore' component={Explore} />
@@ -38,8 +38,8 @@ function App () {
         <Route exact path='/explore/c' component={C} />
         <Route path='/signup' component={AuthSignup} />
         <Route path='/get-started/:uid' component={PersonalSignup} />
-        <Route path='/more/:id' component={MoreInfoSignup} />
-        <PrivateRoute exact path='/dashboard/:uid' component={Profile}/>
+        <Route path='/more/:uid' component={MoreInfoSignup} />
+        <Route exact path='/dashboard/:uid' component={Profile} />
         <Route path='/login' component={Login} />
       </AuthProvider>
     </>

@@ -43,11 +43,11 @@ describe('GET /api/v1/dev', () => {
   })
 })
 
-describe('POST / api/v1/dev/get-started', () => {
+describe('POST / api/v1/dev/get-started/:uid', () => {
   it('responds with new developer id', () => {
     db.insertNewDeveloper.mockImplementation(() => Promise.resolve(4))
     return request(server)
-      .post('/api/v1/dev/get-started')
+      .post('/api/v1/dev/get-started/adfdsfd1234')
       .send(newDev)
       .expect(201)
       .then(res => {

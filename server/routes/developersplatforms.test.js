@@ -10,7 +10,7 @@ describe('POST /api/v1/devPlat', () => {
     db.insertNewDevPlat.mockImplementation(() => Promise.resolve(5))
     return request(server)
       .post('/api/v1/devPlat/2')
-      .send({ developerId: 2, platformId: 2 })
+      .send({ uuid: 2, platformId: 2 })
       .expect(201)
       .then(res => {
         expect(res.body).toBe(5)

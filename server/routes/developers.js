@@ -35,10 +35,7 @@ router.get('/:uid', (req, res) => {
 
 router.post('/get-started/:uid', (req, res) => {
   const newUser = req.body
-  const { uid } = req.params
-  const userWithUid = { ...newUser, uuid: uid }
-  console.log('new user with id:', JSON.stringify(req))
-  dev.insertNewDeveloper(userWithUid)
+  dev.insertNewDeveloper(newUser)
     .then(devId => {
       res.status(201).json(devId)
       return null

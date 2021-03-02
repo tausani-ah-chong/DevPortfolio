@@ -3,40 +3,37 @@ import { auth } from '../firebase'
 
 const AuthContext = React.createContext()
 
-export function useAuth() {
+export function useAuth () {
   return useContext(AuthContext)
 }
 
-export function AuthProvider({ children }) {
+export function AuthProvider ({ children }) {
   const [currentUser, setCurrentUser] = useState()
   const [loading, setLoading] = useState(true)
 
-  function signup(email, password) {
+  function signup (email, password) {
     return auth.createUserWithEmailAndPassword(email, password)
-      .then(() => {
-        console.log(auth.currentUser.uid)
-        return auth.currentUser.uid
-      })
+      .then(() => auth.currentUser.uid)
   }
 
-  function login(email, password) {
+  function login (email, password) {
     return auth.signInWithEmailAndPassword(email, password)
       .then(() => auth.currentUser.uid)
   }
 
-  function logout() {
+  function logout () {
     return auth.signOut()
   }
 
-  function resetPassword(email) {
+  function resetPassword (email) {
     return auth.sendPasswordResetEmail(email)
   }
 
-  function updateEmail(email) {
+  function updateEmail (email) {
     return currentUser.updateEmail(email)
   }
 
-  function updatePassword(password) {
+  function updatePassword (password) {
     return currentUser.updatePassword(password)
   }
 

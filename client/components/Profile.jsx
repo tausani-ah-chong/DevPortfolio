@@ -10,7 +10,7 @@ function Profile({ devs }) {
   const history = useHistory()
   const { logout } = useAuth()
   const [error, setError] = useState('')
-  console.log(uid)
+
   useEffect(() => {
     setStore(uid)
   }, [])
