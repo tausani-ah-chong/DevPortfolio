@@ -3,28 +3,36 @@ import { Link } from 'react-router-dom'
 
 function SearchBar () {
   return (
-    <div className="h-14 w-full flex justify-center">
-      <Link to='/explore'>
-        <button type="button" className="defaultButton">All Devs</button>
+
+    <div className="h-14 w-full flex justify-center items-center">
+      <Link to='/'>
+        <button type="button" className="buttonSearchBar">All Devs</button>
       </Link>
-      <Link to='/explore/mobile'>
-        <button type="button" className="defaultButton">Mobile</button>
+
+      <Link to='/mobile'>
+        <button type="button" className="buttonSearchBar">Mobile</button>
       </Link>
-      <Link to='/explore/web'>
-        <button type="button" className="defaultButton">Web</button>
+
+      <Link to='/web'>
+        <button type="button" className="buttonSearchBar">Web</button>
       </Link>
-      <Link to='/explore/software'>
-        <button type="button" className="defaultButton">Software</button>
+
+      <Link to='/software'>
+        <button type="button" className="buttonSearchBar">Software</button>
       </Link>
-      <Link to='/explore/js'>
-        <button type="button" className="defaultButton">JS</button>
+
+      <Link to='/js'>
+        <button type="button" className="buttonSearchBar">JS</button>
       </Link>
-      <Link to='/explore/ts'>
-        <button type="button" className="defaultButton">TS</button>
+
+      <Link to='/ts'>
+        <button type="button" className="buttonSearchBar">TS</button>
       </Link>
-      <Link to='/explore/c'>
-        <button type="button" className="defaultButton">C#</button>
+
+      <Link to='/c'>
+        <button type="button" className="buttonSearchBar">C#</button>
       </Link>
+
     </div>
   )
 }

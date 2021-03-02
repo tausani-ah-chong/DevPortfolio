@@ -12,13 +12,18 @@ module.exports = {
       width: {
         c: '630px'
       },
+      padding: {
+        p: '56.25%'
+      },
       screens: {
         xl: '1285px'
       }
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      width: ['responsive', 'hover', 'focus']
+    }
   },
   plugins: [
     require('@tailwindcss/aspect-ratio')

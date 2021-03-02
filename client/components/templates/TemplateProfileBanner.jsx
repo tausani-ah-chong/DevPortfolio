@@ -1,5 +1,6 @@
 import React from 'react'
 import TemplateProfileCarousel from './TemplateProfileCarousel'
+import ProfileCarousel from '../ProfileCarousel'
 
 export default function TemplateProfileBanner () {
   const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus nulla dui, non vestibulum arcu bibendum a. Morbi vestibulum molestie eros ac mattis. Maecenas a justo bibendum, ornare nisl vel, blandit tortor. In euismod purus eu lacinia pulvinar. Morbi vel purus velit. Etiam maximus, nisi et commodo tempor, nisi odio tincidunt massa, vel sagittis lorem nisi non elit. Nam ligula felis, molestie ut nunc eu, sollicitudin maximus sapien.'
@@ -9,7 +10,7 @@ export default function TemplateProfileBanner () {
 
   return (
     <>
-      <div className="w-full  h-96 grid grid-cols-2 p-3">
+      <div className="w-full  h-96 grid grid-cols-2 p-10 bg-gray-100">
         {/* profilepic and hire button */}
         <div className="w-full h-full flex pr-10">
           <div className=" pr-6 pt-3 justify-center ml-auto">
@@ -33,10 +34,7 @@ export default function TemplateProfileBanner () {
           </div>
         </div>
         {/* showcase reel carousel */}
-        <div className="w-full order-2 flex items-center">
-          <TemplateProfileCarousel/>
-        </div>
-
+        <ProfileCarousel/>
       </div>
     </>
   )

@@ -55,7 +55,7 @@ function PersonalSignup (props) {
 
               {/* PROFIL PHOTO */}
               <div className="mt-4 flex flex-col">
-                <label className="text-xl">Profile Picture:</label>
+                <label className="lg:text-lg xl:text-xl">Profile Picture:</label>
                 <input className="inputBox placeHolderText mb-2" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
                 <hr className="border-black mb-4 "></hr>
               </div>
