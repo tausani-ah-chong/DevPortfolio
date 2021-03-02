@@ -28,7 +28,15 @@ export default function NewProfileBanner () {
             </div>
           </div>
         </div>
-        <div className="lg:h-72 xl:h-96 bg-green-400"></div>
+        <div className="lg:h-72 xl:h-96">
+          <div className="lg:h-72 xl:h-96 w-full ">
+            <div className="order-2 aspect-w-16 aspect-h-9 rounded-md">
+              <div className="h-0 pt-p">
+                <img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src='/images/placeholder-img/pic1.jpg'/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )
