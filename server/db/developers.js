@@ -6,7 +6,7 @@ module.exports = {
   getDeveloperById
 }
 
-function getDevelopers (id, db = connection) {
+function getDevelopers (db = connection) {
   return db('developers')
     .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
     .leftJoin('projects', 'developersProjects.project_id', 'projects.id')
@@ -14,7 +14,6 @@ function getDevelopers (id, db = connection) {
     .leftJoin('languages', 'developersLanguages.language_id', 'languages.id')
     .leftJoin('developersPlatforms', 'developersPlatforms.developer_id', 'developers.id')
     .leftJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
-    .where('developers.id', id)
     .select(
       'developers.id as id',
       'profile_picture as profilePic',
@@ -74,6 +73,7 @@ function getDevelopers (id, db = connection) {
       return devs
     })
 }
+
 function getDeveloperById (id, db = connection) {
   return db('developers')
     .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
@@ -139,7 +139,6 @@ function getDeveloperById (id, db = connection) {
           }, [])
         }]
       }, [])
-      console.log(devs)
       return devs
     })
 }

@@ -16,14 +16,15 @@ function Nav () {
 
       <nav className="w-full h-12 flex items-center">
         <div className="w-full grid grid-cols-2">
-
-          <Link to="/">
-            <h1 className="xl:text-xl lg:text-lg font-semibold my-auto hover:text-blue-400">DevPortfolio</h1>
-          </Link>
-          <span className= "flex relative order-1">
-            <button type="button" className="buttonBlue absolute right-0 xl:text-lg lg:text-base">Sign in</button>
-            <a href='' className="font-semibold mx-6 inline absolute right-32 hover:text-blue-400 xl:text-lg lg:text-base">Sign Up</a>
-
+          <h1 className="xl:text-xl lg:text-lg font-semibold my-auto hover:text-blue-400">DevPortfolio</h1>
+          <span className="flex relative order-1">
+            {/* <a href='' className="font-semibold mx-6 inline absolute right-0 hover:text-blue-500">Sign In</a> */}
+            <Link to='/login'>
+              <button type="button" className="buttonBlue absolute right-0 xl:text-lg lg:text-base">Sign in</button>
+            </Link>
+            <Link to='/signup'>
+              <button className="font-semibold mx-6 inline absolute right-32 hover:text-blue-400 xl:text-lg lg:text-base">Sign Up</button>
+            </Link>
           </span>
 
         </div>
