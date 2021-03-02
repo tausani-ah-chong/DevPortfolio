@@ -33,9 +33,12 @@ router.get('/:uid', (req, res) => {
     })
 })
 
-router.post('/get-started', (req, res) => {
+router.post('/get-started/:uid', (req, res) => {
   const newUser = req.body
-  dev.insertNewDeveloper(newUser)
+  const { uid } = req.params
+  const userWithUid = { ...newUser, uuid: uid }
+  console.log('new user with id:', userWithUid)
+  dev.insertNewDeveloper(userWithUid)
     .then(devId => {
       res.status(201).json(devId)
       return null

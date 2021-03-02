@@ -16,6 +16,7 @@ function getDevelopers (db = connection) {
     .leftJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
     .select(
       'developers.id as id',
+      'uuid',
       'profile_picture as profilePic',
       'first_name as firstName',
       'last_name as lastName',
@@ -145,9 +146,10 @@ function getDeveloperById (uuid, db = connection) {
     })
 }
 
-function insertNewDeveloper ({ firstName, lastName, profilePicture, pronoun, bio }, db = connection) {
+function insertNewDeveloper ({ uuid, firstName, lastName, profilePicture, pronoun, bio }, db = connection) {
   return db('developers')
     .insert({
+      uuid,
       first_name: firstName,
       last_name: lastName,
       profile_picture: profilePicture,
