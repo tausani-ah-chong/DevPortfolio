@@ -19,17 +19,22 @@ import TS from './components/queries/TS'
 import C from './components/queries/C'
 import Login from './components/Login'
 import ProfileExplore from './components/ProfileExplore'
+import NewBanner from './components/templates/NewBanner'
+import NewProfile from './components/templates/NewProfile'
+import LandingPage from './components/LandingPage'
 
 function App () {
   return (
     <>
       <AuthProvider>
         <Route path='/' component={Nav} />
+        <Route exact path ='/landingpage' component={LandingPage}/>
         <Route path='/explore' component={Banner} />
         <Route path='/explore' component={SearchBar} />
-        <Route exact path='/explore' component={Explore} />
-        <Route exact path='/css' component={TemplateProfilePage} />
-        <Route exact path='/visible' component={TemplateVisible} />
+        <Route exact path='/explore/alldevs' component={Explore} />
+        <Route exact path='/profile' component={TemplateProfilePage} />
+        <Route exact path='/newprofile' component={NewProfile} />
+        <Route exact path='/explore/visible' component={TemplateVisible} />
         <Route exact path='/explore/mobile' component={Mobile} />
         <Route exact path='/explore/web' component={Web} />
         <Route exact path='/explore/software' component={Software} />
