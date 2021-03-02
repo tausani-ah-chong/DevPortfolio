@@ -24,10 +24,10 @@ function Nav () {
           <span className="flex relative order-1">
             <div className="flex items-center ml-auto">
               <Link to='/signup'>
-                <button className="font-semibold mx-6 inline hover:text-blue-400 xl:text-lg lg:text-base">Sign Up</button>
+                <button className="lg:font-medium xl:font-semibold mx-6 inline hover:text-blue-400 lg:text-base">Sign Up</button>
               </Link>
               <Link to='/login'>
-                <button type="button" className="flex items-center xl:ml-2 hover:bg-blue-400 bg-blue-200 rounded-md lg:h-8 xl:h-10 px-3 font-semibold focus:outline-none xl:text-lg lg:text-base">Sign in</button>
+                <button type="button" className="flex items-center xl:ml-2 hover:bg-blue-400 bg-blue-200 rounded-md lg:h-8 px-3 lg:font-medium xl:font-semibold focus:outline-none lg:text-base">Sign in</button>
               </Link>
             </div>
           </span>
