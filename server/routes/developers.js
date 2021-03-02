@@ -19,9 +19,10 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:uid', (req, res) => {
-  const { uid } = req.params
-  dev.getDeveloperById(uid)
+// Might take ID
+router.get('/:id', (req, res) => {
+  const id = Number(req.params.id)
+  dev.getDeveloperById(id)
     .then(devs => res.json(devs))
     .catch((err) => {
       console.log(err.message)

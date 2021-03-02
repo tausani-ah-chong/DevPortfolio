@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom'
 import { setStore } from './profileHelper'
 
 function Profile ({ devs }) {
-  const { uid } = useParams()
+  const { id } = useParams()
 
   useEffect(() => {
-    setStore(uid)
+    setStore(id)
   }, [])
 
   return (

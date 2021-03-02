@@ -75,7 +75,7 @@ function getDevelopers (db = connection) {
     })
 }
 
-function getDeveloperById (uuid, db = connection) {
+function getDeveloperById (id, db = connection) {
   return db('developers')
     .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
     .leftJoin('projects', 'developersProjects.project_id', 'projects.id')
@@ -83,7 +83,7 @@ function getDeveloperById (uuid, db = connection) {
     .leftJoin('languages', 'developersLanguages.language_id', 'languages.id')
     .leftJoin('developersPlatforms', 'developersPlatforms.developer_id', 'developers.id')
     .leftJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
-    .where('developers.uuid', uuid)
+    .where('developers.id', id)
     .select(
       'developers.id as id',
       'uuid',
