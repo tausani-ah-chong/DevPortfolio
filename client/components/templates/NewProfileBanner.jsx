@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import ProfileCarousel from '../ProfileCarousel'
+import ManualCarousel from './ManualCarousel'
 
 export default function NewProfileBanner () {
   const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus nulla dui, non vestibulum arcu bibendum a. Morbi vestibulum molestie eros ac mattis. Maecenas a justo bibendum, ornare nisl vel, blandit tortor. In euismod purus eu lacinia pulvinar. Morbi vel purus velit. Etiam maximus, nisi et commodo tempor, nisi odio tincidunt massa, vel sagittis lorem nisi non elit. Nam ligula felis, molestie ut nunc eu, sollicitudin maximus sapien.'
-
+  const [pic, setPic] = useState(1)
   return (
     <>
       <div className="w-full lg:h-72 xl:h-96 grid grid-cols-2 gap-4 bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-md">
+
         <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 lg:pr-10 xl:pr-14">
           <div className=" pr-6 pt-3 justify-center ml-auto">
             <div className="xl:mr-2">
@@ -37,6 +39,7 @@ export default function NewProfileBanner () {
             </div>
           </div>
         </div>
+        {/* <ManualCarousel/> */}
       </div>
     </>
   )

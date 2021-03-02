@@ -31913,6 +31913,22 @@ languageCardIcon{
   }
 }
 
+.hover-trigger{
+}
+
+.hover-target{
+  display:none
+}
+
+.hover-trigger:hover .hover-target {
+  display:block
+}
+
+.square{
+  height: 5rem;
+  width: 5rem
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

@@ -82,3 +82,19 @@ languageCardIcon{
 .placeHolderText{
   @apply lg:h-6 xl:h-8 lg:text-lg xl:text-xl
 }
+
+.hover-trigger{
+  
+}
+
+.hover-target{
+  display:none
+}
+
+.hover-trigger:hover .hover-target {
+    display:block
+}
+
+.square{
+  @apply h-20 w-20
+}
