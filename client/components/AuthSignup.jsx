@@ -62,6 +62,4 @@ function AuthSignup () {
 
 export default AuthSignup
 // TODO:
-
-// somehow show the error when there is an error
 // the "sign up" title needs to move above the sign up box
