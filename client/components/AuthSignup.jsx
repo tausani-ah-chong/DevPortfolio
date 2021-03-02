@@ -33,21 +33,28 @@ function AuthSignup() {
   return (
     <>
       <h1><strong>Sign Up</strong></h1>
-      <form onSubmit={handleSubmit}>
+      <div className="w-full p-6 flex ">
+        <div className=" flex-col mx-auto bg-gray-200 rounded-md p-6 m-4">
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <input ref={emailRef} className="inputBox placeHolderText" placeholder="Email" id='email' type='email' name='email' required></input>
+              <hr className="border-black mb-4 "></hr>
+            </div>
 
-        <label htmlFor='email'>Email</label>
-        <input id='email' type='email' ref={emailRef} name='email' required />
+            <div className="mb-3">
+              <input ref={passwordRef} className="inputBox placeHolderText" placeholder="Password" id='password' type='password' name='password' required></input>
+              <hr className="border-black mb-4 "></hr>
+            </div>
 
-        <label htmlFor='password'>Password</label>
-        <input id='password' type='password' ref={passwordRef} name='password' required />
-
-        <label htmlFor='confirm-password'>Confirm Password</label>
-        <input id='confirm-password' type='password' ref={passwordConfirmRef} name='confirm-password' required />
-
-        <button disabled={loading}>Sign Up</button>
-      </form>
-
-      <p>Already have an account?<Link to='/login'><button>Log In</button></Link></p>
+            <div className="mb-3">
+              <input ref={passwordConfirmRef} className="inputBox placeHolderText" placeholder="Confirm Password" id='confirmPassword' type='password' name='confirmPassword' required></input>
+              <hr className="border-black mb-4 "></hr>
+            </div>
+            <button disabled={loading} className="flex items-center hover:bg-blue-400 bg-blue-200 rounded-md h-10 mb-3 px-3 font-semibold tracking-wide">Sign Up</button>
+          </form>
+          <p>Already have an account? <Link to='/login'><span className="hover:text-blue-400">Log In</span></Link></p>
+        </div>
+      </div>
     </>
   )
 }

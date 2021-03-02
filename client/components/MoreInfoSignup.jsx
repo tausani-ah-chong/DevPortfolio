@@ -47,7 +47,7 @@ function MoreInfoSignup (props) {
                   <li><i className="devicon-javascript-plain lg:text-8xl xl:text-9xl text-white"></i></li>
                   {/* lg:text-8xl xl:text-9xl text-white */}
                   <li className="languageCardText"><label htmlFor='JS'>Java script</label></li>
-                  <li><input id='JS' type="checkbox" value='JS' onChange={changeLang} /></li>
+                  <li><input id='JS' type="checkbox" value={1} onChange={changeLang} /></li>
 
                 </ul>
               </div>
@@ -57,19 +57,16 @@ function MoreInfoSignup (props) {
 
                   <li><i className="devicon-csharp-plain lg:text-8xl xl:text-9xl text-white"></i></li>
                   <li className="languageCardText"><label htmlFor='C#'>C#</label></li>
-                  <li><input id='C#' type="checkbox" value='C#' onChange={changeLang} /></li>
-
                 </ul>
-              </div>
+                <div className="languageCard">
+                  <ul className="text-center">
 
-              <div className="languageCard">
-                <ul className="text-center">
+                    <li><i className="devicon-typescript-plain lg:text-8xl xl:text-9xl text-white"></i></li>
+                    <li className='languageCardText'><label htmlFor='TS'>TS</label></li>
+                    <li><input id='TS' type="checkbox" value={3} onChange={changeLang} /></li>
 
-                  <li><i className="devicon-typescript-plain lg:text-8xl xl:text-9xl text-white"></i></li>
-                  <li className='languageCardText'><label htmlFor='TS'>TS</label></li>
-                  <li><input id='TS' type="checkbox" value='TS' onChange={changeLang} /></li>
-
-                </ul>
+                  </ul>
+                </div>
               </div>
             </span>
 
@@ -82,7 +79,7 @@ function MoreInfoSignup (props) {
 
                   <li><i className="devicon-ie10-original  lg:text-8xl xl:text-9xl text-white"></i></li>
                   <li className="languageCardText"><label htmlFor='web'>Web</label></li>
-                  <li><input id='web' type="checkbox" value='web' onChange={changePlat} /></li>
+                  <li><input id='web' type="checkbox" value={1} onChange={changePlat} /></li>
 
                 </ul>
               </div>
@@ -92,7 +89,7 @@ function MoreInfoSignup (props) {
 
                   <li><i className="devicon-apple-original lg:text-8xl xl:text-9xl text-white"></i></li>
                   <li className="languageCardText"> <label htmlFor='mobile'>Mobile</label></li>
-                  <li><input id='mobile' type="checkbox" value='mobile' onChange={changePlat} /></li>
+                  <li><input id='mobile' type="checkbox" value={2} onChange={changePlat} /></li>
 
                 </ul>
               </div>
@@ -102,7 +99,7 @@ function MoreInfoSignup (props) {
 
                   <li><i className="devicon-windows8-original lg:text-8xl xl:text-9xl text-white"></i></li>
                   <li className="languageCardText"><label htmlFor='software'>Software</label></li>
-                  <li><input id='software' type="checkbox" value='software' onChange={changePlat} /></li>
+                  <li><input id='software' type="checkbox" value={3} onChange={changePlat} /></li>
 
                 </ul>
               </div>
