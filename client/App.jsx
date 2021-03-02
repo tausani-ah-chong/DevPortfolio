@@ -18,13 +18,12 @@ import JS from './components/queries/JS'
 import TS from './components/queries/TS'
 import C from './components/queries/C'
 import Login from './components/Login'
-import PrivateRoute from './components/PrivateRoute'
 
 function App () {
   return (
     <>
       <AuthProvider>
-        <PrivateRoute path='/' component={Nav} />
+        <Route path='/' component={Nav} />
         <Route path='/explore' component={Banner} />
         <Route path='/explore' component={SearchBar} />
         <Route exact path='/explore' component={Explore} />
