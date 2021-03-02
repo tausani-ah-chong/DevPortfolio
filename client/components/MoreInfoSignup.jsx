@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 function MoreInfoSignup (props) {
   const [languages, setLanguages] = useState([])
   const [platforms, setPlatforms] = useState([])
-  // const [button, setButton] = useState(false)
   const { uid } = useParams()
+
   function changeLang (e) {
     return !languages.some(element => element.languageId === e.target.value)
       ? setLanguages([...languages, { languageId: e.target.value }])
@@ -25,7 +25,7 @@ function MoreInfoSignup (props) {
     if (languages.length && platforms.length) {
       consume(`/devLang/${uid}`, 'post', languages)
         .then(() => consume(`/devPlat/${uid}`, 'post', platforms))
-        .then(() => props.history.push(`/dashboard/${uid}`))
+        .then(() => props.history.push('/explore'))
         .catch(err => console.error(err.message))
     } else {
       alert('Must Choose at least one language and platform')

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { setStore } from './profileHelper'
-import { Link, useHistory } from "react-router-dom"
-import { useAuth } from "../contexts/AuthContext"
+import { useAuth } from '../contexts/AuthContext'
 
 function Profile({ devs }) {
   const { uid } = useParams()
@@ -41,7 +40,7 @@ function Profile({ devs }) {
   )
 }
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
     devs: state.devs
   }
