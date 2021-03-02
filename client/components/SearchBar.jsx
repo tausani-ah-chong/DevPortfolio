@@ -5,31 +5,31 @@ function SearchBar () {
   return (
 
     <div className="h-14 w-full flex justify-center items-center">
-      <Link to='/'>
+      <Link to='/explore'>
         <button type="button" className="buttonSearchBar">All Devs</button>
       </Link>
 
-      <Link to='/mobile'>
+      <Link to='/explore/mobile'>
         <button type="button" className="buttonSearchBar">Mobile</button>
       </Link>
 
-      <Link to='/web'>
+      <Link to='/explore/web'>
         <button type="button" className="buttonSearchBar">Web</button>
       </Link>
 
-      <Link to='/software'>
+      <Link to='/explore/software'>
         <button type="button" className="buttonSearchBar">Software</button>
       </Link>
 
-      <Link to='/js'>
+      <Link to='/explore/js'>
         <button type="button" className="buttonSearchBar">JS</button>
       </Link>
 
-      <Link to='/ts'>
+      <Link to='/explore/ts'>
         <button type="button" className="buttonSearchBar">TS</button>
       </Link>
 
-      <Link to='/c'>
+      <Link to='/explore/c'>
         <button type="button" className="buttonSearchBar">C#</button>
       </Link>
 

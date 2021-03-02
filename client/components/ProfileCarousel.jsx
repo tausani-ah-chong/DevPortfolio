@@ -5,11 +5,12 @@ function ProfileCarousel ({ dev }) {
   return (
     <>
       <div className="flex flex-row items-center">
+
         <div className="h-10 w-10 bg-red-400"></div>
         <div className="w-full order-2 aspect-w-16 aspect-h-9">
           {/* <TemplateProfileCarousel/> */}
           <div className="h-0 pt-p">
-            {
+            {/* {
               dev.map(e => {
                 e.projects.map(el => {
                   return (
@@ -17,7 +18,7 @@ function ProfileCarousel ({ dev }) {
                   )
                 })
               })
-            }
+            } */}
           </div>
 
         </div>
@@ -28,7 +29,7 @@ function ProfileCarousel ({ dev }) {
   )
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     devs: state.devs
   }

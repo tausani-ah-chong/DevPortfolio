@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function DevCard ({ dev }) {
+function DevCard({ dev }) {
   return (
     <>
       <div className="group relative w-full lg:h-64 hover-trigger">
-        <div className='h-full w-full absolute rounded-md bg-gradient-to-t from-black to-transparent opacity-90 hover-target'></div>
         <Link to={`/dashboard/${dev.id}`}>
+          <div className='h-full w-full absolute rounded-md bg-gradient-to-t from-black to-transparent opacity-90 hover-target'></div>
           {
             dev.projects.length
               ? <img src={dev.projects[0].projectImage} className='imgFit rounded-md' />
