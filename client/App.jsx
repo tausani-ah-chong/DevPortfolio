@@ -22,12 +22,14 @@ import PrivateRoute from './components/PrivateRoute'
 import NewBanner from './components/templates/NewBanner'
 import NewProfile from './components/templates/NewProfile'
 
+import LandingPage from './components/LandingPage'
+
 function App () {
   return (
     <>
       <AuthProvider>
         <Route path='/' component={Nav} />
-        <Route exact path ='/grid' component={NewBanner}/>
+        <Route exact path ='/landingpage' component={LandingPage}/>
         <Route path='/explore' component={NewBanner} />
         <Route path='/explore' component={SearchBar} />
         <Route exact path='/explore/alldevs' component={Explore} />
