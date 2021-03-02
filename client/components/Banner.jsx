@@ -3,7 +3,7 @@ import TemplateProfileCarousel from './templates/TemplateProfileCarousel'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
-function Banner() {
+function Banner () {
   const { currentUser } = useAuth()
 
   return (

@@ -49,7 +49,7 @@ function PersonalSignup (props) {
               </div>
 
               <div className="inputDiv">
-                <input className="inputBox placeHolderText " placeholder="Last Name:"id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
+                <input className="inputBox placeHolderText " placeholder="Last Name:" id='lastName' type='text' name='lastName' value={form.lastName} onChange={onChange} required />
                 <hr className="border-black mb-4 "></hr>
               </div>
 
@@ -59,11 +59,10 @@ function PersonalSignup (props) {
               </div>
 
               {/* PROFIL PHOTO */}
-              <div className="mt-4 flex flex-col">
-                <label className="text-xl">Profile Picture:</label>
-                <input className="inputBox placeHolderText mb-2" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" required />
-                <hr className="border-black mb-4 "></hr>
-              </div>
+              {/* <div className="mt-4 flex flex-col"> */}
+              {/* <input hidden='true' value='' className="inputBox placeHolderText mb-2" placeholder="Profile Picture" id='profilePicture' type='file' name='profilePicture' accept="image/png, image/jpeg" /> */}
+              {/* <hr className="border-black mb-4 "></hr> */}
+              {/* </div> */}
 
               {/* BIO  */}
               <div className="inputDiv flex flex-col">

@@ -20,6 +20,7 @@ function Profile ({ devs }) {
               {
                 devs.map(e => {
                   return (
+                    // use conditional to show either stock or real image
                     <img key={e.id} src={e.profilePicture} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" alt=""/>
                   )
                 })
@@ -32,9 +33,7 @@ function Profile ({ devs }) {
             <ul>
               {devs.map(e => (<li key={e.id} className='lg:text-3xl xl:text-5xl mb-1 font-semibold' >{e.firstName} {e.lastName}</li>))}
               {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}</li>))}
-              {/* <li className="lg:text-lg xl:text-xl italic mb-1">Full Stack Dev,Auckland</li> */}
               <hr/>
-              {/* {devs.map(e => e.languages.map(el => (<li key={el.id} className="lg:text-lg xl:text-xl italic my-2">JS, Css, C#, Python</li>)))} */}
               {
                 devs.map(e => {
                   return (
@@ -50,7 +49,6 @@ function Profile ({ devs }) {
                   )
                 })
               }
-              {/* <li className="lg:text-lg xl:text-xl italic my-2">JS, Css, C#, Python</li> */}
               <hr/>
             </ul>
             <div className='h-40 mt-3 w-auto overflow-auto bg-gray-200 rounded-md'>
@@ -61,7 +59,6 @@ function Profile ({ devs }) {
                   )
                 })
               }
-              {/* <p className="mr-3 italic">Bio</p> */}
             </div>
           </div>
         </div>

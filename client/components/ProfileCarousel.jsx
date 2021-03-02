@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 function ProfileCarousel ({ dev }) {
   const [pic, setPic] = useState(1)
 
-  // setTimeout(function () { setPic(pic + 1) }, 1000)
-
   if (pic > 3) {
     setPic(1)
   } else if (pic < 1) {

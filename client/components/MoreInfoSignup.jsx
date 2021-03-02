@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 function MoreInfoSignup (props) {
   const [languages, setLanguages] = useState([])
   const [platforms, setPlatforms] = useState([])
-  // const [button, setButton] = useState(false)
+
   const id = Number(useParams().uid)
   console.log(id)
 
