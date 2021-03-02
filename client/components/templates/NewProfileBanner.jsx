@@ -10,19 +10,19 @@ export default function NewProfileBanner () {
           <div className=" pr-6 pt-3 justify-center ml-auto">
             <div>
               <div className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48 bg-red-400"></div>
-              <button type="button" className="flex items-center mx-auto hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg">Hire Me</button>
+              <button type="button" className="flex items-center mx-auto hover:bg-blue-400 bg-blue-200 rounded-md lg:h-8 px-3 font-normal text-lg">Hire Me</button>
             </div>
           </div>
           <div className="w-auto max-w-md h-full pt-2">
             <ul>
               <li className='lg:text-3xl xl:text-5xl mb-1 font-semibold' >Multi Ah Foon</li>
-              <li className="lg:text-lg xl:text-xl italic mb-1">Full Stack Dev,Auckland</li>
+              <li className="lg:text-lg xl:text-xl italic mb-1">Big/Huge, Auckland</li>
               <hr/>
               <li className="lg:text-lg xl:text-xl italic my-2">JS, Css, C#, Python</li>
               <hr/>
             </ul>
             <div className='lg:h-32 mt-3 lg:w-80 overflow-auto bg-gray-200 rounded'>
-              <p className="mr-3 lg:text-sm xl:text-base italic">{loremIpsum }</p>
+              <p className="mr-3 ml-1 lg:text-sm xl:text-base italic">{loremIpsum }</p>
             </div>
           </div>
         </div>
