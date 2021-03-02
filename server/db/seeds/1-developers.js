@@ -1,7 +1,7 @@
 exports.seed = function (knex) {
   return knex('developers').insert([
     // TODO: Make seeds more diverse
-    { id: 1, profile_picture: '/images/dev-img/imansyah-muhamad-putera-n4KewLKFOZw-unsplash-min.jpg', first_name: 'Lloyd', last_name: 'Banks', pronoun: 'him/he', bio: 'lorem ipsum' },
+    { id: 1, uuid: 'hXz6CYByNAQBBT0agfoosoGAn0c2', profile_picture: '/images/dev-img/imansyah-muhamad-putera-n4KewLKFOZw-unsplash-min.jpg', first_name: 'Lloyd', last_name: 'Banks', pronoun: 'him/he', bio: 'lorem ipsum' },
     { id: 2, profile_picture: '/images/dev-img/jurica-koletic-7YVZYZeITc8-unsplash-min.jpg', first_name: 'Kylie', last_name: 'Afoa', pronoun: 'her/she', bio: 'lorem ipsum' },
     { id: 3, profile_picture: '/images/dev-img/gabriel-silverio-u3WmDyKGsrY-unsplash-min.jpg', first_name: 'Bruce', last_name: 'Loifua', pronoun: 'her/she', bio: 'lorem ipsum' },
     { id: 4, profile_picture: '/images/dev-img/aatik-tasneem-7omHUGhhmZ0-unsplash-min.jpg', first_name: 'Emily', last_name: 'Simpson', pronoun: 'him/he', bio: 'lorem ipsum' },

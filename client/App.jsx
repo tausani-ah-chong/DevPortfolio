@@ -18,7 +18,6 @@ import JS from './components/queries/JS'
 import TS from './components/queries/TS'
 import C from './components/queries/C'
 import Login from './components/Login'
-import PrivateRoute from './components/PrivateRoute'
 
 function App () {
   return (
@@ -37,9 +36,9 @@ function App () {
         <Route exact path='/explore/ts' component={TS} />
         <Route exact path='/explore/c' component={C} />
         <Route path='/signup' component={AuthSignup} />
-        <Route path='/get-started' component={PersonalSignup} />
-        <Route path='/more/:id' component={MoreInfoSignup} />
-        <PrivateRoute exact path='/dashboard/:id' component={Profile}/>
+        <Route path='/get-started/:uid' component={PersonalSignup} />
+        <Route path='/more/:uid' component={MoreInfoSignup} />
+        <Route exact path='/dashboard/:uid' component={Profile} />
         <Route path='/login' component={Login} />
       </AuthProvider>
     </>

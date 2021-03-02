@@ -16,6 +16,7 @@ function getDevelopers (db = connection) {
     .leftJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
     .select(
       'developers.id as id',
+      'uuid',
       'profile_picture as profilePic',
       'first_name as firstName',
       'last_name as lastName',
@@ -74,7 +75,7 @@ function getDevelopers (db = connection) {
     })
 }
 
-function getDeveloperById (id, db = connection) {
+function getDeveloperById (uuid, db = connection) {
   return db('developers')
     .leftJoin('developersProjects', 'developersProjects.developer_id', 'developers.id')
     .leftJoin('projects', 'developersProjects.project_id', 'projects.id')
@@ -82,9 +83,10 @@ function getDeveloperById (id, db = connection) {
     .leftJoin('languages', 'developersLanguages.language_id', 'languages.id')
     .leftJoin('developersPlatforms', 'developersPlatforms.developer_id', 'developers.id')
     .leftJoin('platforms', 'developersPlatforms.platform_id', 'platforms.id')
-    .where('developers.id', id)
+    .where('developers.uuid', uuid)
     .select(
       'developers.id as id',
+      'uuid',
       'profile_picture as profilePic',
       'first_name as firstName',
       'last_name as lastName',
@@ -107,6 +109,7 @@ function getDeveloperById (id, db = connection) {
       const devs = results.reduce((devAcc, dev) => {
         return devAcc.some(e => e.id === dev.id) ? devAcc : [...devAcc, {
           id: dev.id,
+          uuid: dev.uuid,
           profilePicture: dev.profilePic,
           firstName: dev.firstName,
           lastName: dev.lastName,
@@ -143,9 +146,10 @@ function getDeveloperById (id, db = connection) {
     })
 }
 
-function insertNewDeveloper ({ firstName, lastName, profilePicture, pronoun, bio }, db = connection) {
+function insertNewDeveloper ({ uuid, firstName, lastName, profilePicture, pronoun, bio }, db = connection) {
   return db('developers')
     .insert({
+      uuid,
       first_name: firstName,
       last_name: lastName,
       profile_picture: profilePicture,

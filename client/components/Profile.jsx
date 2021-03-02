@@ -1,15 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { setStore } from './profileHelper'
+import { Link, useHistory } from "react-router-dom"
+import { useAuth } from "../contexts/AuthContext"
 
-function Profile ({ devs }) {
-  const { id } = useParams()
+function Profile({ devs }) {
+  const { uid } = useParams()
+  const history = useHistory()
+  const { logout } = useAuth()
+  const [error, setError] = useState('')
+
   useEffect(() => {
-    setStore(Number(id))
+    setStore(uid)
   }, [])
 
-  // console.log(devs[0].firstName)
+  async function handleLogOut () {
+    try {
+      await logout()
+      history.push('/login')
+    } catch {
+      setError('failed to logout')
+    }
+  }
   return (
     <>
       <h1>Profile</h1>
@@ -23,11 +36,12 @@ function Profile ({ devs }) {
           )
         })
       }
+      <button onClick={handleLogOut}> logout </button>
     </>
   )
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     devs: state.devs
   }

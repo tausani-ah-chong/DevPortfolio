@@ -19,9 +19,9 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res) => {
-  const id = Number(req.params.id)
-  dev.getDeveloperById(id)
+router.get('/:uid', (req, res) => {
+  const { uid } = req.params
+  dev.getDeveloperById(uid)
     .then(devs => res.json(devs))
     .catch((err) => {
       console.log(err.message)
@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.post('/get-started', (req, res) => {
+router.post('/get-started/:uid', (req, res) => {
   const newUser = req.body
   dev.insertNewDeveloper(newUser)
     .then(devId => {

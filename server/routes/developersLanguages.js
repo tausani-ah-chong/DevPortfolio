@@ -6,7 +6,7 @@ const router = express.Router()
 
 module.exports = router
 
-router.post('/:id', (req, res) => {
+router.post('/:uid', (req, res) => {
   const devId = Number(req.params.id)
   const langIds = req.body
   return devLang.insertDeveloperLanguage(devId, langIds)
