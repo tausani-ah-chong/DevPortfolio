@@ -1,24 +1,95 @@
 exports.seed = function (knex) {
   return knex('developers').insert([
     // TODO: Make seeds more diverse
-    { id: 1, uuid: 'hXz6CYByNAQBBT0agfoosoGAn0c2', profile_picture: '/images/dev-img/imansyah-muhamad-putera-n4KewLKFOZw-unsplash-min.jpg', first_name: 'Lloyd', last_name: 'Banks', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 2, profile_picture: '/images/dev-img/jurica-koletic-7YVZYZeITc8-unsplash-min.jpg', first_name: 'Kylie', last_name: 'Afoa', pronoun: 'her/she', bio: 'lorem ipsum' },
-    { id: 3, profile_picture: '/images/dev-img/gabriel-silverio-u3WmDyKGsrY-unsplash-min.jpg', first_name: 'Bruce', last_name: 'Loifua', pronoun: 'her/she', bio: 'lorem ipsum' },
-    { id: 4, profile_picture: '/images/dev-img/aatik-tasneem-7omHUGhhmZ0-unsplash-min.jpg', first_name: 'Emily', last_name: 'Simpson', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 5, profile_picture: '/images/dev-img/aiony-haust-3TLl_97HNJo-unsplash-min.jpg', first_name: 'Diane', last_name: 'Welch', pronoun: 'They/Them', bio: 'lorem ipsum' },
-    { id: 6, profile_picture: '/images/dev-img/albert-dera-ILip77SbmOE-unsplash-min.jpg', first_name: 'Dan', last_name: 'Richard', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 7, profile_picture: '/images/dev-img/alex-perri-At__EKm5PGE-unsplash-min.jpg', first_name: 'Austin', last_name: 'Mitchell', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 8, profile_picture: '/images/dev-img/austin-wade-X6Uj51n5CE8-unsplash-min.jpg', first_name: 'Christopher', last_name: 'Kylie', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 9, profile_picture: '/images/dev-img/bruce-dixon--lYtsl62gyU-unsplash-min.jpg', first_name: 'Dylan', last_name: 'Cornish', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 10, profile_picture: '/images/dev-img/christopher-campbell-rDEOVtE7vOs-unsplash-min.jpg', first_name: 'Austin', last_name: 'Pippa', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 11, profile_picture: '/images/dev-img/gabriel-silverio-u3WmDyKGsrY-unsplash-min.jpg', first_name: 'Max', last_name: 'Powell', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 12, profile_picture: '/images/dev-img/hisu-lee-2qvxIr_DXGo-unsplash-min.jpg', first_name: 'Kylie', last_name: 'Alan', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 13, profile_picture: '/images/dev-img/houcine-ncib-B4TjXnI0Y2c-unsplash-min.jpg', first_name: 'Richard', last_name: 'Alexandra', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 14, profile_picture: '/images/dev-img/imansyah-muhamad-putera-n4KewLKFOZw-unsplash-min.jpg', first_name: 'Amanda', last_name: 'Pippa', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 15, profile_picture: '/images/dev-img/jack-finnigan-rriAI0nhcbc-unsplash-min.jpg', first_name: 'Audrey', last_name: 'Jessica', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 16, profile_picture: '/images/dev-img/jessica-felicio-_cvwXhGqG-o-unsplash-min.jpg', first_name: 'Kylie', last_name: 'Katherine', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 17, profile_picture: '/images/dev-img/joseph-gonzalez-iFgRcqHznqg-unsplash-min.jpg', first_name: 'Joan', last_name: 'Kimberly', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 18, profile_picture: '/images/dev-img/jurica-koletic-7YVZYZeITc8-unsplash-min.jpg', first_name: 'Martin', last_name: 'Madeleine', pronoun: 'him/he', bio: 'lorem ipsum' },
-    { id: 19, profile_picture: '/images/dev-img/kimson-doan-HD8KlyWRYYM-unsplash-min.jpg', first_name: 'Mitchell', last_name: 'Stephanie', pronoun: 'him/he', bio: 'lorem ipsum' }
+    {
+      id: 1,
+      uuid: 'hXz6CYByNAQBBT0agfoosoGAn0c2',
+      profile_picture: '/images/dev-img/imansyah-muhamad-putera-n4KewLKFOZw-unsplash-min.jpg',
+      first_name: 'Lloyd',
+      last_name: 'Banks',
+      pronoun: 'him/he',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+      id: 2,
+      uuid: 'ZwlmOfEGbFSCyOXcfw5gbCW2G9o1',
+      profile_picture: '/images/dev-img/jurica-koletic-7YVZYZeITc8-unsplash-min.jpg',
+      first_name: 'Kylie',
+      last_name: 'Afoa',
+      pronoun: 'her/she',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+      id: 3,
+      uuid: 'jd8eUIwQ3OU9XLP7i6hIQewg6D72',
+      profile_picture: 'https://avatars.githubusercontent.com/u/73867233?s=400&u=2473abfa2b718b6bbebff426d4eca7cdbb993ab7&v=4',
+      first_name: 'Steve',
+      last_name: 'Kim',
+      pronoun: 'her/she',
+      bio: "Hi I'm Steve. I'm an EDA graduate looking for a cool place to work. I like good vibes and dislike smelly code"
+    },
+    {
+      id: 4,
+      uuid: 'a14LpzSEweU3q6eTg49BiJ5KBUJ3',
+      profile_picture: '/images/dev-img/aatik-tasneem-7omHUGhhmZ0-unsplash-min.jpg',
+      first_name: 'Emily',
+      last_name: 'Simpson',
+      pronoun: 'him/he',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+      id: 5,
+      uuid: 'fUYOLt08jkfsXfrbrcNkzlbTcS73',
+      profile_picture: '/images/dev-img/aiony-haust-3TLl_97HNJo-unsplash-min.jpg',
+      first_name: 'Diane',
+      last_name: 'Welch',
+      pronoun: 'They/Them',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+      id: 6,
+      uuid: 'Uq7TyPIvPvKoNbEMPmTTlEyih1',
+      profile_picture: 'https://avatars.githubusercontent.com/u/73858996?s=400&u=b093074c17ae5ce5a7246ebece8d1b5e418f9895&v=4',
+      first_name: 'Christo',
+      last_name: 'Karadjov',
+      pronoun: 'him/he',
+      bio: "Hi I'm Christo. I'm an EDA graduate but my proudest achievement is how big my guns are. I'm not talking firearms. I'm talking about my big muscles."
+    },
+    {
+      id: 7,
+      uuid: 'IaqoI88Z5PWN1EoBPuudfKSbt5B3',
+      profile_picture: 'https://avatars.githubusercontent.com/u/58315812?s=400&u=b608f82088e6cab55e4416d38570c4b7b246e6e0&v=4',
+      first_name: 'Tausani',
+      last_name: 'Ah Chong',
+      pronoun: 'him/he',
+      bio: "Hi I'm Tausani but I go by Sani. I'm an EDA graduate. I like good vibes and dislike smelly code. Don't bring that smell near me."
+    },
+    {
+      id: 8,
+      uuid: '98mUeSDdNHYQlHyHjsaZRppH6fP2',
+      profile_picture: '/images/dev-img/austin-wade-X6Uj51n5CE8-unsplash-min.jpg',
+      first_name: 'Alex',
+      last_name: 'Purel',
+      pronoun: 'him/he',
+      bio: "Hi I'm Pete. I am an EDA graduate with skills in Web Development. I have fantastic app ideas and I'm always up for an awesome coding sesh"
+    },
+    {
+      id: 9,
+      uuid: 'ZjQBriWB9aSdfqoywjPYwbHfRVB3',
+      profile_picture: 'https://avatars.githubusercontent.com/u/35914987?s=400&u=fd2162c1aeb0e9d714882e528112ffbbeb4142df&v=4',
+      first_name: 'Multi',
+      last_name: 'Ah Foon',
+      pronoun: 'him/he',
+      bio: 'Hi there, Multi here. Developer by day, get rich schemer by night. Im only doing this until I win the lotto.'
+    },
+    {
+      id: 10,
+      uuid: 'X6l9o8laC2Ok7CzHK6KIGT6LDIf1',
+      profile_picture: '/images/dev-img/christopher-campbell-rDEOVtE7vOs-unsplash-min.jpg',
+      first_name: 'Austin',
+      last_name: 'Pippa',
+      pronoun: 'him/he',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    }
   ])
 }
