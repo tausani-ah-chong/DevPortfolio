@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { setStore } from './profileHelper'
 
-function Profile({ devs }) {
+function Profile ({ devs }) {
   const { id } = useParams()
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function Profile({ devs }) {
                   return (
                     e.profilePicture
                       ? <img key={e.id} src={e.profilePicture} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" alt="" />
-                      : <img className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" src='https://www.appliedlogistics.co.nz/wp-content/uploads/2018/01/person-placeholder-300x300.jpg' />
+                      : <img key={e.id} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" src='https://www.appliedlogistics.co.nz/wp-content/uploads/2018/01/person-placeholder-300x300.jpg' />
                   )
                 })
               }
@@ -67,7 +67,7 @@ function Profile({ devs }) {
   )
 }
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
     devs: state.devs
   }

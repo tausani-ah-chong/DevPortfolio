@@ -10,6 +10,7 @@ export default function LandingPage () {
             <div className='flex'>
               <span disabled='true' className='flex items-center bg-blue-200 rounded-md lg:h-10 xl:h-12 px-3 lg:mr-1 lg:mt-1 text-white font-extrabold lg:text-4xl focus:outline-none'>Dev</span>
               <h1 className='lg:text-5xl xl:text-6xl lg:font-extrabold lg:mb-1'>Portfolio.</h1>
+
             </div>
             <h1 className='lg:text-3xl xl:text-4xl font-bold lg:mb-3'>welcome to the future</h1>
             <h2 className='lg:text-xl font-semibold mt-8'>we help developers connect with the world</h2>
