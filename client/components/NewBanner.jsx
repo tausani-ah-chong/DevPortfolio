@@ -13,7 +13,7 @@ export default function NewBanner () {
           <div className=" lg:ml-44 xl:ml-80 lg:mt-3 xl:mt-14">
             <h2 className=" font-Poppins font-extrabold xl:text-5xl lg:text-4xl text-cgrey ">Find your next job, </h2>
             <h2 className=" font-Poppins my-3 font-extrabold xl:text-5xl lg:text-4xl text-cgrey ">Find your next dev</h2>
-            <h4 className="xl:text-xl lg:text-xl italic font-normal mb-3">Your dream Developer is just a click away</h4>
+            <h4 className="xl:text-xl lg:text-xl italic font-normal mb-3">Your next opportunity awaits</h4>
             {currentUser ? null
               : <Link to='/signup'>
                 <button type="button" className="buttonNoMargin">Sign up</button>
