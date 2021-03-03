@@ -27,11 +27,12 @@ export default function Login () {
 
   return (
     <>
-      <h1><strong>Log In</strong></h1>
-      <h1>{error || null}</h1>
-      <div className="w-full p-6 flex ">
+      <div className="w-full p-6 flex flex-col ">
+        <div className='mx-auto w-32 h-20 px-1'>
+          <h1 className="xl:text-4xl font-semibold mb-2">Log In</h1>
+          <h1 className='text-red-500'>{error || null}</h1>
+        </div>
         <div className=" flex-col mx-auto bg-gray-200 rounded-md p-6 m-4">
-
           <form onSubmit={handleSubmit}>
 
             <div className="mb-3">
