@@ -32,9 +32,15 @@ function AuthSignup () {
 
   return (
     <>
-      <h1><strong>Sign Up</strong></h1>
-      <h1>{error || null}</h1>
-      <div className="w-full p-6 flex ">
+      {/* <h1>{error || null}</h1> */}
+
+      <div className="w-full p-6 flex flex-col">
+
+        <div className='mx-auto w-52 h-20 px-1'>
+          <h1 className="xl:text-4xl font-semibold mb-2">Sign Up</h1>
+          <h1 className='text-red-500'>{error || null}</h1>
+        </div>
+
         <div className=" flex-col mx-auto bg-gray-200 rounded-md p-6 m-4">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
@@ -51,7 +57,7 @@ function AuthSignup () {
               <input ref={passwordConfirmRef} className="inputBox placeHolderText" placeholder="Confirm Password" id='confirmPassword' type='password' name='confirmPassword' required></input>
               <hr className="border-black mb-4 "></hr>
             </div>
-            <button disabled={loading} className="flex items-center hover:bg-blue-400 bg-blue-200 rounded-md h-10 mb-3 px-3 font-semibold tracking-wide">Sign Up</button>
+            <button disabled={loading} className="flex items-center hover:bg-blue-400 bg-blue-200 rounded-md h-10 mb-3 px-3 font-semibold tracking-wide outline-none">Sign Up</button>
           </form>
           <p>Already have an account? <Link to='/login'><button className="hover:text-blue-400">Log In</button></Link></p>
         </div>
