@@ -13,7 +13,7 @@ exports.seed = function (knex) {
     {
       id: 2,
       uuid: 'ZwlmOfEGbFSCyOXcfw5gbCW2G9o1',
-      profile_picture: 'https://static8.depositphotos.com/1377527/925/i/450/depositphotos_9255189-stock-photo-businesswoman-portrait.jpg',
+      profile_picture: '/images/dev-img/jurica-koletic-7YVZYZeITc8-unsplash-min.jpg',
       first_name: 'Kylie',
       last_name: 'Afoa',
       pronoun: 'her/she',
