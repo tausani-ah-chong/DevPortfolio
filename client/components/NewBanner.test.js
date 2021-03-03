@@ -18,6 +18,7 @@ describe('NewBanner Component', () => {
         currentUser
       }
     })
+    expect.assertions(2)
     renderWithRouter(<Banner />)
     const element = screen.getByText('Find your next dev')
     expect(element).toBeInTheDocument()
