@@ -45,7 +45,7 @@ export default function Login () {
               <hr className="border-black mb-4 "></hr>
             </div>
 
-            <button disabled={loading} className="flex items-center hover:bg-blue-400 bg-blue-200 rounded-md h-10 mb-3 px-3 font-semibold tracking-wide">Log In</button>
+            <button disabled={loading} className="flex items-center hover:bg-blue-400 bg-blue-200 rounded-md h-10 mb-3 px-3 font-semibold tracking-wide outline-none">Log In</button>
           </form>
 
           <p>Don&#39;t have an account? <Link to='/signup'><button className="hover:text-blue-400">Sign Up</button></Link></p>
