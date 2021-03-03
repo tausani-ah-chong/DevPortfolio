@@ -1,5 +1,4 @@
 import React from 'react'
-import TemplateProfileCarousel from './templates/TemplateProfileCarousel'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
@@ -21,12 +20,10 @@ function Banner () {
       </div>
 
       <div className="order-2 aspect-w-16 aspect-h-9 rounded-md">
-        {/* <TemplateProfileCarousel/> */}
         <div className="h-0 pt-p">
           <img className="h-5/6 w-5/6 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-5 object-cover rounded-md" src='/images/placeholder-img/pic1.jpg'/>
         </div>
       </div>
-      
     </div>
   )
 }

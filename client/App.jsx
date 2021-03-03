@@ -19,7 +19,7 @@ import TS from './components/queries/TS'
 import C from './components/queries/C'
 import Login from './components/Login'
 import ProfileExplore from './components/ProfileExplore'
-import NewBanner from './components/templates/NewBanner'
+import NewBanner from './components/NewBanner'
 import NewProfile from './components/templates/NewProfile'
 import LandingPage from './components/LandingPage'
 
@@ -29,7 +29,7 @@ function App () {
       <AuthProvider>
         <Route path='/' component={Nav} />
         <Route exact path ='/' component={LandingPage}/>
-        <Route path='/explore' component={Banner} />
+        <Route path='/explore' component={NewBanner} />
         <Route path='/explore' component={SearchBar} />
         <Route exact path='/explore' component={Explore} />
         <Route exact path='/profile' component={TemplateProfilePage} />

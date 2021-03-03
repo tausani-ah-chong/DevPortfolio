@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { setStore } from './profileHelper'
@@ -21,15 +21,8 @@ function Profile ({ devs }) {
           {/* Profile Pic & Hire Me btn */}
           <div className=" pr-6 pt-3 justify-center ml-auto">
             <div className="xl:mr-2">
-              {
-                devs.map(e => {
-                  return (
-                    e.profilePicture
-                      ? <img key={e.id} src={e.profilePicture} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" alt="" />
-                      : <img className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" src='https://www.appliedlogistics.co.nz/wp-content/uploads/2018/01/person-placeholder-300x300.jpg' />
-                  )
-                })
-              }
+              {/* <div className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48"></div> */}
+              { devs.map(e => (<img key={e.id} src={e.profilePicture} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" alt=""/>))}
               <button type="button" className="flex items-center mx-auto hover:bg-blue-400 bg-blue-200 rounded-md lg:h-8 px-3 font-normal text-lg">Hire Me</button>
             </div>
           </div>
@@ -37,13 +30,17 @@ function Profile ({ devs }) {
           {/* User Info */}
           <div className="w-auto max-w-md h-full pt-2">
             <ul>
+              {/* <li className='lg:text-3xl xl:text-4xl mb-1 font-semibold' >Multi Ah Foon</li> */}
               {devs.map(e => (<li key={e.id} className='lg:text-3xl xl:text-4xl mb-1 font-semibold' >{e.firstName} {e.lastName}</li>))}
+              {/* <li className="lg:text-lg xl:text-xl italic mb-1">Big/Huge, Auckland</li> */}
               {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}</li>))}
-              <hr />
+              <hr/>
+              {/* <li className="lg:text-lg xl:text-xl italic my-2">JS, Css, C#, Python</li> */}
               {devs.map(e => (<li key={e.id} className="lg:text-lg xl:text-xl italic my-2">{e.languages.map(el => (<span key={el.languageId}>{el.languageName}, </span>))}</li>))}
-              <hr />
+              <hr/>
             </ul>
             <div className='lg:h-28 xl:h-44 mt-3 lg:w-80 xl:w-auto overflow-auto bg-gray-200 rounded'>
+              {/* <p className="mr-3 ml-1 lg:text-sm xl:text-base italic">{loremIpsum }</p> */}
               {devs.map(e => (<p key={e.id} className="mr-3 ml-1 lg:text-sm xl:text-base italic">{e.bio}</p>))}
             </div>
           </div>
@@ -55,7 +52,8 @@ function Profile ({ devs }) {
           <div className="lg:h-72 xl:h-96 w-full ">
             <div className="order-2 aspect-w-16 aspect-h-9 rounded-md">
               <div className="h-0 pt-p">
-                {devs[0].projects.length ? (<img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src={devs[0].projects[0].projectImage} alt="" />) : <h2><strong>No current projects</strong></h2>}
+                {/* <img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src='/images/placeholder-img/pic1.jpg'/> */}
+                {devs[0].projects.length ? (<img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src={devs[0].projects[0].projectImage} alt=""/>) : null}
               </div>
             </div>
           </div>
