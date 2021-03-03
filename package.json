@@ -50,11 +50,12 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
-    "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
     "devicon": "^2.10.1",
     "express": "^4.17.1",
     "firebase": "^8.2.9",
+    "framer-motion": "^3.10.0",
     "knex": "^0.21.18",
     "postcss": "^8.2.6",
     "process": "^0.11.10",
