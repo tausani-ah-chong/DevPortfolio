@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { setStore } from './profileHelper'
 
-function Profile({ devs }) {
+function Profile ({ devs }) {
   const { id } = useParams()
 
   useEffect(() => {
@@ -67,7 +67,7 @@ function Profile({ devs }) {
   )
 }
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
     devs: state.devs
   }
