@@ -1,11 +1,20 @@
 const path = require('path')
+const webpack = require('webpack')
+require('babel-polyfill')
 
 module.exports = {
-  entry: [path.join(__dirname, 'index.js'), path.join(__dirname, 'styles/main.scss')],
+  entry: ['babel-polyfill', path.join(__dirname, 'index.js')],
   output: {
     path: path.join(__dirname, '../server/public'),
     filename: 'bundle.js'
   },
+  plugins: [
+    // fix "process is not defined" error:
+    // (do "npm install process" before running the build)
+    new webpack.ProvidePlugin({
+      process: 'process/browser'
+    })
+  ],
   mode: 'development',
   module: {
     rules: [

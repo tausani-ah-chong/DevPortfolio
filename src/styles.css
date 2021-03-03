@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components; 
+@tailwind utilities; 
+
+@layer base {
+  body { 
+    @apply font-Poppins text-cgrey
+  }
+
+}
+
+.testClass{ 
+  color:green;
+}
+
+.imgFit{
+  @apply object-cover h-full w-full
+}
+
+.cShadow{
+  
+}
+
+.devicon-git-plain path {
+  fill: #FFFFFF;
+}
+
+.devicon-javascript-plain {
+  width: 3rem;
+}
+
+.listItem{
+  @apply my-3
+}
+
+.getStartedLabel{
+  @apply text-lg font-semibold
+}
+
+.inputBox{
+  @apply bg-transparent placeholder-gray-700 w-96 outline-none placeholder-opacity-50
+}
+
+inputDiv{
+  @apply my-6
+}
+
+.defaultButton{
+  @apply flex items-center mx-6 hover:bg-blue-400 bg-gray-200 rounded-md lg:h-8 xl:h-10 px-3 lg:font-medium xl:font-semibold xl:text-lg lg:text-base focus:outline-none
+}
+
+.buttonSearchBar{
+  @apply flex items-center mx-3 hover:bg-blue-100 bg-gray-100 bg-opacity-80 rounded-md lg:h-8 xl:h-8 px-3 lg:font-normal xl:font-normal xl:text-lg lg:text-base focus:outline-none
+
+}
+
+.buttonNoMargin{
+  @apply flex items-center hover:bg-blue-400 bg-gray-200 rounded-md lg:h-8 xl:h-10 px-3 lg:font-medium xl:font-semibold xl:text-lg lg:text-base focus:outline-none
+}
+
+.buttonBlue{
+  @apply flex items-center mx-6 hover:bg-blue-400 bg-blue-200 rounded-md h-10 px-3 font-semibold text-lg lg:text-base  focus:outline-none
+
+}
+
+.noResize{
+  resize: none;
+}
+
+.languageCard{
+  @apply lg:h-44 lg:w-44 xl:w-52 xl:h-52 bg-blue-200 hover:bg-blue-500 rounded-md m-6 p-6
+}
+
+.languageCardText{
+  @apply mb-0 mt-1 font-medium lg:text-base xl:text-lg italic
+}
+
+languageCardIcon{
+  @apply lg:text-8xl xl:text-9xl text-white
+}
+
+.placeHolderText{
+  @apply lg:h-6 xl:h-8 lg:text-lg xl:text-xl 
+}
+
+.hover-trigger{
+  
+}
+
+.hover-target{
+  display:none
+}
+
+.hover-trigger:hover .hover-target {
+    display:block
+}
+
+.square{
+  @apply h-20 w-20
+}
+
+
+

@@ -15,14 +15,23 @@
     "build": "npm run webpack",
     "server": "node server",
     "knex": "knex --knexfile server/db/knexfile.js",
+    "db:migrate": "npm run knex migrate:latest",
+    "db:seed": "npm run knex seed:run",
+    "db:reset": "npm run knex migrate:rollback && npm run db:migrate && npm run db:seed",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "webpack": "webpack --config ./client/webpack.config.js",
-    "lint": "eslint --ext .js,.jsx ."
+    "lint": "eslint --ext .js,.jsx .",
+    "tailbuild": "tailwindcss build src/styles.css -o server/public/styles/styles.css"
   },
   "keywords": [
     "fullstack"
   ],
+  "jest": {
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom"
+    ]
+  },
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -40,14 +49,24 @@
     ]
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "devicon": "^2.10.1",
     "express": "^4.17.1",
+    "firebase": "^8.2.9",
+    "framer-motion": "^3.10.0",
     "knex": "^0.21.18",
+    "postcss": "^8.2.6",
+    "process": "^0.11.10",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "sqlite3": "^5.0.0",
-    "superagent": "^6.1.0"
+    "superagent": "^6.1.0",
+    "supertest": "^6.1.3",
+    "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -55,20 +74,25 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.2",
+    "autoprefixer": "^10.2.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^5.0.2",
     "eslint": "7.9.0",
     "eslint-config-eda": "0.1.4",
     "jest": "^26.6.3",
-    "mini-css-extract-plugin": "^1.3.8",
-    "node-sass": "^5.0.0",
     "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.17.0",
     "webpack-cli": "^4.4.0",
