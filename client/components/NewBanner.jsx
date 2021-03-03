@@ -4,6 +4,8 @@ import { useAuth } from '../contexts/AuthContext'
 
 export default function NewBanner () {
   const { currentUser } = useAuth()
+  console.log('currentUser', currentUser)
+  console.log('useAuth', useAuth())
   return (
     <>
       <div className="w-full lg:h-72 xl:h-96  grid grid-cols-2 gap-4 bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-md">
