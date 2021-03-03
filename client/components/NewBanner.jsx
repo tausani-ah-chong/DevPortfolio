@@ -9,8 +9,8 @@ export default function NewBanner () {
       <div className="w-full lg:h-72 xl:h-96  grid grid-cols-2 gap-4 bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-md">
         <div className=" lg:h-72 xl:h-96 w-full py-10 ">
           <div className=" lg:ml-44 xl:ml-80 lg:mt-3 xl:mt-14">
-            <h2 className=" font-Poppins font-semibold xl:text-5xl lg:text-4xl text-cgrey ">Find your next job, </h2>
-            <h2 className=" font-Poppins my-3 font-semibold xl:text-5xl lg:text-4xl text-cgrey ">Find your next dev</h2>
+            <h2 className=" font-Poppins font-extrabold xl:text-5xl lg:text-4xl text-cgrey ">Find your next job, </h2>
+            <h2 className=" font-Poppins my-3 font-extrabold xl:text-5xl lg:text-4xl text-cgrey ">Find your next dev</h2>
             <h4 className="xl:text-xl lg:text-xl italic font-normal mb-3">Your dream Developer is just a click away</h4>
             {currentUser ? null
               : <Link to='/signup'>
