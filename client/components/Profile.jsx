@@ -57,7 +57,7 @@ function Profile({ devs }) {
               <div className="h-0 pt-p">
                 {devs[0].projects.length
                   ? (<img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src={devs[0].projects[0].projectImage} alt="" />)
-                  : <div className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md"><h2><strong>No current projects</strong></h2></div>}
+                  : <img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src="/images/placeholder-img/noProject.png"/>}
               </div>
             </div>
           </div>
