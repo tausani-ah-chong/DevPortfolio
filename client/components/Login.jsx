@@ -27,18 +27,29 @@ export default function Login () {
 
   return (
     <>
-      <h1><strong>Sign In</strong></h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='email'>Email</label>
-        <input id='email' type='email' ref={emailRef} name='email' required />
+      <h1><strong>Log In</strong></h1>
+      <h1>{error || null}</h1>
+      <div className="w-full p-6 flex ">
+        <div className=" flex-col mx-auto bg-gray-200 rounded-md p-6 m-4">
 
-        <label htmlFor='password'>Password</label>
-        <input id='password' type='password' ref={passwordRef} name='password' required />
+          <form onSubmit={handleSubmit}>
 
-        <button disabled={loading}>Log In</button>
-      </form>
+            <div className="mb-3">
+              <input className="inputBox placeHolderText" placeholder="Email" id='email' type='email' ref={emailRef} name='email' required />
+              <hr className="border-black mb-4 "></hr>
+            </div>
 
-      <p>Don&#39;t have an account?<Link to='/signup'><button>Sign Up</button></Link></p>
+            <div className="mb-3">
+              <input className="inputBox placeHolderText" placeholder="Password" id='password' type='password' ref={passwordRef} name='password' required />
+              <hr className="border-black mb-4 "></hr>
+            </div>
+
+            <button disabled={loading} className="flex items-center hover:bg-blue-400 bg-blue-200 rounded-md h-10 mb-3 px-3 font-semibold tracking-wide">Log In</button>
+          </form>
+
+          <p>Don&#39;t have an account? <Link to='/signup'><button className="hover:text-blue-400">Sign Up</button></Link></p>
+        </div>
+      </div>
     </>
   )
 }
