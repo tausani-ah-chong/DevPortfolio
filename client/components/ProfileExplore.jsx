@@ -13,7 +13,17 @@ function ProfileExplore ({ devs }) {
   return (
     <>
       <div className='w-full grid lg:grid-cols-3 xl:grid-cols-4 gap-4 rounded-md lg:py-10 lg:px-6 xl:px-10'>
-        {devs.length && <WorkCard devs={devs}/>}
+
+        {devs.length && devs[0].projects.map(project => {
+          return (
+            <span key={project.projectId}>
+              {/* <WorkCard project={project} /> */}
+              <WorkCard name={project.projectName} image={project.projectImage} />
+            </span>
+          )
+        }
+        )
+        }
       </div>
     </>
   )

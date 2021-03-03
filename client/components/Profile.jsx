@@ -16,7 +16,7 @@ function Profile({ devs }) {
       <div className="w-full lg:h-72 xl:h-96 grid grid-cols-2 gap-4 bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-md">
 
         {/* Left Container */}
-        <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 lg:pr-10 xl:pr-14">
+        <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 lg:pr-3 xl:pr-14">
 
           {/* Profile Pic & Hire Me btn */}
           <div className=" pr-6 pt-3 justify-center ml-auto">
@@ -38,7 +38,7 @@ function Profile({ devs }) {
           <div className="w-auto max-w-md h-full pt-2">
             <ul>
               {devs.map(e => (<li key={e.id} className='lg:text-3xl xl:text-4xl mb-1 font-semibold' >{e.firstName} {e.lastName}</li>))}
-              {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}</li>))}
+              {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}, Auckland</li>))}
               <hr />
               {devs.map(e => (<li key={e.id} className="lg:text-lg xl:text-xl italic my-2">{e.languages.map(el => (<span key={el.languageId}>{el.languageName}, </span>))}</li>))}
               <hr />
