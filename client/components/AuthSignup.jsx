@@ -36,12 +36,12 @@ function AuthSignup () {
 
       <div className="w-full p-6 flex flex-col">
 
-        <div className='mx-auto w-52 h-20 lg:pl-7 px-1'>
+        <div className='mx-auto lg:w-72 h-20 lg:pl-11 xl:pl-14 px-1'>
           <h1 className="lg:text-4xl font-semibold mb-2">Sign Up</h1>
           <h1 className='text-red-500'>{error || null}</h1>
         </div>
 
-        <div className=" flex-col mx-auto bg-gray-200 rounded-md p-6 m-4">
+        <div className=" flex-col mx-auto bg-gray-200 rounded-md p-6">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <input ref={emailRef} className="inputBox placeHolderText" placeholder="Email" id='email' type='email' name='email' required></input>

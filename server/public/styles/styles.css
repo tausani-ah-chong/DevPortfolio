@@ -32170,16 +32170,19 @@ body {
 .inputBox::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgba(55, 65, 81, var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.5;
 }
 
 .inputBox:-ms-input-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgba(55, 65, 81, var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.5;
 }
 
 .inputBox::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgba(55, 65, 81, var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.5;
 }
 
 .inputBox {
@@ -32471,56 +32474,6 @@ languageCardIcon{
 .square{
   height: 5rem;
   width: 5rem
-}
-
-.fade-in-fast {
-  -webkit-animation: animation-fade-in 0.3s;
-          animation: animation-fade-in 0.3s;
-}
-
-.fade-in-slow {
-  -webkit-animation: animation-fade-in 1.5s;
-          animation: animation-fade-in 1.5s;
-}
-
-@-webkit-keyframes animation-fade-in-fast {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes animation-fade-in-fast {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes animation-fade-in-slow {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes animation-fade-in-slow {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @media (min-width: 640px) {
@@ -189992,5 +189945,6 @@ languageCardIcon{
             animation: bounce 1s infinite;
   }
 }
+
 
 
