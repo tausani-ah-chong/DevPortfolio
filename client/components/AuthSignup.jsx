@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
-function AuthSignup() {
+function AuthSignup () {
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
@@ -33,6 +33,7 @@ function AuthSignup() {
   return (
     <>
       <h1><strong>Sign Up</strong></h1>
+      <h1>{error || null}</h1>
       <div className="w-full p-6 flex ">
         <div className=" flex-col mx-auto bg-gray-200 rounded-md p-6 m-4">
           <form onSubmit={handleSubmit}>
@@ -60,7 +61,5 @@ function AuthSignup() {
 }
 
 export default AuthSignup
-//TODO:
-
-// somehow show the error when there is an error
+// TODO:
 // the "sign up" title needs to move above the sign up box

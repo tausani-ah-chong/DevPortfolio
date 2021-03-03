@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function LandingPage () {
   return (
@@ -12,7 +13,9 @@ export default function LandingPage () {
             </div>
             <h1 className='lg:text-3xl xl:text-4xl font-bold lg:mb-6'>welcome to the future</h1>
             <h2 className='lg:text-xl font-semibold'>we help developers connect with the world</h2>
-            <button className='flex items-center hover:bg-blue-400 bg-blue-200 rounded-md lg:h-8 xl:h-10 lg:mt-3 xl:mt-5 px-3 lg:font-medium xl:font-semibold xl:text-lg lg:text-base focus:outline-none '>Get Started</button>
+            <Link to='/explore'>
+              <button className='flex items-center hover:bg-blue-400 bg-blue-200 rounded-md lg:h-8 xl:h-10 lg:mt-3 xl:mt-5 px-3 lg:font-medium xl:font-semibold xl:text-lg lg:text-base focus:outline-none '>Explore</button>
+            </Link>
           </div>
           <div className='mr-auto'>
             <img className='lg:h-72 xl:h-96 w-auto' src='/images/placeholder-img/landingPage.png'></img>
@@ -24,9 +27,5 @@ export default function LandingPage () {
   )
 }
 
-// TODO: 
-
-// link for get started to go to explore
-//  rename "get started" button to "explore"
+// TODO:
 // get rid of hover effect of "Dev"
-// 

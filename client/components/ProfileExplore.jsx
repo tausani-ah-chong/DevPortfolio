@@ -26,7 +26,3 @@ function mapStateToProps (state) {
 }
 
 export default connect(mapStateToProps)(ProfileExplore)
-
-// TODO:
-// stock image for profile image
-// stock image for projects
