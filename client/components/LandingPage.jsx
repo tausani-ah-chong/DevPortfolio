@@ -19,7 +19,7 @@ export default function LandingPage () {
                 }}
               >Dev
               </motion.span>
-              <motion.h1 className='lg:text-5xl xl:text-6xl lg:font-extrabold lg:mb-6'
+              <motion.h1 className='lg:text-5xl xl:text-6xl lg:font-extrabold lg:mb-1'
                 initial={{ opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
                 transition={{
@@ -31,8 +31,8 @@ export default function LandingPage () {
                 Portfolio.
               </motion.h1>
             </div>
-            <h1 className='lg:text-3xl xl:text-4xl font-bold lg:mb-6'>welcome to the future</h1>
-            <motion.h2 className='lg:text-xl font-semibold'
+            <h1 className='lg:text-3xl xl:text-4xl font-bold lg:mb-3'>welcome to the future</h1>
+            <motion.h2 className='lg:text-xl font-semibold mt-8'
               initial={{ opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}
               transition={{

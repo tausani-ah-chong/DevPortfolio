@@ -68,7 +68,7 @@ function PersonalSignup (props) {
               {/* BIO  */}
               <div className="inputDiv flex flex-col">
                 <label className="lg:text-lg xl:text-xl">Bio:</label>
-                <textarea className="inputBox noResize h-32 text-xl border-cgrey border-2 rounded-md " placeholder="" id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
+                <textarea className="inputBox noResize h-32 text-lg border-cgrey border-2 rounded-md p-1" placeholder="" id='bio' type='text' name='bio' value={form.bio} onChange={onChange} required />
               </div>
 
               {/* NEXT BUTTON */}

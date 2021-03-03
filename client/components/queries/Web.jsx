@@ -10,7 +10,7 @@ function Web ({ web }) {
 
   return (
     <>
-      <div className=" w-full grid xl:grid-cols-4 lg:grid-cols-3 gap-4 gap-x-4 rounded-md lg:px-6 xl:px-10">
+      <div className=" w-full grid xl:grid-cols-4 lg:grid-cols-3 gap-4 gap-x-4 rounded-md lg:px-6 xl:px-10 lg:mt-14">
         {
           web.map(dev => {
             return (

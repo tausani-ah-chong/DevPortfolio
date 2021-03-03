@@ -38,7 +38,7 @@
 }
 
 .inputBox{
-  @apply bg-transparent placeholder-gray-700 w-96 outline-none
+  @apply bg-transparent placeholder-gray-700 w-96 outline-none placeholder-opacity-50
 }
 
 inputDiv{
@@ -80,7 +80,7 @@ languageCardIcon{
 }
 
 .placeHolderText{
-  @apply lg:h-6 xl:h-8 lg:text-lg xl:text-xl
+  @apply lg:h-6 xl:h-8 lg:text-lg xl:text-xl 
 }
 
 .hover-trigger{
