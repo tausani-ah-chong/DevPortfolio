@@ -6,7 +6,7 @@ function DevCard ({ dev }) {
     <>
       <div className="group relative w-full lg:h-64 hover-trigger">
         <Link to={`/dashboard/${dev.id}`}>
-          <div className='h-full w-full absolute rounded-md bg-gradient-to-t from-black to-transparent opacity-90 hover-target'></div>
+          <div className='h-full w-full absolute rounded-md bg-gradient-to-t from-black to-transparent opacity-70 hover-target'></div>
           {
             dev.projects.length
               ? <img src={dev.projects[0].projectImage} className='imgFit rounded-md' />
