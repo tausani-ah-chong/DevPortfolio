@@ -38,7 +38,7 @@ function Profile({ devs }) {
           <div className="w-auto max-w-md h-full pt-2">
             <ul>
               {devs.map(e => (<li key={e.id} className='lg:text-3xl xl:text-4xl mb-1 font-semibold' >{e.firstName} {e.lastName}</li>))}
-              {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}</li>))}
+              {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}, Auckland</li>))}
               <hr />
               {devs.map(e => (<li key={e.id} className="lg:text-lg xl:text-xl italic my-2">{e.languages.map(el => (<span key={el.languageId}>{el.languageName}, </span>))}</li>))}
               <hr />
