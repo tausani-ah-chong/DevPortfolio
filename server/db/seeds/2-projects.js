@@ -3,13 +3,13 @@ exports.seed = function (knex) {
     {
       id: 1,
       name: 'DevPortfolio',
-      image: 'https://dribbble.com/shots/15221166-Illustration/attachments/6967344?mode=media',
+      image: 'https://cdn.dribbble.com/users/5276/screenshots/15221166/media/4aa7913356058ef357d0fc0e6e3579b3.jpg',
       link: ''
     },
     {
       id: 2,
       name: 'FaceBook',
-      image: 'https://dribbble.com/shots/15220687-How-to-Estimate-Software-Development-Cost/attachments/6966813?mode=media',
+      image: 'https://cdn.dribbble.com/users/1751513/screenshots/15220687/media/f78ea74eda418c72d2777bc43756afc7.png',
       link: ''
     },
     {
@@ -27,7 +27,7 @@ exports.seed = function (knex) {
     {
       id: 5,
       name: 'Microsoft',
-      image: 'https://dribbble.com/shots/15080943/attachments/6810774?mode=media',
+      image: 'https://cdn.dribbble.com/users/16711/screenshots/15080943/media/9078f66be810bde0a34cbcde00183956.jpg',
       link: ''
     },
     {
@@ -51,7 +51,7 @@ exports.seed = function (knex) {
     {
       id: 9,
       name: 'Hotmail',
-      image: 'https://dribbble.com/shots/15218103-Washington-State/attachments/6963989?mode=media',
+      image: 'https://cdn.dribbble.com/users/644672/screenshots/15218103/media/c3c4bd86de894c539eb9e505f97e00d6.jpg',
       link: ''
     },
     {
@@ -63,7 +63,7 @@ exports.seed = function (knex) {
     {
       id: 11,
       name: 'Google Drive',
-      image: 'https://dribbble.com/shots/15219619-TIGRE/attachments/6965660?mode=media',
+      image: 'https://cdn.dribbble.com/users/535615/screenshots/15219619/media/7e7ed75496eed45a0b2b7bed213faa8e.png',
       link: ''
     },
     {
@@ -123,7 +123,7 @@ exports.seed = function (knex) {
     {
       id: 21,
       name: 'Standups',
-      image: 'https://dribbble.com/shots/15218282-A-Letter-Logo-Modern-A/attachments/6964183?mode=media',
+      image: 'https://cdn.dribbble.com/users/6532302/screenshots/15218282/media/babfb2e26643df6ca93ea2490fe6ae4b.jpg',
       link: ''
     },
     {
@@ -135,7 +135,7 @@ exports.seed = function (knex) {
     {
       id: 23,
       name: 'Laziness',
-      image: '/https://dribbble.com/shots/15220635-ROBOMAIL/attachments/6966759?mode=media',
+      image: 'https://cdn.dribbble.com/users/6402056/screenshots/15220635/media/111e32e5627605388f7890f9aef2b91c.png',
       link: ''
     },
     {
@@ -189,19 +189,19 @@ exports.seed = function (knex) {
     {
       id: 32,
       name: 'MEAN',
-      image: 'https://dribbble.com/shots/15220448-Blinky-Business-Landing-Page/attachments/6966555?mode=media',
+      image: 'https://cdn.dribbble.com/users/5351073/screenshots/15220448/media/067a17e92ddc60b5b8db724eaac2a1ad.jpg',
       link: ''
     },
     {
       id: 33,
-      name: 'MEARN',
-      image: 'https://dribbble.com/shots/15220077-Marketing-Concepts-for-Architecture-Firms/attachments/6966150?mode=media',
+      name: 'MERN',
+      image: 'https://cdn.dribbble.com/users/708424/screenshots/15220077/media/34e6aed9802601a0692a4fbf8cc41846.png',
       link: ''
     },
     {
       id: 34,
       name: 'NewZealandAir',
-      image: 'https://dribbble.com/shots/15215330/attachments/6960839?mode=media',
+      image: 'https://cdn.dribbble.com/users/125948/screenshots/15215330/media/26988ae71f1e55b1c7b9303dd7f19896.jpg',
       link: ''
     },
     {
@@ -225,7 +225,7 @@ exports.seed = function (knex) {
     {
       id: 38,
       name: 'Artlist',
-      image: 'https://dribbble.com/shots/15216392/attachments/6962115?mode=media',
+      image: 'https://cdn.dribbble.com/users/2253180/screenshots/15216392/media/80fa7969418f1b581b71a060644c0c0e.png',
       link: ''
     },
     {
