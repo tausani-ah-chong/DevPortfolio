@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { setStore } from './profileHelper'
 
-function Profile ({ devs }) {
+function Profile({ devs }) {
   const { id } = useParams()
 
   useEffect(() => {
@@ -55,7 +55,9 @@ function Profile ({ devs }) {
           <div className="lg:h-72 xl:h-96 w-full ">
             <div className="order-2 aspect-w-16 aspect-h-9 rounded-md">
               <div className="h-0 pt-p">
-                {devs[0].projects.length ? (<img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src={devs[0].projects[0].projectImage} alt="" />) : <h2><strong>No current projects</strong></h2>}
+                {devs[0].projects.length
+                  ? (<img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src={devs[0].projects[0].projectImage} alt="" />)
+                  : <div className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md"><h2><strong>No current projects</strong></h2></div>}
               </div>
             </div>
           </div>
@@ -65,7 +67,7 @@ function Profile ({ devs }) {
   )
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     devs: state.devs
   }
