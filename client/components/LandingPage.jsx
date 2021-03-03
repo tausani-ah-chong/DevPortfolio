@@ -13,7 +13,7 @@ export default function LandingPage () {
                 initial={{ opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
                 transition={{
-                  delay: 3,
+                  delay: 4,
                   x: { type: 'spring', stiffness: 50 },
                   default: { duration: 1 }
                 }}
@@ -23,7 +23,7 @@ export default function LandingPage () {
                 initial={{ opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
                 transition={{
-                  delay: 2,
+                  delay: 3,
                   x: { type: 'spring', stiffness: 50 },
                   default: { duration: 1 }
                 }}
@@ -36,7 +36,7 @@ export default function LandingPage () {
               initial={{ opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}
               transition={{
-                delay: 1,
+                delay: 2,
                 x: { type: 'spring', stiffness: 50 },
                 default: { duration: 1 }
               }}
@@ -48,7 +48,7 @@ export default function LandingPage () {
                 initial={{ opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
                 transition={{
-                  delay: 4,
+                  delay: 5,
                   x: { type: 'spring', stiffness: 50 },
                   default: { duration: 1 }
                 }}
@@ -61,7 +61,7 @@ export default function LandingPage () {
             initial={{ opacity: 0 }}
             animate={{ rotate: 0, opacity: 1 }}
             transition={{
-              delay: 3,
+              delay: 4,
               x: { type: 'spring', stiffness: 50 },
               default: { duration: 1 }
             }}
