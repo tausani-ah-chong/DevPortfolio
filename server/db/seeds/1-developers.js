@@ -8,16 +8,16 @@ exports.seed = function (knex) {
       first_name: 'Lloyd',
       last_name: 'Banks',
       pronoun: 'him/he',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      bio: "I'm Lloyd. I'm a Software Developer able to work in all platforms. I love dogs and cats. I'm currently based overseas but I'm able to cater towards any organisation in any part of the world. I've worked at YouTube for many years but thought I'd float around as a freelancer, giving me more time for family and friends"
     },
     {
       id: 2,
       uuid: 'ZwlmOfEGbFSCyOXcfw5gbCW2G9o1',
-      profile_picture: '/images/dev-img/jurica-koletic-7YVZYZeITc8-unsplash-min.jpg',
+      profile_picture: 'https://static8.depositphotos.com/1377527/925/i/450/depositphotos_9255189-stock-photo-businesswoman-portrait.jpg',
       first_name: 'Kylie',
       last_name: 'Afoa',
       pronoun: 'her/she',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      bio: "Hi I'm Kylie. I've been working as a software developer for 10 years. I've worked with many companies including Google. I'm currently a freelancer working on web development and systems architecture."
     },
     {
       id: 3,
@@ -25,17 +25,17 @@ exports.seed = function (knex) {
       profile_picture: 'https://avatars.githubusercontent.com/u/73867233?s=400&u=2473abfa2b718b6bbebff426d4eca7cdbb993ab7&v=4',
       first_name: 'Steve',
       last_name: 'Kim',
-      pronoun: 'her/she',
+      pronoun: 'him/he',
       bio: "Hi I'm Steve. I'm an EDA graduate looking for a cool place to work. I like good vibes and dislike smelly code"
     },
     {
       id: 4,
       uuid: 'a14LpzSEweU3q6eTg49BiJ5KBUJ3',
       profile_picture: '/images/dev-img/aatik-tasneem-7omHUGhhmZ0-unsplash-min.jpg',
-      first_name: 'Emily',
-      last_name: 'Simpson',
+      first_name: 'Barney',
+      last_name: 'Stinson',
       pronoun: 'him/he',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      bio: "I'm a Developer from Auckland, New Zealand. I love all things programming but I'm heavily focused on Web and mobile development. I'm able to work for any organisation from any part of the world."
     },
     {
       id: 5,
@@ -44,7 +44,7 @@ exports.seed = function (knex) {
       first_name: 'Diane',
       last_name: 'Welch',
       pronoun: 'They/Them',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      bio: "Hi! I'm from New York, currently residing in Auckland, New Zealand. I am a recent graduate from the University of Auckland and am freelancing while take a year off to travel"
     },
     {
       id: 6,
@@ -88,8 +88,8 @@ exports.seed = function (knex) {
       profile_picture: '/images/dev-img/christopher-campbell-rDEOVtE7vOs-unsplash-min.jpg',
       first_name: 'Austin',
       last_name: 'Pippa',
-      pronoun: 'him/he',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      pronoun: 'her/she',
+      bio: "I'm Austin. Funnily enough, I'm from Austin Texas but I'm currently studying at EnSpiral Dev Academy. I'm working as a freelancer to perk up my programming skills and I focus on Web Development."
     }
   ])
 }

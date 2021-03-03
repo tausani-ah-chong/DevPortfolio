@@ -48,7 +48,7 @@ function MoreInfoSignup (props) {
               <div className="languageCard">
                 <ul className="text-center">
                   <li><i className="devicon-javascript-plain lg:text-8xl xl:text-9xl text-white"></i></li>
-                  <li className="languageCardText"><label htmlFor='JS'>Java script</label></li>
+                  <li className="languageCardText"><label htmlFor='JS'>JavaScript</label></li>
                   <li><input id='JS' type="checkbox" value={1} onChange={changeLang} /></li>
                 </ul>
               </div>

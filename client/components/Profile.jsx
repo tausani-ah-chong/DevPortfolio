@@ -16,7 +16,7 @@ function Profile ({ devs }) {
       <div className="w-full lg:h-72 xl:h-96 grid grid-cols-2 gap-4 bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-md">
 
         {/* Left Container */}
-        <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 lg:pr-3 xl:pr-14">
+        <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 lg:pr-10 xl:pr-14">
 
           {/* Profile Pic & Hire Me btn */}
           <div className=" pr-6 pt-3 justify-center ml-auto">
@@ -38,7 +38,7 @@ function Profile ({ devs }) {
           <div className="w-auto max-w-md h-full pt-2">
             <ul>
               {devs.map(e => (<li key={e.id} className='lg:text-3xl xl:text-4xl mb-1 font-semibold' >{e.firstName} {e.lastName}</li>))}
-              {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}, Auckland</li>))}
+              {devs.map(e => (<li key={e.id} className='lg:text-lg xl:text-xl italic mb-1' >{e.pronoun}</li>))}
               <hr />
               {devs.map(e => (<li key={e.id} className="lg:text-lg xl:text-xl italic my-2">{e.languages.map(el => (<span key={el.languageId}>{el.languageName}, </span>))}</li>))}
               <hr />
@@ -57,7 +57,7 @@ function Profile ({ devs }) {
               <div className="h-0 pt-p">
                 {devs[0].projects.length
                   ? (<img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src={devs[0].projects[0].projectImage} alt="" />)
-                  : <img className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md" src="/images/placeholder-img/noProject.png"/>}
+                  : <div className="lg:h-3/4 xl:h-2/3 absolute top-0 left-0 lg:ml-12 xl:ml-10 lg:mt-3 xl:mt-5  object-cover rounded-md"><h2><strong>No current projects</strong></h2></div>}
               </div>
             </div>
           </div>
