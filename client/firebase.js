@@ -2,7 +2,7 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 
 const app = firebase.initializeApp({
-  apiKey: 'AIzaSyAI6bhbuKe2VzisFUpq1_bJhxRxpnvd_PI',
+  apiKey: 'null',
   authDomain: 'followalong-user.firebaseapp.com',
   databaseURL: 'https://followalong-user-default-rtdb.firebaseio.com',
   projectId: 'followalong-user',
