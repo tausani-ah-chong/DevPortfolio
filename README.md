@@ -7,6 +7,7 @@
 
 ```shell
 npm install
+npm run db:reset
 npm run tailbuild
 npm run dev
 ```
