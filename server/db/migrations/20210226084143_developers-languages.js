@@ -1,6 +1,6 @@
 exports.up = function (knex) {
   return knex.schema.createTable('developersLanguages', table => {
-    table.increments('id')
+    table.increments('id').primary()
     table.integer('developer_id').references('developers.id')
     table.integer('language_id').references('languages.id')
   })

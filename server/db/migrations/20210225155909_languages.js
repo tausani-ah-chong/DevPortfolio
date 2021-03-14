@@ -1,6 +1,6 @@
 exports.up = function (knex) {
   return knex.schema.createTable('languages', table => {
-    table.increments('id')
+    table.increments('id').primary()
     table.string('name')
   })
 }
