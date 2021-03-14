@@ -27,6 +27,3 @@ Christo Karadjov (Design Lead)
 Tausani Ah Chong (Front End Lead)
 
 Steve Kim (Back End Lead)
-
-![IMG_7748](https://user-images.githubusercontent.com/58315812/108942986-db4b3380-76bc-11eb-9a0b-2637213e6275.JPG)
-![IMG_7746](https://user-images.githubusercontent.com/58315812/108942999-e1d9ab00-76bc-11eb-9b8a-05e514dcf28e.JPG)
