@@ -1,38 +1,32 @@
 ## Table of contents
 * [Story](#story)
-* [MVP](#mvp)
 * [General info](#general-info)
+* [Get Started](#get-started)
+
+## Get Started
+
+```shell
+npm install
+npm run tailbuild
+npm run dev
+```
+
 
 ## Story
-Creating a platform for ALL developers to be able to showcase their work, their personalities and get connected to employers.
+This was my final Group Project that was presented during a 15 week Software Develeopment Bootcamp at Enspiral Dev Academy. 
+We wanted to create a platform for ALL developers to be able to showcase their work, their personalities and get connected to employers. Our main focus was on the visual aspect. We wanted the focal point to be the portfolio or work itself first before the developer. 
 	
-## MVP
-MVP stage 1:
-* Employer can search by the location and job type for developers using drop down menu.
-* Employer can view developers who match the query listed on the search result page
-* Developer will be able to display their BIO, specs & contact detail, portfolio (body of work), and their current working location
-
-MVP stage 2:
-* Expand search query parameter to include years of experience, specific language, and platform (e.g. web dev, mobile dev, etc.)
-* Dev can sign up and their results are logged into the database
-
-MVP stage 3: 
-* Employer can contact developer from profile by clicking on email link, which will send a generic email to developer
-
-MVP stage 4: 
-* Create a profile and allow input of info
-* Authentication
 	
 ## General info
-This is the final project for Team DevPortfolio, which consists of: 
+Team DevPortfolio, which consists of: 
 
-Multi Ah Foon (Product Owner and CEO), 
+Multi Ah Foon (Product Owner and CEO)
 
-Christo Karadjov (Design Lead), 
+Christo Karadjov (Design Lead)
 
-Tausani Ah Chong (Front-End Lead) and 
+Tausani Ah Chong (Front End Lead)
 
-Steve Kim (Back-End Lead)
+Steve Kim (Back End Lead)
 
 ![IMG_7748](https://user-images.githubusercontent.com/58315812/108942986-db4b3380-76bc-11eb-9a0b-2637213e6275.JPG)
 ![IMG_7746](https://user-images.githubusercontent.com/58315812/108942999-e1d9ab00-76bc-11eb-9b8a-05e514dcf28e.JPG)
