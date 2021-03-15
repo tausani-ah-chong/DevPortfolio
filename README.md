@@ -2,7 +2,6 @@
 
 https://dev-portfolio-21.herokuapp.com/#/
 
-## Story
 This is our final Group Project that was presented during a 15 week Software Develeopment Bootcamp at Enspiral Dev Academy.
 
 We wanted to create a platform for ALL developers to be able to showcase their work, their personalities and get connected to employers.
@@ -12,9 +11,8 @@ Our main focus was on the visual aspect.
 We wanted the focal point to be the portfolio or work itself first before the developer. 
 
 ## Table of contents
-* [Story](#story)
-* [General info](#general-info)
 * [Get Started](#get-started)
+* [General info](#general-info)
 
 ## Get Started
 
