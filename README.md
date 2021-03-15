@@ -12,7 +12,8 @@ We wanted the focal point to be the portfolio or work itself first before the de
 
 ## Table of contents
 * [Get Started](#get-started)
-* [General info](#general-info)
+* [Team](#team)
+* [To Implement next](#implement-next)
 
 ## Get Started
 
@@ -23,13 +24,17 @@ npm run tailbuild
 npm run dev
 ```
 		
-## General info
-Team DevPortfolio, which consists of: 
+## Team
+Team DevPortfolio, consists of: 
 
-Me (Front End Lead)
+_Me_ Tausani Ah Chong (Front End Lead)
 
-Multi Ah Foon (Product Owner and CEO)
+Multi Ah Foon (Product Owner and CEO) - https://github.com/multiahfoon
 
-Christo Karadjov (Design Lead)
+Christo Karadjov (Design Lead) - https://github.com/Christo-lk
 
-Steve Kim (Back End Lead)
+Steve Kim (Back End Lead) - https://github.com/steve-kim-96
+
+## Implement Next
+- Make site responsive (Currently is only responsive to Large Moniter Screens)
+- Implement Auth (Currently user login is disabled)
