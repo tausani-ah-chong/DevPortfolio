@@ -27,7 +27,7 @@ npm run dev
 ## Team
 Team DevPortfolio, consists of: 
 
-_Me_ Tausani Ah Chong (Front End Lead)
+Tausani Ah Chong (Front End Lead) - https://github.com/tausani-ah-chong
 
 Multi Ah Foon (Product Owner and CEO) - https://github.com/multiahfoon
 
