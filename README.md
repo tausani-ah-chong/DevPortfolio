@@ -26,10 +26,10 @@ npm run dev
 ## General info
 Team DevPortfolio, which consists of: 
 
+Me (Front End Lead)
+
 Multi Ah Foon (Product Owner and CEO)
 
 Christo Karadjov (Design Lead)
-
-Tausani Ah Chong (Front End Lead)
 
 Steve Kim (Back End Lead)
