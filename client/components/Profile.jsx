@@ -16,7 +16,7 @@ function Profile ({ devs }) {
       <div className="w-full lg:h-72 xl:h-96 grid grid-cols-2 gap-4 bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-md">
 
         {/* Left Container */}
-        <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 lg:pr-10 xl:pr-14">
+        <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 xl:pr-14">
 
           {/* Profile Pic & Hire Me btn */}
           <div className=" pr-6 pt-3 justify-center ml-auto">
@@ -25,7 +25,7 @@ function Profile ({ devs }) {
                 devs.map(e => {
                   return (
                     e.profilePicture
-                      ? <img key={e.id} src={e.profilePicture} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" alt="" />
+                      ? <img key={e.id} src={e.profilePicture} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 2xl:h-48 2xl:w-48" alt="" />
                       : <img key={e.id} className="mb-3 mx-auto rounded-full lg:h-32 lg:w-32 xl:h-48 xl:w-48" src='https://www.appliedlogistics.co.nz/wp-content/uploads/2018/01/person-placeholder-300x300.jpg' />
                   )
                 })
