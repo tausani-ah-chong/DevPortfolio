@@ -16,7 +16,7 @@ function Profile ({ devs }) {
       <div className="w-full lg:h-72 xl:h-96 grid grid-cols-2 gap-4 bg-gradient-to-r from-transparent via-gray-200 to-transparent rounded-md">
 
         {/* Left Container */}
-        <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 lg:pr-10 xl:pr-14">
+        <div className="lg:h-72 xl:h-96 flex lg:py-3 xl:py-6 xl:pr-14">
 
           {/* Profile Pic & Hire Me btn */}
           <div className=" pr-6 pt-3 justify-center ml-auto">
