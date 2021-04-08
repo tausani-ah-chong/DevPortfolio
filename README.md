@@ -11,9 +11,19 @@ Our main focus was on the visual aspect.
 We wanted the focal point to be the portfolio or work itself first before the developer. 
 
 ## Table of contents
+* [Stack](#stack)
 * [Get Started](#get-started)
 * [Team](#team)
 * [To Implement next](#implement-next)
+
+## Stack
+
+- NodeJS
+- React
+- Redux
+- TailwindCSS
+- Express
+- SQLite3
 
 ## Get Started
 
