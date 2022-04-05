@@ -4,6 +4,9 @@ metadata:
   name: DevPortfolio
   annotations:
     github.com/project-slug: tausani-ah-chong/DevPortfolio
+  links:
+    - url: https://dev-portfolio-21.herokuapp.com
+      title: DevPortfolio
 spec:
   type: website
   lifecycle: production
