@@ -5,6 +5,6 @@ metadata:
   annotations:
     github.com/project-slug: tausani-ah-chong/DevPortfolio
 spec:
-  type: other
-  lifecycle: unknown
+  type: website
+  lifecycle: production
   owner: behaviour
