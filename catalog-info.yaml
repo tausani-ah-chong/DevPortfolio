@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DevPortfolio
+  annotations:
+    github.com/project-slug: tausani-ah-chong/DevPortfolio
+spec:
+  type: website
+  lifecycle: production
+  owner: behaviour
